@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Breadcrumb active="Prolancer.match" />
-    <h2 class="mb-6 text--secondary">Conecte-se com outros profissionais, <br> troque experiências e alavanque sua carreira!</h2>
+    <Breadcrumb active="COR.match" />
+    <h2 class="mb-6 text--secondary">Conecte-se com outros produtores, <br> troque experiências e alavanque sua produção!</h2>
     <div v-if="edit || !$auth.user.need || !$auth.user.need.length">
       <MatchForm @input="edit = false" />
     </div>

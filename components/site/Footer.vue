@@ -6,7 +6,7 @@
           <n-link to="/">
             <v-img
               max-width="200px"
-              title="Prolancer.guru"
+              title="COR.agr.br - Cadastro Orgânico Rural"
               :src="require('~/assets/img/logo.png')"
               contain
             />

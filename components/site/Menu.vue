@@ -49,7 +49,7 @@
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title>
-            Prolancer.match
+            COR.match
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>

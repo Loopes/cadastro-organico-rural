@@ -2,7 +2,7 @@
   <div>
     <Breadcrumb />
     <div v-if="settings" class="home-page">
-      <h2 class="mb-10">A Prolancer.Guru vai mudar a forma como você desenvolve sua carreira!</h2>
+      <h2 class="mb-10">A COR.agr.br vai mudar a forma como você desenvolve seu empreendimento rural orgânico!</h2>
       <Banners :items="settings.banners" />
       <div v-if="settings.description" class="text-center px-5">
         <!-- <img src="~/assets/img/logo-laranja.svg" alt="Sobre"> -->
@@ -20,7 +20,7 @@
           <v-card color="tertiary" class="text-center">
             <v-card-title class="text-h4 justify-center">{{ metrics.conversations }}</v-card-title>
             <v-card-text>
-              <div class="text-primary">Conexões entre prolancers</div>
+              <div class="text-primary">Conexões entre usuários</div>
             </v-card-text>
           </v-card>
         </v-col>
@@ -44,7 +44,7 @@
           <v-card color="tertiary" class="text-center">
             <v-card-title class="text-h4 justify-center">{{ metrics.users }}</v-card-title>
             <v-card-text>
-              <div class="text-primary">Prolancers cadastrados</div>
+              <div class="text-primary">Usuários cadastrados</div>
             </v-card-text>
           </v-card>
         </v-col>
@@ -52,37 +52,37 @@
       <v-row>
         <v-col cols="12" md="3">
           <v-card color="#282A38" to="/match">
-            <v-img :src="require('~/assets/img/trilhas_b.jpg')" alt="Desafie-se!" :aspect-ratio="16/9" />
+            <v-img :src="require('~/assets/img/trilhas_g.jpg')" alt="Desafie-se!" :aspect-ratio="16/9" />
             <v-card-title>Desafie-se!</v-card-title>
             <v-card-text>
-              <div class="text-primary">Encontre um prolancer para guiar ou para ser seu guia nesta jornada!</div>
+              <div class="text-primary">Encontre um usuário para guiar ou para ser seu guia nesta jornada!</div>
             </v-card-text>
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
           <v-card color="#282A38" to="/trilhas">
-            <v-img :src="require('~/assets/img/trilhas_c.jpg')" alt="Trilhe sua evolução" :aspect-ratio="16/9" />
+            <v-img :src="require('~/assets/img/trilhas_f.jpg')" alt="Trilhe sua evolução" :aspect-ratio="16/9" />
             <v-card-title>Trilhe sua evolução</v-card-title>
             <v-card-text>
-              <div class="text-primary">Os melhores conteúdos gratuitos da web spara Seniores catalogados!</div>
+              <div class="text-primary">Os melhores conteúdos gratuitos da web para produtores orgânicos!</div>
             </v-card-text>
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
           <v-card color="#282A38" to="/jornada">
-            <v-img :src="require('~/assets/img/trilhas_d.jpg')" alt="Desafie-se!" :aspect-ratio="16/9" />
+            <v-img :src="require('~/assets/img/trilhas_e.jpg')" alt="Desafie-se!" :aspect-ratio="16/9" />
             <v-card-title>Jornada!</v-card-title>
             <v-card-text>
-              <div class="text-primary">Conheça nossa Jornada! Nossa origem é uma luta interna pela Senioridade!</div>
+              <div class="text-primary">Conheça nossa Jornada! Nossa origem é uma luta coletiva pela causa Orgânica!</div>
             </v-card-text>
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
           <v-card color="#282A38" to="/missao">
-            <v-img :src="require('~/assets/img/senior.jpg')" alt="Seja um Senior!" :aspect-ratio="16/9" />
+            <v-img :src="require('~/assets/img/produtor.jpg')" alt="Seja um Senior!" :aspect-ratio="16/9" />
             <v-card-title>Nossa missão</v-card-title>
             <v-card-text>
-              <div class="text-primary">Entenda os desafios que o Plolancer.guru procura solucionar</div>
+              <div class="text-primary">Entenda os desafios que o Cadastro Orgânico Rural procura solucionar</div>
             </v-card-text>
           </v-card>
         </v-col>

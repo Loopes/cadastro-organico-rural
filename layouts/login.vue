@@ -7,7 +7,7 @@
             <v-container fluid class="d-flex justify-center mb-3 mt-6">
               <n-link to="/">
                 <v-img
-                  title="Prolancer.guru"
+                  title="COR.agr.br"
                   :src="require('~/assets/img/logo.png')"
                   contain
                   max-width="260"

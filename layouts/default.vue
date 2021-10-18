@@ -5,7 +5,7 @@
         <div class="pa-8 pt-10 pb-10">
           <n-link to="/">
             <v-img
-              title="Prolancer.guru"
+              title="COR.agr.br"
               :src="require('~/assets/img/logo.png')"
               contain
             />
@@ -17,7 +17,7 @@
       <v-app-bar dark hide-on-scroll color="#1A1C28" class="d-lg-none">
         <n-link to="/">
           <v-img
-            title="Prolancer.guru"
+            title="COR.agr.br"
             :src="require('~/assets/img/logo.png')"
             contain
             max-width="180"
