@@ -47,3 +47,15 @@ jobs:
         run: yarn lint
       # - name: Run tests 🧪
       #   run: yarn test
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: "source ~/.nvm/nvm.sh; cd ~/server/; ./update.sh; ./deploy.sh cadastro-organico-rural; exit"
+          host: cor.agr.br
+          username: root
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+        env:
+          CI: true
