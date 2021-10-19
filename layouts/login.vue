@@ -8,7 +8,7 @@
               <n-link to="/">
                 <v-img
                   title="COR.agr.br"
-                  :src="require('~/assets/img/logo.png')"
+                  :src="require('~/assets/img/logo-3.png')"
                   contain
                   max-width="260"
                 />
@@ -20,7 +20,7 @@
           </div>
         </v-col>
         <v-col cols="12" md="6" class="overflow-y-hidden">
-          <v-img :src="require('~/assets/img/login_1.png')" contain />
+          <v-img :src="require('~/assets/img/login_1.jpg')" contain />
         </v-col>
       </v-row>
       <Snackbar />

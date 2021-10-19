@@ -5,7 +5,7 @@
         <n-link to="/">
           <v-img
             title="COR.agr.br"
-            :src="require('~/assets/img/logo.png')"
+            :src="require('~/assets/img/logo-3.png')"
             contain
           />
         </n-link>
@@ -16,7 +16,7 @@
       <n-link to="/">
         <v-img
           title="COR.agr.br"
-          :src="require('~/assets/img/logo.png')"
+          :src="require('~/assets/img/logo-3.png')"
           contain
           max-width="180"
         />

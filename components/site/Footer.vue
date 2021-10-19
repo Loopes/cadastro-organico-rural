@@ -7,7 +7,7 @@
             <v-img
               max-width="200px"
               title="COR.agr.br - Cadastro Orgânico Rural"
-              :src="require('~/assets/img/logo.png')"
+              :src="require('~/assets/img/logo-3.png')"
               contain
             />
           </n-link>
