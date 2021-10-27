@@ -1,4 +1,4 @@
-name: ci
+name: Testes de integração
 
 on:
   pull_request:
