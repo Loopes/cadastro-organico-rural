@@ -4,7 +4,7 @@
     :items="currentTags"
     :search-input.sync="search"
     hide-selected
-    label="Palavras chave"
+    :label="label"
     multiple
     persistent-hint
     small-chips
@@ -33,6 +33,10 @@ export default {
     currentTags: {
       type: Array,
       default: () => []
+    },
+    label: {
+      type: String,
+      default: 'Palavras chave'
     }
   },
   data () {

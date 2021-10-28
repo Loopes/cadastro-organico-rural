@@ -2,10 +2,12 @@
   <div class="pl-3">
     <v-list dark nav>
       <v-list-item class="mb-0" :to="$auth.user ? '/profile' : '/login?tab=register'">
-        <v-list-item-avatar color="#4F516F">
-          <v-img v-if="$auth.user && $auth.user.picture && $auth.user.picture.url" :src="$auth.user.picture.url" />
-          <v-icon v-else>mdi-account</v-icon>
+        <v-list-item-avatar v-if="$auth.user && $auth.user.picture && $auth.user.picture.url" color="#4F516F">
+          <v-img :src="$auth.user.picture.url" />
         </v-list-item-avatar>
+        <v-list-item-icon v-else color="#4F516F">
+          <v-icon>mdi-account</v-icon>
+        </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title v-if="$auth.user">
             {{ $auth.user.name }}

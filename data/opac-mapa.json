@@ -1,0 +1,202 @@
+[
+  {
+    "ENTIDADE": "Associação de Agricultura Natural de Campinas e Região (ANC)",
+    "ENDERECO": "Rua Rei Salomão, 295 - Jardim Conceição, Souza",
+    "CIDADE": "Campinas",
+    "UF": "SP",
+    "TELEFONE": "(19) 3213-7759 / 55 (19) 9.97096058",
+    "EMAIL": "contato@anc.org.br"
+  },
+  {
+    "ENTIDADE": "Associação Ecovida de Certificação Participativa",
+    "ENDERECO": "Rua Francisco Hipólito Rolim, n° 317, ap. 03",
+    "CIDADE": "Três Cachoeiras",
+    "UF": "RS",
+    "TELEFONE": "(51) 3667-1516; (51) 3664-0220",
+    "EMAIL": "ecovida@ecovida.org.br; opacecovida@gmail.com"
+  },
+  {
+    "ENTIDADE": "Associação dos Agricultores Biológicos do Estado do Rio de Janeiro (ABIO)",
+    "ENDERECO": "Rua Dr. Julio Otoni, 357, apto 01, Santa Teresa",
+    "CIDADE": "Rio de Janeiro",
+    "UF": "RJ",
+    "TELEFONE": "(21) 3495-2898",
+    "EMAIL": "cbr.abio@hotmail.com"
+  },
+  {
+    "ENTIDADE": "Associação Brasileira de Agricultura Biodinâmica (ABD)",
+    "ENDERECO": "Rodovia Gastão dal Farra, km 04 - Bairro Demétria / Caixa Postal: 1016",
+    "CIDADE": "Botucatu",
+    "UF": "SP",
+    "TELEFONE": "(14)3815-7862; (14)3882-6282",
+    "EMAIL": "biodinamica@biodinamica.org.br"
+  },
+  {
+    "ENTIDADE": "OPAC – Cerrado / Sindicato dos Produtores Orgânicos do DF SINDIORGÂNICOS/DF",
+    "ENDERECO": "SEPS W4 QD 709/908 BLOCO D 1º ANDAR - ASA SUL",
+    "CIDADE": "Brasília",
+    "UF": "DF",
+    "TELEFONE": "(61) 3244-7356 / (61) 3242-9600",
+    "EMAIL": "sindiorganico@gmail.com"
+  },
+  {
+    "ENTIDADE": "Associação de Produtores Orgânicos do Mato Grosso do Sul (APOMS)",
+    "ENDERECO": "Rodovia BR 376, km 67 - Zona Rural",
+    "CIDADE": "Glória de Dourados",
+    "UF": "MS",
+    "TELEFONE": "(67) 3466-1352; (67) 3466-1272",
+    "EMAIL": "apoms-ms@hotmail.com; apoms@yahoo.com.br"
+  },
+  {
+    "ENTIDADE": "Associação dos Produtores Agroecológicos do Semiárido Piauiense (APASPI)",
+    "ENDERECO": "Av. Carlindo Sabino da Silva – Qd 02, Lote 13 – Novo Zabelê (zona rural)",
+    "CIDADE": "São Raimundo Nonato",
+    "UF": "PI",
+    "TELEFONE": "(89) 3582-3257",
+    "EMAIL": "apaspi.opac@hotmail.com"
+  },
+  {
+    "ENTIDADE": "Associação de Certificação Participativa Agroecológica (ACEPA)",
+    "ENDERECO": "Rua da Cruz Nº 216 - Centro",
+    "CIDADE": "Quixeramobim",
+    "UF": "CE",
+    "TELEFONE": "(88) 3441 0119 / (88) 3441 5054",
+    "EMAIL": "acepasertaocentral@hotmail.com"
+  },
+  {
+    "ENTIDADE": "Associação Agroecológica de Certificação Participativa dos Inhamuns/Crateús (ACEPI)",
+    "ENDERECO": "Rua Oscar Lopes, 713 – Fátima II",
+    "CIDADE": "Crateús",
+    "UF": "CE",
+    "TELEFONE": "",
+    "EMAIL": "acepiopac@yahoo.com.br"
+  },
+  {
+    "ENTIDADE": "Associação dos Agricultores e Agricultoras Agroecológicos do Araripe (ECOARARIPE)",
+    "ENDERECO": "Avenida Fernando Bezerra, Nº 1010, Centro",
+    "CIDADE": "Ouricuri",
+    "UF": "PE",
+    "TELEFONE": "(87) 3874-2660",
+    "EMAIL": "ecoararipe@yahoo.com.br"
+  },
+  {
+    "ENTIDADE": "Central de Associações de Produtores Orgânicos Sul de Minas – (Orgânicos Sul de Minas)",
+    "ENDERECO": "Fazenda do IFSULDEMINAS - Campus Inconfidentes, S/N, Bairro Escritório Velho",
+    "CIDADE": "Inconfidentes",
+    "UF": "MG",
+    "TELEFONE": "(35) 3464 1223",
+    "EMAIL": "organicossuldeminas@gmail.com"
+  },
+  {
+    "ENTIDADE": "Associação OPAC Litoral Norte",
+    "ENDERECO": "RS 487, km 12 – Bairro Rota do Sol",
+    "CIDADE": "Itati",
+    "UF": "RS",
+    "TELEFONE": "(51) 3628-5002",
+    "EMAIL": "emforqu@emater.tche.br; emitati@emater.tche.br"
+  },
+  {
+    "ENTIDADE": "Associação de Certificação Orgânica Participativa do Sertão do Apodi  (ACOPASA)",
+    "ENDERECO": "Rua Sebastião Sizenando, 263 - Sala 2 - Centro",
+    "CIDADE": "Apodi",
+    "UF": "RN",
+    "TELEFONE": "(84) 3333-9582 / (84) 3333-3330",
+    "EMAIL": "acopasa.rn@gmail.com"
+  },
+  {
+    "ENTIDADE": "Centro de Desenvolvimento Agroecológico do Cerrado (CEDAC)",
+    "ENDERECO": "Rodovia BR-153, Km4, Qd. GMA, Chácara Retiro, casa 05",
+    "CIDADE": "Goiânia",
+    "UF": "GO",
+    "TELEFONE": "(62) 3202-7515",
+    "EMAIL": "cedac@cedac-ong.org.br"
+  },
+  {
+    "ENTIDADE": "Cooperativa Central dos Assentamentos do Rio Grande do Sul Ltda. (COCEARGS)",
+    "ENDERECO": "Travessa Franscisco Leonardo Truda, 98 – 4º andar",
+    "CIDADE": "Porto Alegre",
+    "UF": "RS",
+    "TELEFONE": "(51) 3221-9022",
+    "EMAIL": "coceargssicorganico@yahoo.com.br"
+  },
+  {
+    "ENTIDADE": "Associação Terra Indígena do Xingu (ATIX)",
+    "ENDERECO": "Setor Bancário Sul, Quadra 02, Lote 14 – Edifício Cleto Meireles, 6º andar",
+    "CIDADE": "Brasília",
+    "UF": "DF",
+    "TELEFONE": "",
+    "EMAIL": "ana.mello@funai.gov.br; cecilia.piva@funai.gov.br; fernando.sopra@funai.gov.br; jose.pereira@funai.gov.br; juan.scalia@funai.gov.br"
+  },
+  {
+    "ENTIDADE": "Associação Brota Cerrado Serra da Canastra de Certificação Participativa",
+    "ENDERECO": "Rodovia MG 428, km 85 – Capão do Mel",
+    "CIDADE": "Sacramento",
+    "UF": "MG",
+    "TELEFONE": "(34) 3351-8161",
+    "EMAIL": "opacbrotacerrado@gmail.com"
+  },
+  {
+    "ENTIDADE": "Associação dos Produtores da Rede Agroecológica Metropolitana (Rama)",
+    "ENDERECO": "Estrada do Varejão, 2.630 – Beco Paraíso, 951 – Lami",
+    "CIDADE": "Porto Alegre",
+    "UF": "RS",
+    "TELEFONE": "",
+    "EMAIL": "rosanedemarco@gmail.com"
+  },
+  {
+    "ENTIDADE": "Associação Povos da Mata Atlântica do Sul da Bahia de Certificação Participativa",
+    "ENDERECO": "Rua Osvaldo Ribeiro, 351",
+    "CIDADE": "Uruçuca",
+    "UF": "BA",
+    "TELEFONE": "",
+    "EMAIL": "opacpovosdamata@gmail.com"
+  },
+  {
+    "ENTIDADE": "Associação de Agricultura Biodinâmica do Sul (ABD-Sul)",
+    "ENDERECO": "Rua Pastor William Schisler Filho n°1055 – Itacorubi",
+    "CIDADE": "Florianópolis",
+    "UF": "SC",
+    "TELEFONE": "(48) 3371-4342",
+    "EMAIL": "biodinamica@abdsul.org.br"
+  },
+  {
+    "ENTIDADE": "Rede Borborema de Agroecologia",
+    "ENDERECO": "Assentamento Margarida Alves I - Juarez Távora",
+    "CIDADE": "Itabaiana",
+    "UF": "PB",
+    "TELEFONE": "(83) 9614 4367",
+    "EMAIL": "rederba@yahoo.com.br"
+  },
+  {
+    "ENTIDADE": "Orgânicos Jequitinhonha - Associação dos Agricultores Familiares Feirantes de Turmalina",
+    "ENDERECO": "Rua São Pedro n° 43 – Campo",
+    "CIDADE": "Turmalina",
+    "UF": "MG",
+    "TELEFONE": "(38) 3527 1401",
+    "EMAIL": "spgorganicosjequi@gmail.com"
+  },
+  {
+    "ENTIDADE": "ASSOCIAÇÃO MANIVA DE CERTIFICAÇÃO PARTICIPATIVA – OPAC MANIVA",
+    "ENDERECO": "Rua Surucuá, 940, LOT. CAMPO SALES - TARUMÃ",
+    "CIDADE": "Manaus",
+    "UF": "AM",
+    "TELEFONE": "(92) 98113-7503",
+    "EMAIL": "opacmaniva@gmail.com"
+  },
+  {
+    "ENTIDADE": "ASSOCIAÇÃO DE AGRICULTURA ECOLÓGICA – OPAC AGE",
+    "ENDERECO": "ST SHCES Quadra 505, Lote 04, Loja 06 – Cruzeiro Novo",
+    "CIDADE": "Brasília",
+    "UF": "DF",
+    "TELEFONE": "(61) 3394-6913",
+    "EMAIL": "agedf@gmail.com"
+  },
+  {
+    "ENTIDADE": "ROTA CAMINHO DOS CANYONS",
+    "ENDERECO": "Estrada Geral, s/nº - Costão da Pedra",
+    "CIDADE": "Jacinto Machado",
+    "UF": "SC",
+    "TELEFONE": "(48) 99164-1588",
+    "EMAIL": ""
+  }
+]
