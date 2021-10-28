@@ -1,0 +1,106 @@
+[
+  {
+    "ENTIDADE": "Instituto de Tecnologia do Paraná (TECPAR)",
+    "ENDERECO": "Rua Professor Algacyr Munhoz Mader, 3775 - Cidade Industrial de Curitiba (CIC)",
+    "CIDADE": "Curitiba",
+    "UF": "PR",
+    "TELEFONE": "(41) 3316-3161 | (41) 3316-3162",
+    "EMAIL": "contato@tecparcert.com.br"
+  },
+  {
+    "ENTIDADE": "Ecocert Brasil Certificadora Ltda",
+    "ENDERECO": "Rodovia Dr. Antônio Luiz Moura Gonzaga, 3339 – Sala 127 A – Rio Tavares",
+    "CIDADE": "Florianópolis",
+    "UF": "SC",
+    "TELEFONE": "(48) 3232-8033 / (48) 3233-6126 / (48) 3234-2258 / (48) 3338-3060",
+    "EMAIL": "ecocert.brasil@ecocert.com"
+  },
+  {
+    "ENTIDADE": "IBD Certificações Ltda.",
+    "ENDERECO": "Rua Amando de Barros, 2.275 – Bairro Lavapés",
+    "CIDADE": "Botucatu",
+    "UF": "SP",
+    "TELEFONE": "(14) 3811-9800 / (14) 3811-9801",
+    "EMAIL": "ibd@ibd.com.br"
+  },
+  {
+    "ENTIDADE": "IMO Control do Brasil Ltda",
+    "ENDERECO": "Rua Dias Barroso, 202",
+    "CIDADE": "Alfenas",
+    "UF": "MG",
+    "TELEFONE": "(35) 3292-6717; (11) 3816-1868",
+    "EMAIL": "imo@imocontrol.com.br / daniel@imocontrol.com.br"
+  },
+  {
+    "ENTIDADE": "Agricontrol OIA Ltda.",
+    "ENDERECO": "Av. Olinda, 960. Trade Tower Lozandes. Sala 1610 – Park Lozandes",
+    "CIDADE": "Goiânia",
+    "UF": "GO",
+    "TELEFONE": "(62) 3942-7541/ (11) 3062-1145 / (64) 98442-1797",
+    "EMAIL": "oiabrasil@oiabrasil.com.br"
+  },
+  {
+    "ENTIDADE": "Instituto Nacional de Tecnologia",
+    "ENDERECO": "Av. Venezuela, 82 – Saúde, sala 708",
+    "CIDADE": "Rio de Janeiro",
+    "UF": "RJ",
+    "TELEFONE": "(21) 2123-1169 / (21) 2123-1012 / (21) 2123 1018",
+    "EMAIL": "ocp@int.gov.br"
+  },
+  {
+    "ENTIDADE": "Instituto Chão Vivo de Avaliação da Conformidade",
+    "ENDERECO": "Rua Paulo Bonino, 676 – Térreo – Bairro do Eco",
+    "CIDADE": "Santa Teresa",
+    "UF": "ES",
+    "TELEFONE": "(27) 3259 3664",
+    "EMAIL": "atendimento@institutochaovivo.com.br"
+  },
+  {
+    "ENTIDADE": "Instituto Mineiro de Agropecuária",
+    "ENDERECO": "Cidade Administrativa Tancredo Neves | Rodovia Prefeito Américo Gianetti, S/Nº - Edifício Gerais: 10º andar - Serra Verde",
+    "CIDADE": "Belo Horizonte",
+    "UF": "MG",
+    "TELEFONE": "(31) 3915-8774",
+    "EMAIL": "gec@ima.mg.gov.br"
+  },
+  {
+    "ENTIDADE": "Cugnier Certificadora",
+    "ENDERECO": "Av. Sete de Setembro, 869 – Centro",
+    "CIDADE": "Itajaí",
+    "UF": "SC",
+    "TELEFONE": "(47) 3348-3300",
+    "EMAIL": "dcp@cugnier.com; dgq@cugnier.com"
+  },
+  {
+    "ENTIDADE": "KIWA BCS ÖKO-GARANTIE DO BRASIL LTDA",
+    "ENDERECO": "Manoel Isidoro da Silveira, 610, sala 302 - Lagoa da Conceição",
+    "CIDADE": "Florianópolis",
+    "UF": "SC",
+    "TELEFONE": "(48) 3307 6384",
+    "EMAIL": "bcs.brazil@kiwa.de; marcelo.farias@bcsbrasil.com"
+  },
+  {
+    "ENTIDADE": "Savassi Certificação de Serviços Administrativos Ltda",
+    "ENDERECO": "Bernardo Guimarães, nº 428 – Centro",
+    "CIDADE": "Patrocínio",
+    "UF": "MG",
+    "TELEFONE": "(34) 3832-0530",
+    "EMAIL": "certificacao@savassicertificadora.com.br"
+  },
+  {
+    "ENTIDADE": "IGCERT SERVIÇOS ADMINISTRATIVOS LTDA/GENESIS CERTIFICAÇÕES – IGCERT",
+    "ENDERECO": "Rua Rolandia, 280 - Jd. Aurora",
+    "CIDADE": "Londrina",
+    "UF": "PR",
+    "TELEFONE": "(43) 3328-7700",
+    "EMAIL": "flavianabim@igcert.com.br"
+  },
+  {
+    "ENTIDADE": "WQS DO BRASIL LTDA",
+    "ENDERECO": "Av. Deputado Dante Delmanto – Nº 2660 – Vila Paulista",
+    "CIDADE": "Botucatu",
+    "UF": "SP",
+    "TELEFONE": "(14) 3811-3003",
+    "EMAIL": "sgq@wqscert.com"
+  }
+]
