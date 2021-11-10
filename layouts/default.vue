@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div v-show="settings">
-      <v-navigation-drawer v-model="show_drawer" app width="314" color="#1A1C28">
+      <v-navigation-drawer v-model="show_drawer" app width="314" color="primary">
         <div class="pa-8 pt-10 pb-10">
           <n-link to="/">
             <v-img
@@ -14,7 +14,7 @@
         <Menu />
       </v-navigation-drawer>
 
-      <v-app-bar dark hide-on-scroll color="#1A1C28" class="d-lg-none">
+      <v-app-bar dark hide-on-scroll color="primary" class="d-lg-none">
         <n-link to="/">
           <v-img
             title="COR.agr.br"

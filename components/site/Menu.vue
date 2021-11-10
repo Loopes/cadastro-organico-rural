@@ -1,18 +1,18 @@
 <template>
   <div class="pl-3">
-    <v-list dark nav>
+    <v-list nav>
       <v-list-item class="mb-0" :to="$auth.user ? '/profile' : '/login?tab=register'">
-        <v-list-item-avatar v-if="$auth.user && $auth.user.picture && $auth.user.picture.url" color="#4F516F">
+        <v-list-item-avatar v-if="$auth.user && $auth.user.picture && $auth.user.picture.url">
           <v-img :src="$auth.user.picture.url" />
         </v-list-item-avatar>
-        <v-list-item-icon v-else color="#4F516F">
+        <v-list-item-icon v-else>
           <v-icon>mdi-account</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title v-if="$auth.user">
             {{ $auth.user.name }}
           </v-list-item-title>
-          <v-list-item-title v-else class="text-h6 primary--text">
+          <v-list-item-title v-else>
             Cadastre-se!
           </v-list-item-title>
           <v-list-item-subtitle v-if="$auth.user">{{ $auth.user.email }}</v-list-item-subtitle>
@@ -22,12 +22,21 @@
     <v-list nav class="pb-0 mt-3" rounded dense>
       <v-list-item to="/" class="ml-n10 pl-12">
         <v-list-item-icon>
-          <v-icon>mdi-view-dashboard</v-icon>
+          <v-icon>mdi-home-circle-outline</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
-          <v-list-item-title>Dashboard</v-list-item-title>
+          <v-list-item-title>Início</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+      <v-list-item class="ml-n10 pl-12" to="/unidades-de-producao">
+        <v-list-item-icon>
+          <v-icon>mdi-barn</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>Unidades de produção</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
       <v-list-item v-if="$auth.user" to="/conexoes" class="ml-n10 pl-12">
         <v-list-item-icon>
           <v-badge

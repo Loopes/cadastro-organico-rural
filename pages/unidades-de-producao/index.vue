@@ -1,10 +1,10 @@
 <template>
   <div>
-    <AdminBreadcrumb :items="breadcrumb" />
+    <Breadcrumb active="Unidades de produção" />
     <v-btn
-      to="/admin/production_units/new"
+      to="/unidades-de-producao/cadastrar"
       fab
-      bottom
+      top
       right
       fixed
       color="success"
@@ -12,9 +12,10 @@
       <v-icon dark>mdi-plus</v-icon>
     </v-btn>
     <div v-if="production_units">
-      <v-list v-if="production_units.length" color="tertiary" class="rounded">
+      <v-list v-if="production_units.length" class="rounded lighten-1" color="primary">
         <template v-for="(production_unit, index) in production_units">
-          <v-list-item :key="production_unit._id" :to="'/admin/production_units/' + production_unit._id + '/edit'">
+          <v-list-item :key="production_unit._id" :to="'/unidades-de-producao/' + production_unit._id ">
+            <v-list-item-avatar>{{ production_unit.uf }}</v-list-item-avatar>
             <v-list-item-content>
               <v-list-item-title>{{ production_unit.name }}</v-list-item-title>
               <v-list-item-subtitle v-if="production_unit.city && production_unit.uf">
@@ -22,9 +23,6 @@
               </v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
-              <v-list-item-action-text v-if="production_unit.publishing_date">
-                {{ $moment(production_unit.publishing_date).format(production_unit.publishing_date_format || "DD/MM/YYYY") }}
-              </v-list-item-action-text>
               <v-btn icon>
                 <v-icon>mdi-chevron-right</v-icon>
               </v-btn>
@@ -47,14 +45,9 @@
 <script>
 
 export default {
-  layout: 'admin',
   data() {
     return {
-      production_units: null,
-      breadcrumb: [
-        { text: 'Dashboard', to: '/admin' },
-        { text: 'Unidades de produção', active: true }
-      ]
+      production_units: null
     }
   },
   created () {

@@ -1,8 +1,11 @@
 <template>
   <div v-if="validCoordinates">
-    <div class="text-dark">
-      <small>Coordenadas: {{ point.coordinates.join(',') }}
-        <a variant="light" @click="show_map = !show_map"><strong>({{ show_map ? 'Esconder mapa' : 'Ver mapa' }})</strong></a></small>
+    <div class="text-dark mb-3">
+      <small>{{ label }}: <strong>{{ point.coordinates.join(',') }}</strong>
+        <v-btn color="secondary" small class="ml-1" @click="show_map = !show_map">
+          {{ show_map ? 'Esconder mapa' : 'Ver mapa' }}
+        </v-btn>
+      </small>
     </div>
     <l-map
       v-if="show_map"
@@ -28,6 +31,10 @@ export default {
     show: {
       type: Boolean,
       default: false
+    },
+    label: {
+      type: String,
+      default: 'Coordenadas'
     }
   },
   data() {

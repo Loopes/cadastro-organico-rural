@@ -2,7 +2,7 @@
   <div>
     <Breadcrumb />
     <div v-if="settings" class="home-page">
-      <h2 class="mb-10">A COR.agr.br vai mudar a forma como você desenvolve seu empreendimento rural orgânico!</h2>
+      <p class="mb-10">A COR.agr.br vai mudar a forma como você desenvolve seu empreendimento rural orgânico!</p>
       <Banners :items="settings.banners" />
       <div v-if="settings.description" class="text-center px-5">
         <!-- <img src="~/assets/img/logo-laranja.svg" alt="Sobre"> -->
@@ -17,7 +17,7 @@
       </div>
       <v-row v-if="metrics">
         <v-col cols="12" md="3">
-          <v-card color="tertiary" class="text-center">
+          <v-card color="brown darken-4" dark class="text-center">
             <v-card-title class="text-h4 justify-center">{{ metrics.conversations }}</v-card-title>
             <v-card-text>
               <div class="text-primary">Conexões entre usuários</div>
@@ -25,7 +25,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
-          <v-card color="tertiary" class="text-center">
+          <v-card color="brown darken-4" dark class="text-center">
             <v-card-title class="text-h4 justify-center">{{ metrics.categories }}</v-card-title>
             <v-card-text>
               <div class="text-primary">Trilhas de conhecimento</div>
@@ -33,7 +33,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
-          <v-card color="tertiary" class="text-center">
+          <v-card color="brown darken-4" dark class="text-center">
             <v-card-title class="text-h4 justify-center">{{ metrics.medias }}</v-card-title>
             <v-card-text>
               <div class="text-primary">Conteúdos publicados</div>
@@ -41,7 +41,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
-          <v-card color="tertiary" class="text-center">
+          <v-card color="brown darken-4" dark class="text-center">
             <v-card-title class="text-h4 justify-center">{{ metrics.users }}</v-card-title>
             <v-card-text>
               <div class="text-primary">Usuários cadastrados</div>
@@ -51,7 +51,7 @@
       </v-row>
       <v-row>
         <v-col cols="12" md="3">
-          <v-card color="#282A38" to="/match">
+          <v-card to="/match">
             <v-img :src="require('~/assets/img/trilhas_g.jpg')" alt="Desafie-se!" :aspect-ratio="16/9" />
             <v-card-title>Desafie-se!</v-card-title>
             <v-card-text>
@@ -60,7 +60,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
-          <v-card color="#282A38" to="/trilhas">
+          <v-card to="/trilhas">
             <v-img :src="require('~/assets/img/trilhas_f.jpg')" alt="Trilhe sua evolução" :aspect-ratio="16/9" />
             <v-card-title>Trilhe sua evolução</v-card-title>
             <v-card-text>
@@ -69,7 +69,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
-          <v-card color="#282A38" to="/jornada">
+          <v-card to="/jornada">
             <v-img :src="require('~/assets/img/trilhas_e.jpg')" alt="Desafie-se!" :aspect-ratio="16/9" />
             <v-card-title>Jornada!</v-card-title>
             <v-card-text>
@@ -78,7 +78,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
-          <v-card color="#282A38" to="/missao">
+          <v-card to="/missao">
             <v-img :src="require('~/assets/img/produtor.jpg')" alt="Seja um Senior!" :aspect-ratio="16/9" />
             <v-card-title>Nossa missão</v-card-title>
             <v-card-text>

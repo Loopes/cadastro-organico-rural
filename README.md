@@ -1,6 +1,6 @@
-# Tekoa
+# COR - Cadastro Orgânico Rural
 
-Projeto de EAD para criação de trilhas de aprendizagens e desafios de forma rápida e dinâmica
+A COR.agr.br vai mudar a forma como você desenvolve seu empreendimento rural orgânico!
 
 ### Tecnologias utilizadas
 
@@ -38,10 +38,10 @@ O lado servidor está construido em cima do Node.js e algumas de suas biblioteca
 
 ```bash
 # Clone esse repositório
-git clone git@github.com:squad-on/tekoa.git
+git clone git@github.com:loopes/cadastro-organico-rural.git
 
 # Entre na pasta criada
-cd tekoa/
+cd cadastro-organico-rural/
 
 # Instale as dependências
 $ yarn install

@@ -2,7 +2,7 @@
   <div class="pl-3">
     <v-list dark nav>
       <v-list-item class="mb-0" to="/profile">
-        <v-list-item-avatar color="#4F516F">
+        <v-list-item-avatar>
           <v-img v-if="$auth.user && $auth.user.picture && $auth.user.picture.url" :src="$auth.user.picture.url" />
           <v-icon v-else>mdi-account</v-icon>
         </v-list-item-avatar>
@@ -29,14 +29,6 @@
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title>Trilhas</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item v-if="$auth.user.role === 'admin'" class="ml-n10 pl-12" to="/admin/production_units">
-        <v-list-item-icon>
-          <v-icon>mdi-barn</v-icon>
-        </v-list-item-icon>
-        <v-list-item-content>
-          <v-list-item-title>Unidades de produção</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-list-item v-if="$auth.user.role === 'admin'" class="ml-n10 pl-12" to="/admin/posts">

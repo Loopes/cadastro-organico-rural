@@ -1,14 +1,12 @@
 <template>
   <div v-if="address">
-    <div class="text-dark">
-      <small v-if="address.description">
-        <strong>{{ address.description }}</strong>
-      </small>
+    <div class="text-dark mb-3">
       <small v-if="validCoordinates">
-        <br>Coordenadas: {{ address.location.coordinates.join(',') }}
-        <a variant="light" @click="show_map = !show_map">
-          <strong>({{ show_map ? 'Esconder mapa' : 'Ver mapa' }})</strong>
-        </a>
+        {{ label }}:
+        <strong v-if="address.description">{{ address.description }}</strong>
+        <v-btn color="secondary" small class="ml-1" @click="show_map = !show_map">
+          {{ show_map ? 'Esconder mapa' : 'Ver mapa' }}
+        </v-btn>
       </small>
     </div>
     <l-map
@@ -31,6 +29,14 @@ export default {
     address: {
       type: Object,
       default: null
+    },
+    show: {
+      type: Boolean,
+      default: false
+    },
+    label: {
+      type: String,
+      default: 'Endereço'
     }
   },
   data() {
@@ -63,6 +69,13 @@ export default {
         }
       }
       return false
+    }
+  },
+  created() {
+    if (this.show) {
+      setTimeout(() => {
+        this.show_map = true
+      }, 100)
     }
   }
 }

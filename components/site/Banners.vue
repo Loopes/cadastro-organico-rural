@@ -9,7 +9,7 @@
             justify="center"
           >
             <div class="text-center">
-              <h2 v-if="item.title" class="text-h4">{{ item.title }}</h2>
+              <h2 v-if="item.title" class="text-h4 white--text">{{ item.title }}</h2>
               <p v-if="item.description" class="mb-0 d-none d-md-block">{{ (item.description) | truncate(250) }}</p>
               <template v-if="item.link">
                 <v-btn v-if="item.link.startsWith('http')" :href="item.link" target="_blank" color="secondary" class="mt-md-4 btn-home">{{ item.link_title || 'Saiba mais' }}</v-btn>

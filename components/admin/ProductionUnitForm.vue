@@ -20,17 +20,17 @@
 
         <v-textarea v-model="form.farm_address" outlined name="farm_address" label="Endereço da propriedade" rows="2" auto-grow />
 
-        <p class="mb-3">Coordenada georeferenciada da <strong>entrada:</strong></p>
+        <p class="mb-1">Coordenada georeferenciada da <strong>entrada:</strong></p>
         <client-only>
           <PointForm v-model="form.farm_gate_location" />
         </client-only>
 
-        <p class="mb-3">Coordenada georeferenciada da <strong>sede:</strong></p>
+        <p class="mb-1">Coordenada georeferenciada da <strong>sede:</strong></p>
         <client-only>
           <PointForm v-model="form.farm_house_location" />
         </client-only>
 
-        <p class="mb-3">Endereço de correspondência:</p>
+        <p class="mb-1">Endereço de correspondência:</p>
         <client-only>
           <AddressForm v-model="form.correspondence_address" />
         </client-only>
@@ -96,7 +96,7 @@ export default {
         permanent_preservation_area: '',
         legal_reservea_area: '',
         organic_since: '',
-        cultures: '',
+        cultures: [],
         previous_year_total_production: '',
         current_year_estimated_production: '',
         certifying_entity_type: '',
@@ -115,21 +115,21 @@ export default {
       if (this.productionUnit) {
         const productionUnit = await this.$axios.$put('/api/production_units/' + this.productionUnit._id, this.form)
         if (productionUnit) {
-          this.$notifier.success('Item atualizado com sucesso!')
-          this.$router.push('/admin/production_units')
+          this.$notifier.success('Unidade atualizada!')
+          this.$router.push('/unidades-de-producao/' + productionUnit._id)
         }
       } else {
         const productionUnit = await this.$axios.$post('/api/production_units', this.form)
         if (productionUnit) {
-          this.$notifier.success('Item cadastrado com sucesso!')
-          this.$router.push('/admin/production_units')
+          this.$notifier.success('Unidade cadastrada!')
+          this.$router.push('/unidades-de-producao/' + productionUnit._id)
         }
       }
     },
     remove (productionUnit) {
       this.$axios.delete('/api/production_units/' + productionUnit._id).then(() => {
         this.$notifier.success('Removido com sucesso!')
-        this.$router.push('/admin/production_units')
+        this.$router.push('/unidades-de-producao')
       })
     }
   }

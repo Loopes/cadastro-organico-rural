@@ -6,6 +6,7 @@
     hide-selected
     :label="label"
     multiple
+    deletable-chips
     persistent-hint
     small-chips
     outlined

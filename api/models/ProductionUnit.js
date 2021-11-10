@@ -1,8 +1,14 @@
 const mongoose = require('mongoose')
 const PointSchema = require('./Point')
 const AddressSchema = require('./Address')
+const ObjectId = mongoose.Schema.Types.ObjectId
 
 const ProductionUnitSchema = mongoose.Schema({
+  user: {
+    type: ObjectId,
+    ref: 'User',
+    required: true
+  },
   uf: {
     type: String,
     required: true
@@ -12,7 +18,7 @@ const ProductionUnitSchema = mongoose.Schema({
     required: true
   },
   name: String,
-  farm_address: [String],
+  farm_address: String,
   farm_gate_location: PointSchema,
   farm_house_location: PointSchema,
   correspondence_address: AddressSchema,
