@@ -1,9 +1,9 @@
 <template>
-  <v-toolbar dark color="#151621" elevation="0" class="pt-3 mb-8">
+  <v-toolbar elevation="0" class="pt-3 mb-8">
     <v-btn
       v-if="items.filter(item => item.to).length"
       small
-      class="tertiary ml-n4"
+      class="ml-n4"
       icon
       :to="items.filter(item => item.to).slice(-1)[0].to"
     >

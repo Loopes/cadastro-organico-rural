@@ -1,17 +1,17 @@
 <template>
   <div class="create">
-    <AdminBreadcrumb :items="breadcrumb" />
+    <Breadcrumb active="Cadsatrar unidade de produção" parent="/unidades-de-producao" />
     <ProductionUnitForm />
   </div>
 </template>
 <script>
 export default {
-  layout: 'admin',
+  middleware: 'auth',
   data () {
     return {
       breadcrumb: [
         { text: 'Dashboard', to: '/admin' },
-        { text: 'Unidades de produção', to: '/admin/production_units' },
+        { text: 'Unidades de produção', to: '/unidades-de-producao' },
         { text: 'Cadastrar item', active: true }
       ]
     }

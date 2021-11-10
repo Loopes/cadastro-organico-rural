@@ -1,6 +1,6 @@
 <template>
   <div class="create">
-    <AdminBreadcrumb :items="breadcrumb" />
+    <Breadcrumb active="Editar unidade de produção" parent="/unidades-de-producao" />
     <ProductionUnitForm v-if="production_unit" :production-unit="production_unit" />
     <div v-else class="text-center">
       <v-progress-circular indeterminate small label="Carregando..." />
@@ -9,15 +9,10 @@
 </template>
 <script>
 export default {
-  layout: 'admin',
+  middleware: 'auth',
   data () {
     return {
-      production_unit: null,
-      breadcrumb: [
-        { text: 'Dashboard', to: '/admin' },
-        { text: 'Unidades de produção', to: '/admin/production_units' },
-        { text: 'Editar item', active: true }
-      ]
+      production_unit: null
     }
   },
   async created () {

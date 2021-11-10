@@ -107,13 +107,10 @@ export default {
     customVariables: ['~/assets/css/variables.sass'],
     treeShake: true,
     theme: {
-      dark: true, // you don't actually need this line as it's for default
+      dark: false,
       themes: {
-        dark: {
-          background: '#151621',
-          primary: '#FF012F',
-          secondary: '#4F516F',
-          tertiary: '#1A1C28'
+        light: {
+          primary: '#00c65e'
         }
       }
     }

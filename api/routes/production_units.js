@@ -40,6 +40,8 @@ router.get('/:id', (req, res) => {
 
 router.post('/', auth.authenticated, (req, res) => {
   const newProductionUnit = new ProductionUnit(req.body)
+  console.log(req.user)
+  newProductionUnit.user = req.user._id
   newProductionUnit.save((err, productionUnit) => {
     if (err) {
       res.status(422).send(err.message)
