@@ -7,7 +7,7 @@
       <template #activator="{ on, attrs }">
         <v-btn v-bind="attrs" color="success" class="mb-6" v-on="on">
           <v-icon dark>mdi-map-marker</v-icon>
-          {{ hasCoordinates ? 'Mudar' : 'Adicionar' }} endereço
+          {{ addressFilled ? 'Mudar' : 'Adicionar' }} endereço
         </v-btn>
       </template>
       <v-card>

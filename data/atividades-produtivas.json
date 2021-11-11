@@ -1,0 +1,2777 @@
+{
+  "GRÃOS": [
+    {
+      "codigo": 1,
+      "descricao": "ALPISTE",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "AMENDOIM",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "ARROZ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "AVEIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "CENTEIO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "CEVADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "ERVILHA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 8,
+      "descricao": "FAVA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "FEIJÃO COMUM",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "FEIJÃO FRADINHO, CAUPI, DE CORDA OU MACAÇAR (VIGNA UNGUICULATA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 12,
+      "descricao": "MILHETO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 13,
+      "descricao": "MILHO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 15,
+      "descricao": "PAINÇO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 16,
+      "descricao": "SOJA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 17,
+      "descricao": "SORGO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 18,
+      "descricao": "TRIGO - TRITTICUM SPP",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 19,
+      "descricao": "TRIGO PRETO (TRIGO SARRACENO OU TRIGO MOURISCO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 20,
+      "descricao": "TRITICALE",
+      "unidade": "KG"
+    }
+  ],
+  "OLEAGINOSAS": [
+    {
+      "codigo": 21,
+      "descricao": "AZEITONA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 22,
+      "descricao": "BABUÇU",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 23,
+      "descricao": "COLZA (INCLUSIVE CANOLA E NÍGER)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 24,
+      "descricao": "DENDÊ (COCO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 25,
+      "descricao": "GERGELIM",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 26,
+      "descricao": "GIRASSOL",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 27,
+      "descricao": "LINHO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 28,
+      "descricao": "MAMONA",
+      "unidade": "KG"
+    }
+  ],
+  "CANA DE AÇÚCAR": [
+    {
+      "codigo": 1,
+      "descricao": "CANA-DE-AÇÚCAR",
+      "unidade": "KG"
+    }
+  ],
+  "FUMO": [
+    {
+      "codigo": 1,
+      "descricao": "FUMO (EM FOLHA)",
+      "unidade": "KG"
+    }
+  ],
+  "CAFÉ": [
+    {
+      "codigo": 1,
+      "descricao": "CAFÉ (EM COCO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "CAFÉ (EM GRÃO) - EXCETO TORRADO, MOÍDO OU DESCAFEINADO",
+      "unidade": "KG"
+    }
+  ],
+  "CACAU": [
+    {
+      "codigo": 1,
+      "descricao": "CACAU (EM AMÊNDOA)",
+      "unidade": "KG"
+    }
+  ],
+  "SERINGUEIRA": [
+    {
+      "codigo": 7,
+      "descricao": "BORRACHA NATURAL (HEVEA SPP)",
+      "unidade": "KG"
+    }
+  ],
+  "FORRAGEIRAS PARA CORTE": [
+    {
+      "codigo": 1,
+      "descricao": "ALFAFA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "AVEIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "AZEVÉM",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "BRAQUIÁRIAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "CANA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "CAPIM CIARÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "CAPIM COLONIÃO OU COLONIAL",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 8,
+      "descricao": "CAPIM ELEFANTE NAPIER",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "CAPIM GORDURA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "CAPIM JARAGUÁ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "CEVADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 12,
+      "descricao": "CORNICHÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 13,
+      "descricao": "CROTALÁRIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 14,
+      "descricao": "MILHO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 15,
+      "descricao": "MUCUNA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 17,
+      "descricao": "PALMA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 19,
+      "descricao": "TREMOÇO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 20,
+      "descricao": "TREVO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 28,
+      "descricao": "SORGO",
+      "unidade": "KG"
+    }
+  ],
+  "TÊXTEIS": [
+    {
+      "codigo": 1,
+      "descricao": "ALGODÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "JUNCO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "JUTA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "LINHO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "MALVA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "RAMI",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 8,
+      "descricao": "SISAL OU AGAVE",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "SORGO VASSOURA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "VIME",
+      "unidade": "KG"
+    }
+  ],
+  "TUBÉRCULOS E RAÍZES": [
+    {
+      "codigo": 1,
+      "descricao": "BATATA-INGLESA (TUBÉRCULO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "MANDIOCA, AIPIM OU MACAXEIRA (RAIZ)",
+      "unidade": "KG"
+    }
+  ],
+  "HORTALIÇAS FOLHOSAS E DE TALOS": [
+    {
+      "codigo": 1,
+      "descricao": "ACELGA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "AGRIÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "AIPO OU SALSÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "ALCACHOFRA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "ALFACE",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "ALHO PORRÓ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "ALMEIRÃO OU CHICÓRIA-AMARGA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 8,
+      "descricao": "ASPARGO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "AZEDINHA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "BELDROEGA OU ORA-PRO-NOBIS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "BERTALHA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 12,
+      "descricao": "BRÓCOLIS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 13,
+      "descricao": "CARURU",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 14,
+      "descricao": "CEREFÓLIO (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 15,
+      "descricao": "CHICÓRIA, CHICÓRIA-DE-FOLHA-CRESPA, CHICÓRIA-DE-FOLHA-LISA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 16,
+      "descricao": "COUVE, COUVE-MINEIRA, COUVE-CRESPA OU COUVE-MANTEIGA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 17,
+      "descricao": "COUVE-CHINESA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 18,
+      "descricao": "COUVE-DA-CATALONHA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 19,
+      "descricao": "COUVE-DE-BRUXELAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 20,
+      "descricao": "COUVE-FLOR",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 21,
+      "descricao": "COUVE-TRONCHUDA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 22,
+      "descricao": "ENDÍVIA OU ESCAROLA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 23,
+      "descricao": "ESPINAFRES (COMUM, DA NOVA ZELÂNDIA, ETC)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 24,
+      "descricao": "MANGERONA (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 25,
+      "descricao": "MOSTARDA (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 27,
+      "descricao": "REPOLHO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 28,
+      "descricao": "RÚCULA OU PINCHÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 29,
+      "descricao": "SERRALHA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 30,
+      "descricao": "TAIOBA (FOLHA)",
+      "unidade": "KG"
+    }
+  ],
+  "HORTALIÇAS DE FRUTOS": [
+    {
+      "codigo": 1,
+      "descricao": "ABÓBORA OU JERIMUM",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "ABOBRINHA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "BERINJELA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "CHUCHU",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "JILÓ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "MAXIXE (FRUTO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "MORANGO (FRUTO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "PEPINO (FRUTO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "PIMENTÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "QUIABO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 12,
+      "descricao": "TOMATE ESTAQUEADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 13,
+      "descricao": "TOMATE RASTEIRO",
+      "unidade": "KG"
+    }
+  ],
+  "HORTALIÇAS TUBEROSAS E RAÍZES": [
+    {
+      "codigo": 1,
+      "descricao": "ALCAÇUZ (RAIZ)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "ARARUTA (RIZOMA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "BARDANA OU GOBÔ (RAIZ)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "BATATA-BAROA OU MANDIOQUINHA-SALSA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "BATATA-DOCE (RAIZ)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "BETERRABA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "CARÁ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 8,
+      "descricao": "CENOURA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "COUVE-NABO OU RUTABAGA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "COUVE-RÁBANO OU RÁBANO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "INHAME (RIZOMA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 12,
+      "descricao": "NABIÇA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 13,
+      "descricao": "NABO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 15,
+      "descricao": "RABANETE",
+      "unidade": "KG"
+    }
+  ],
+  "HORTALIÇAS PARA GRÃOS E VAGENS": [
+    {
+      "codigo": 1,
+      "descricao": "ERVILHA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "FEIJÃO-VAGEM (FEIJÃO VERDE)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "GRÃO-DE-BICO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "GUANDU EM GRÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "LENTILHA EM GRÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "TREMOÇO EM GRÃO",
+      "unidade": "KG"
+    }
+  ],
+  "CORANTES, MEDICINAIS E CONDIMENTARES": [
+    {
+      "codigo": 1,
+      "descricao": "AÇAFRÃO (FLORES SECAS)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "ALCAPARRA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "ALECRIM (FLOR E FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "ALHO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "ALOÉ OU BABOSA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "ANIS ESTRELADO OU BADIANA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "ARRUDA (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 8,
+      "descricao": "BAUNILHA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "BOLDO (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "CAMOMILA (FLORES PARA INFUSÃO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "CANELA (CASCA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 12,
+      "descricao": "CAPIM LIMÃO (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 13,
+      "descricao": "CEBOLA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 14,
+      "descricao": "CEBOLINHA (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 15,
+      "descricao": "COENTRO (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 16,
+      "descricao": "COMINHO (SEMENTES)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 17,
+      "descricao": "CRAVO-DA-ÍNDIA (FLOR CONDIMENTAR)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 18,
+      "descricao": "CURCUMA OU AÇAFRÃO-DA-TERRA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 19,
+      "descricao": "ERVA-CIDREIRA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 20,
+      "descricao": "ERVA-DOCE OU ANIS VERDE (FLORES PARA INFUSÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 21,
+      "descricao": "ESTÉVIA (RAMA SECA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 22,
+      "descricao": "FUNCHO (ERVA-DOCE-DE-CABEÇA OU ANIZ DOCE)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 23,
+      "descricao": "GENGIBRE (RIZOMA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 24,
+      "descricao": "HORTELÃ-PIMENTA OU MENTA (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 25,
+      "descricao": "LOSNA OU ABSINTO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 26,
+      "descricao": "LOURO (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 27,
+      "descricao": "MANJERICÃO OU ALFAVACA (FOLHA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 28,
+      "descricao": "MELÃO-DE-SÃO-CAETANO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 29,
+      "descricao": "MOSTARDA (SEMENTE)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 30,
+      "descricao": "NOZ MOSCADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 31,
+      "descricao": "ORÉGANO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 33,
+      "descricao": "PIMENTA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 34,
+      "descricao": "PIMENTA-DO-REINO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 35,
+      "descricao": "POEJO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 36,
+      "descricao": "RUIBARBO (RAIZ)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 37,
+      "descricao": "SALSA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 38,
+      "descricao": "SALSAPARRILHA (RAIZ)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 39,
+      "descricao": "SÁLVIA OU SALVA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 40,
+      "descricao": "SEGURELHA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 41,
+      "descricao": "TOMILHO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 42,
+      "descricao": "URUCUM (SEMENTE COLORÍFICA)",
+      "unidade": "KG"
+    }
+  ],
+  "PRODUTOS HORTÍCOLAS NÃO ESPECIFICADOS": [
+    {
+      "codigo": 1,
+      "descricao": "BUCHA OU ESPONJA VEGETAL (LUFA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "CABAÇA-PURUNGA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "COGUMELOS COMESTÍVEIS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "MILHO VERDE OU DOCE MESMO EM ESPIGA",
+      "unidade": "KG"
+    }
+  ],
+  "FLORES PARA CORTE": [
+    {
+      "codigo": 1,
+      "descricao": "ALSTROEMERIA",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "ANTÚRIO",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 3,
+      "descricao": "ASTER",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 4,
+      "descricao": "BOCA-DE-LEÃO (ANTHIRRINUM)",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 5,
+      "descricao": "CHUVA-DE-PRATA",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 6,
+      "descricao": "COPO-DE-LEITE (ZANTEDESCHIA)",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 7,
+      "descricao": "CRAVO (DIANTHUS)",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 8,
+      "descricao": "CRISÂNTEMO (DENDRANTHEMA)",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 9,
+      "descricao": "CYMBIDIUM",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 10,
+      "descricao": "ESTRELITZIA",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 11,
+      "descricao": "FLOR-DE-TRIGO",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 12,
+      "descricao": "GENGIBRE",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 13,
+      "descricao": "GERBERA",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 14,
+      "descricao": "GIPSÓFILA OU BRANQUINHA",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 15,
+      "descricao": "GLADÍOLO (PALMA-DE-SANTA-RITA)",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 16,
+      "descricao": "HELICONIA",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 17,
+      "descricao": "LIATHRIS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 18,
+      "descricao": "LIRIO (LILIUM)",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 19,
+      "descricao": "LISIANTUS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 20,
+      "descricao": "MARGARIDAS",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 21,
+      "descricao": "NARCISSO, (POLIANTHES OU ANGÉLICA)",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 23,
+      "descricao": "ORQUÍDEAS",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 24,
+      "descricao": "ROSAS",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 25,
+      "descricao": "TANGO (SOLIDAGO)",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 26,
+      "descricao": "TULIPA",
+      "unidade": "MAÇO"
+    }
+  ],
+  "FOLHAS VERDES PARA CORTE": [
+    {
+      "codigo": 1,
+      "descricao": "ARECAS",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 2,
+      "descricao": "AVENCA",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 3,
+      "descricao": "CIPRESTE (CUPRESSUS)",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 4,
+      "descricao": "CORDILINE",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 5,
+      "descricao": "MURTA (MURRAYA)",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 7,
+      "descricao": "PAPIRO (CYPERUS)",
+      "unidade": "MAÇO"
+    },
+    {
+      "codigo": 8,
+      "descricao": "PAULISTINHA (NEPHROLEPIS)",
+      "unidade": "MAÇO"
+    }
+  ],
+  "PLANTAS DE FLORES EM VASO": [
+    {
+      "codigo": 1,
+      "descricao": "AZALEA (RHODODENDRON)",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "BEGÔNIAS",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 3,
+      "descricao": "BICO-DE-PAPAGAIO (POINSENTIA)",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 4,
+      "descricao": "BROMÉLIAS",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 5,
+      "descricao": "CACTUS",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 6,
+      "descricao": "CICLAME",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 7,
+      "descricao": "CRISÂNTEMO",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 8,
+      "descricao": "GERÂNIO (PELARGONIUM)",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 9,
+      "descricao": "GIRASSOL (HELIANTHUS)",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 10,
+      "descricao": "GLOXÍNIA",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 11,
+      "descricao": "HORTÊNSIA (HIDRANGEA)",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 12,
+      "descricao": "KALANCHOE",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 13,
+      "descricao": "LÍRIO, (LILIUM)",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 14,
+      "descricao": "MARGARIDAS",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 16,
+      "descricao": "PRIMULA",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 17,
+      "descricao": "ROSEIRA",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 18,
+      "descricao": "TULIPAS",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 19,
+      "descricao": "VIOLETA",
+      "unidade": "CAIXA"
+    }
+  ],
+  "FOLHAGENS EM VASO": [
+    {
+      "codigo": 1,
+      "descricao": "ÁRVORE DA FELICIDADE, (POLYSCIAS)",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 2,
+      "descricao": "BONSAI",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 3,
+      "descricao": "CHEFLERA, (SCHEFFLERA)",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 4,
+      "descricao": "DRACENA (DRACAENA)",
+      "unidade": "CAIXA"
+    },
+    {
+      "codigo": 5,
+      "descricao": "ESPADA-DE-SÃO-JORGE, (SANSEVIERIA)",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 6,
+      "descricao": "FICUS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 7,
+      "descricao": "GIBÓIA, (SCINDAPSUS)",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 8,
+      "descricao": "HERA, (HEDERA)",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 9,
+      "descricao": "MARANTA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 11,
+      "descricao": "PEPERÔNIA, (PEPEROMIA)",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 12,
+      "descricao": "SAMAMBAIAS",
+      "unidade": "VASO"
+    },
+    {
+      "codigo": 13,
+      "descricao": "SINGÔNIO, (SINGONIUM)",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 14,
+      "descricao": "SUCULENTAS",
+      "unidade": "UNIDADE"
+    }
+  ],
+  "PAISAGISMO E JARDINOCULTURA": [
+    {
+      "codigo": 1,
+      "descricao": "ARBUSTOS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 2,
+      "descricao": "ÁRVORES",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 3,
+      "descricao": "CACTUS, PARA PAISAGISMO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 4,
+      "descricao": "CONÍFERAS (PINHEIROS)",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 5,
+      "descricao": "GRAMAS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 6,
+      "descricao": "ORQUÍDEAS, PARA PAISAGISMO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 8,
+      "descricao": "PALMEIRAS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 9,
+      "descricao": "PLANTAS ANUAIS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 10,
+      "descricao": "PLANTAS AQUÁTICAS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 11,
+      "descricao": "PLANTAS PARA FORRAÇÕES",
+      "unidade": "UNIDADE"
+    }
+  ],
+  "FRUTÍFERAS": [
+    {
+      "codigo": 1,
+      "descricao": "ABACATE",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "ABACAXI OU ANANÁS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 3,
+      "descricao": "AÇAÍ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "ACEROLA OU CEREJA-DAS-ANTILHAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "AMEIXA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "AMORA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "ARAÇÁ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 8,
+      "descricao": "ARATICUM",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "BANANA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "CAJÁ-MANGA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "CAJÚ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 12,
+      "descricao": "CAMU-CAMU",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 13,
+      "descricao": "CAQUI",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 14,
+      "descricao": "CARAMBOLA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 15,
+      "descricao": "CASTANHA EUROPÉIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 16,
+      "descricao": "CEREJA OU CEREJA-DA-EUROPA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 17,
+      "descricao": "CERIGUELA OU SERIGUELA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 18,
+      "descricao": "CHÁ-DA-ÍNDIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 19,
+      "descricao": "CHERIMÓLIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 21,
+      "descricao": "CIDRA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 22,
+      "descricao": "COCO-DA-BAÍA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 23,
+      "descricao": "CUPUAÇU",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 24,
+      "descricao": "ERVA-MATE",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 25,
+      "descricao": "FIGO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 26,
+      "descricao": "FRAMBOESA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 27,
+      "descricao": "FRUTA-DE-CONDE",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 28,
+      "descricao": "GOIABA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 29,
+      "descricao": "GRAVIOLA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 30,
+      "descricao": "GROSELHA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 31,
+      "descricao": "GUARANÁ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 32,
+      "descricao": "JABUTICABA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 33,
+      "descricao": "JACA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 34,
+      "descricao": "JAMBO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 35,
+      "descricao": "JAMELÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 36,
+      "descricao": "JENIPAPO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 37,
+      "descricao": "KINKAN, LARANJINHA KINKAN OU KUNQUAT",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 38,
+      "descricao": "LARANJA - LIMA, PÊRA, DA TERRA, ETC",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 39,
+      "descricao": "LICHIA OU LECHIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 40,
+      "descricao": "LIMA - DE BICO, DA PÉRSIA, ETC",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 41,
+      "descricao": "LIMÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 42,
+      "descricao": "LÚPULO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 43,
+      "descricao": "MAÇÃ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 44,
+      "descricao": "MAMÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 45,
+      "descricao": "MANGA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 46,
+      "descricao": "MANGUSTÃO OU BACUPARI",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 47,
+      "descricao": "MARACUJÁ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 48,
+      "descricao": "MARMELO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 49,
+      "descricao": "MELANCIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 50,
+      "descricao": "MELÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 51,
+      "descricao": "NECTARINA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 52,
+      "descricao": "NÊSPERA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 53,
+      "descricao": "NOZ (EUROPÉIA, PECÃ)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 54,
+      "descricao": "NOZ MACADÂMIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 56,
+      "descricao": "PÊRA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 57,
+      "descricao": "PÊSSEGO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 58,
+      "descricao": "PITANGA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 59,
+      "descricao": "POMELO OU GRAPE-FRUIT",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 60,
+      "descricao": "PUPUNHA (COCO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 61,
+      "descricao": "PUPUNHA (PALMITO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 62,
+      "descricao": "QUIVI OU KIWI",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 63,
+      "descricao": "ROMÃ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 64,
+      "descricao": "SAPOTI",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 65,
+      "descricao": "TÂMARA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 66,
+      "descricao": "TAMARINDO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 67,
+      "descricao": "TANGELO (CÍTRICO HÍBRIDO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 68,
+      "descricao": "TANGERINA - PONKAN, MEXERICA, BERGAMOTA, ETC",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 69,
+      "descricao": "TANGOR (CÍTRICO HÍBRIDO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 70,
+      "descricao": "TORANJA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 71,
+      "descricao": "UVA",
+      "unidade": "KG"
+    }
+  ],
+  "FLORESTAIS": [
+    {
+      "codigo": 1,
+      "descricao": "ACÁCIA-NEGRA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 2,
+      "descricao": "ALGAROBEIRA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 3,
+      "descricao": "ANDIROBA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 4,
+      "descricao": "ANGICO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 5,
+      "descricao": "BRACATINGA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 6,
+      "descricao": "CANELA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 7,
+      "descricao": "CARVALHO CORTICEIRO OU SOBREIRO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 8,
+      "descricao": "CASUARINA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 9,
+      "descricao": "CAXETA OU TABEBUIA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 10,
+      "descricao": "CEDRO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 11,
+      "descricao": "CEDRO JAPONÊS OU CRIPTOMÉRIA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 12,
+      "descricao": "CIPRESTE",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 13,
+      "descricao": "CUNINGÂMIA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 14,
+      "descricao": "EUCALIPTO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 15,
+      "descricao": "GMELINA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 16,
+      "descricao": "GREVILHA GIGANTE",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 17,
+      "descricao": "GUAJUVIRA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 18,
+      "descricao": "GUAPURUVU",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 19,
+      "descricao": "IMBUIA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 20,
+      "descricao": "IPÊ",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 21,
+      "descricao": "JACARANDÁ",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 22,
+      "descricao": "JACARÉ OU PAU JACARÉ",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 23,
+      "descricao": "JACATIRÃO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 24,
+      "descricao": "MOGNO OU AGUANO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 26,
+      "descricao": "PAU-BRASIL",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 27,
+      "descricao": "PEROBA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 28,
+      "descricao": "PINHEIRO BRASILEIRO OU ARAUCÁRIA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 29,
+      "descricao": "PINUS AMERICANO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 30,
+      "descricao": "QUIRI OU KIRI",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 31,
+      "descricao": "SABIÁ",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 32,
+      "descricao": "SASSAFRÁS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 33,
+      "descricao": "SETE CASACAS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 34,
+      "descricao": "TECA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 35,
+      "descricao": "UCUUBEIRA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 36,
+      "descricao": "VINHÁTICO",
+      "unidade": "UNIDADE"
+    }
+  ],
+  "MUDAS E SEMENTES": [
+    {
+      "codigo": 1,
+      "descricao": "MUDAS CERTIFICADAS DE CANA-DE-AÇÚCAR",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 2,
+      "descricao": "OUTRAS MUDAS CERTIFICADAS DE OUTRAS LAVOURAS TEMPORÁRIAS NÃO ESPECIFICADAS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 4,
+      "descricao": "SEMENTES ALGODÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "SEMENTES DE ARROZ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "SEMENTES DE AVEIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "SEMENTES DE BATATA-INGLESA (BATATA-SEMENTE)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 8,
+      "descricao": "SEMENTES DE CEVADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "SEMENTES DE FEIJÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "SEMENTES DE FUMO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "SEMENTES DE GIRASSOL",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 12,
+      "descricao": "SEMENTES DE MILHO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 13,
+      "descricao": "SEMENTES DE SOJA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 14,
+      "descricao": "SEMENTES DE SORGO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 15,
+      "descricao": "SEMENTES DE TRIGO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 16,
+      "descricao": "SEMENTES PARA FORMAÇÃO DE PASTO - FORRAGEIRAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 17,
+      "descricao": "MUDAS DE HORTALIÇAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 18,
+      "descricao": "SEMENTES DE HORTALIÇAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 19,
+      "descricao": "MUDAS (BULBOS, RIZOMAS, REBENTOS, ENXERTOS, ESTACAS E OUTROS MATERIAIS PROPAGATIVOS) DE PLANTAS DE FLOR PARA CORTE, DE FOLHAS VERDES PARA CORTE E DE PLANTAS ORNAMENTAIS",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 20,
+      "descricao": "SEMENTES DE PLANTAS DE FLOR PARA CORTE, DE FOLHAS VERDES PARA CORTE E DE PLANTAS ORNAMENTAIS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 21,
+      "descricao": "MUDAS DE CACAU",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 22,
+      "descricao": "MUDAS DE CAFÉ",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 23,
+      "descricao": "MUDAS DE CAJÚ",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 24,
+      "descricao": "MUDAS DE FRUTÍFERAS DE LAVOURA PERMANENTE",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 25,
+      "descricao": "MUDAS DE LARANJA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 26,
+      "descricao": "MUDAS DE MAÇÃ",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 27,
+      "descricao": "MUDAS DE OUTRAS FRUTAS CÍTRICAS, EXCLUSIVE DE LARANJA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 28,
+      "descricao": "MUDAS DE OUTRAS PLANTAS DE LAVOURA PERMANENTE",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 29,
+      "descricao": "MUDAS DE PALMEIRAS PARA PRODUÇÃO DE PALMITO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 30,
+      "descricao": "MUDAS DE PÊSSEGO",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 31,
+      "descricao": "MUDAS DE SERINGUEIRA",
+      "unidade": "UNIDADE"
+    },
+    {
+      "codigo": 32,
+      "descricao": "MUDAS DE UVA",
+      "unidade": "UNIDADE"
+    }
+  ],
+  "BOVINOS": [
+    {
+      "codigo": 1,
+      "descricao": "BEZERRAS (VITELAS)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "BEZERROS (VITELOS)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 3,
+      "descricao": "BOIS (2 ANOS E MAIS)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 4,
+      "descricao": "NOVILHAS (DE 1 A MENOS DE 2 ANOS), EXCETO PRECOCE",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 5,
+      "descricao": "NOVILHAS PRECOCES (ATÉ 24 MESES)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 6,
+      "descricao": "NOVILHOS (DE 1 A MENOS DE 2 ANOS), EXCETO PRECOCE",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 7,
+      "descricao": "NOVILHOS PRECOCES (ATÉ 24 MESES",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 8,
+      "descricao": "NOVILHONA (VACA ESTÉRIL OU FALHADA)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 9,
+      "descricao": "TOURO",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 10,
+      "descricao": "VACA (SECA)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 11,
+      "descricao": "VACA EM LACTAÇÃO",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 12,
+      "descricao": "ESTERCO DE BOVINOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 13,
+      "descricao": "LEITE DE VACA IN NATURA",
+      "unidade": "LITROS"
+    },
+    {
+      "codigo": 14,
+      "descricao": "SÊMEN DE BOVINOS",
+      "unidade": "MILILITRO"
+    }
+  ],
+  "BUFALINOS": [
+    {
+      "codigo": 1,
+      "descricao": "BÚFALA EM LACTAÇÃO (ORDENHADA)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "BÚFALOS MENORES DE 1 ANO",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 3,
+      "descricao": "BÚFALOS E BÚFALAS (SECAS) 1 A 2 ANOS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 4,
+      "descricao": "BÚFALOS E BÚFALAS (SECAS) 2 ANOS E MAIS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 5,
+      "descricao": "LEITE DE BÚFALA (IN NATURA)",
+      "unidade": "LITROS"
+    },
+    {
+      "codigo": 6,
+      "descricao": "SÊMEN DE BÚFALOS",
+      "unidade": "MILILITRO"
+    }
+  ],
+  "EQUINOS": [
+    {
+      "codigo": 1,
+      "descricao": "EQÜINOS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "CRINA DE EQÜINO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "SÊMEN DE EQÜINOS",
+      "unidade": "MILILITRO"
+    }
+  ],
+  "ASININOS E MUARES": [
+    {
+      "codigo": 1,
+      "descricao": "ASININOS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "MUARES",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 3,
+      "descricao": "SÊMEN DE ASININOS",
+      "unidade": "MILILITRO"
+    }
+  ],
+  "OVINOS": [
+    {
+      "codigo": 1,
+      "descricao": "CARNEIROS (NÃO REPRODUTORES)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "CARNEIROS (REPRODUTORES)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 3,
+      "descricao": "CORDEIROS (MACHOS E FÊMEAS)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 4,
+      "descricao": "OVELHAS (MATRIZES E NÃO REPRODUTORAS)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 5,
+      "descricao": "OVINOS TOSQUIADOS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 6,
+      "descricao": "LÃ OVINA DE TOSQUIA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "SÊMEN DE OVINOS",
+      "unidade": "MILILITRO"
+    }
+  ],
+  "SUÍNOS": [
+    {
+      "codigo": 1,
+      "descricao": "PORCAS MATRIZES, REPRODUTORAS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "SUÍNOS DE MENOS DE 2 MESES, EXCETO REPRODUTORES",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 3,
+      "descricao": "SUÍNOS DE 2 A 5 MESES, EXCETO REPRODUTORES",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 4,
+      "descricao": "SUÍNOS DE 5 MESES E MAIS, EXCETO REPRODUTORES",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 5,
+      "descricao": "SUÍNOS REPRODUTORES (VARRÃO)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 6,
+      "descricao": "ESTERCO DE SUÍNOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "SÊMEN DE SUÍNOS",
+      "unidade": "MILILITRO"
+    }
+  ],
+  "AVES (GALLUS GALLUS)": [
+    {
+      "codigo": 1,
+      "descricao": "FRANGOS E FRANGAS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "GALINÁCEOS DA ESPÉCIE GALLUS GALLUS, N.E.",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 3,
+      "descricao": "GALINHAS POEDEIRAS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 4,
+      "descricao": "GALOS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 5,
+      "descricao": "OVOS DE GALINHA (EXCETO PARA INCUBAÇÃO)",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 6,
+      "descricao": "OVOS DE GALINHA (PARA INCUBAÇÃO)",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 7,
+      "descricao": "PINTOS DE 1 DIA REPRODUTOR",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 8,
+      "descricao": "PINTOS DE 1 DIA NÃO REPRODUTOR",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 9,
+      "descricao": "ESTERCO DE FRANGO",
+      "unidade": "KG"
+    }
+  ],
+  "AVES – OUTRAS ESPÉCIES": [
+    {
+      "codigo": 1,
+      "descricao": "AVES (EMA, PAVÃO, PERDIZ, FAISÃO, ETC.), N. E.",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "AVESTRUZ",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 3,
+      "descricao": "CODORNAS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 4,
+      "descricao": "GALINHA D'ANGOLA (COCÓ, TÔ-FRACO, GUINÉ, PINTADA)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 5,
+      "descricao": "PATOS, GANSOS, MARRECOS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 6,
+      "descricao": "PERUS",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 7,
+      "descricao": "OVOS DE CODORNAS (PARA INCUBAÇÃO E PARA OUTROS FINS)",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 8,
+      "descricao": "OVOS DE OUTRAS AVES (PARA INCUBAÇÃO E PARA OUTROS FINS), N. E.",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 9,
+      "descricao": "OVOS DE PATAS, MARRECAS OU GANSAS (PARA INCUBAÇÃO E PARA OUTROS FINS)",
+      "unidade": "DÚZIA"
+    },
+    {
+      "codigo": 10,
+      "descricao": "OVOS DE PERUAS (PARA INCUBAÇÃO E PARA OUTROS FINS)",
+      "unidade": "DÚZIA"
+    }
+  ],
+  "CAPRINOS": [
+    {
+      "codigo": 1,
+      "descricao": "BODE REPRODUTOR",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "BODE NÃO REPRODUTOR",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 3,
+      "descricao": "CABRA (SECA)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 4,
+      "descricao": "CABRA EM LACTAÇÃO",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 5,
+      "descricao": "CABRITA E CABRITO",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 6,
+      "descricao": "LEITE DE CABRA (IN NATURA)",
+      "unidade": "LITROS"
+    },
+    {
+      "codigo": 7,
+      "descricao": "SÊMEN DE CAPRINOS",
+      "unidade": "MILILITRO"
+    }
+  ],
+  "ABELHAS": [
+    {
+      "codigo": 1,
+      "descricao": "CERA DE ABELHA (PRODUTO VIRGEM)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "GELÉIA REAL",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "MEL",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "PÓLEN",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "PRÓPOLIS",
+      "unidade": "KG"
+    }
+  ],
+  "BICHO DA SEDA": [
+    {
+      "codigo": 1,
+      "descricao": "CASULOS DO BICHO-DA-SEDA (EM BRUTO)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "OVOS E LARVAS DO BICHO-DA-SEDA",
+      "unidade": "KG"
+    }
+  ],
+  "COELHOS": [
+    {
+      "codigo": 1,
+      "descricao": "COELHOS",
+      "unidade": "CABEÇA"
+    }
+  ],
+  "ESCARGÔ": [
+    {
+      "codigo": 1,
+      "descricao": "ESCARGÔ",
+      "unidade": "CABEÇA"
+    }
+  ],
+  "MINHOCA": [
+    {
+      "codigo": 1,
+      "descricao": "MINHOCA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "HUMUS DE MINHOCA",
+      "unidade": "KG"
+    }
+  ],
+  "OUTROS ANIMAIS DE PEQUENO PORTE": [
+    {
+      "codigo": 1,
+      "descricao": "ANIMAIS DE LABORATÓRIO OU BIOTÉRIOS (RATOS, SERPENTES, PREÁ, HAMESTER, MACACOS, ETC.)",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 2,
+      "descricao": "ANIMAIS DOMÉSTICOS (CÃES, GATOS, ETC.)",
+      "unidade": "CABEÇA"
+    }
+  ],
+  "ANIMAIS SILVESTRES": [
+    {
+      "codigo": 1,
+      "descricao": "ANIMAIS SILVESTRES (JACARÉ, CAPIVARA, JAVALI, PACA, CATETO, ETC.)",
+      "unidade": "CABEÇA"
+    }
+  ],
+  "PESCA": [
+    {
+      "codigo": 1,
+      "descricao": "ENGUIAS VIVAS, PARA REPRODUÇÃO OU PARA OUTRAS FINALIDADES",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "ABRÓTEA FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "ATUNS OU ALBACORAS FRESCOS OU RESFRIADOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "BAGRES FRESCOS OU RESFRIADOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "BONITOS FRESCOS OU RESFRIADOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "CAÇÃO FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 8,
+      "descricao": "CASTANHA FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "CAVALINHAS FRESCAS OU RESFRIADAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "CIOBA FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "CORVINA FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 12,
+      "descricao": "CURIMATÃ FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 13,
+      "descricao": "DOURADO FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 14,
+      "descricao": "ENCHOVA OU ANCHOVA FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 15,
+      "descricao": "ENGUIAS FRESCAS OU RESFRIADAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 16,
+      "descricao": "GAROUPA FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 17,
+      "descricao": "LINGUADOS FRESCOS OU RESFRIADOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 18,
+      "descricao": "MERLUZA FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 19,
+      "descricao": "NAMORADO FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 21,
+      "descricao": "PACU FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 22,
+      "descricao": "PARGO FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 23,
+      "descricao": "PESCADA FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 24,
+      "descricao": "PESCADINHA FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 25,
+      "descricao": "PIRAMUTABA FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 26,
+      "descricao": "PIRARUCU FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 27,
+      "descricao": "SARDINHA VERDADEIRA, FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 28,
+      "descricao": "SURUBIM FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 29,
+      "descricao": "TAMBAQUI FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 30,
+      "descricao": "TUCUNARÉ FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 31,
+      "descricao": "XAREU FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 32,
+      "descricao": "XERELETE FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    }
+  ],
+  "CRUSTÁCEOS, OSTRAS E MOLUSCOS": [
+    {
+      "codigo": 1,
+      "descricao": "CAMARÃO (BRANCO, ROSA, SETE BARBAS E VERDADEIRO) VIVO, FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "CARANGUEJO VIVO, FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "LAGOSTA VIVA, FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "LAGOSTIM VIVO, FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "LULA VIVA, FRESCA OU RESFRIADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "MEXILHÕES OU MARISCOS VIVOS, FRESCOS OU RESFRIADOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "OSTRA VIVA, FRESCA OU REFRIGERADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "POLVO VIVO, FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "SIRI VIVO, FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "VIEIRA VIVO OU PARA REPRODUÇÃO, FRESCO OU REFRIGERADO",
+      "unidade": "KG"
+    }
+  ],
+  "QUELÔNIOS": [
+    {
+      "codigo": 1,
+      "descricao": "QUELÔNIOS VIVOS (TARTARUGA MARINHA, ETC)",
+      "unidade": "KG"
+    }
+  ],
+  "PRODUTOS DA PESCA E OUTROS SERES VIVOS": [
+    {
+      "codigo": 1,
+      "descricao": "ALGAS MARINHAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "CORAIS EM BRUTO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "ESPONJAS EM BRUTO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "OURIÇO-DO-MAR VIVO, FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "PÉROLAS NATURAIS",
+      "unidade": "KG"
+    }
+  ],
+  "PEIXES DA AQUICULTURA VIVOS": [
+    {
+      "codigo": 1,
+      "descricao": "CARPAS VIVAS OU PARA REPRODUÇÃO (CARPA-CABEÇA-GRANDE, CARPA-CAPIM, CARPA-COMUM, CARPA-PRATEADA)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "CURIMATÃ VIVO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "PACU VIVO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "PIAUS VIVO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "PINTADO VIVO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "SALMÕES VIVOS, PARA REPRODUÇÃO OU PARA OUTRAS FINALIDADES",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 8,
+      "descricao": "TAMBACU VIVO(2)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 9,
+      "descricao": "TAMBAQUIS VIVO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 10,
+      "descricao": "TILÁPIA VIVO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 11,
+      "descricao": "TRUTAS VIVAS, PARA REPRODUÇÃO OU PARA OUTRAS FINALIDADES",
+      "unidade": "KG"
+    }
+  ],
+  "CRUSTÁCEOS, OSTRAS E MOLUSCOS DA AQÜICULTURA VIVOS": [
+    {
+      "codigo": 1,
+      "descricao": "CAMARÕES VIVOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "OSTRAS VIVAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "MEXILHÕES OU MARISCOS VIVOS",
+      "unidade": "KG"
+    }
+  ],
+  "PEIXES DA AQUICULTURA, FRESCOS OU REFRIGERADOS": [
+    {
+      "codigo": 1,
+      "descricao": "CARPAS FRESCAS OU RESFRIADAS (CARPA-CABEÇA-GRANDE, CARPA-CAPIM, CARPA-COMUM, CARPA-PRATEADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "PINTADO FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "SALMÕES FRESCOS OU RESFRIADOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "TAMBACU FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "TRUTAS FRESCAS OU RESFRIADAS",
+      "unidade": "KG"
+    }
+  ],
+  "CRUSTÁCEOS, OSTRAS E MOLUSCOS DA AQÜICULTURA": [
+    {
+      "codigo": 1,
+      "descricao": "CAMARÃO FRESCO OU RESFRIADO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "MEXILHÕES OU MARISCOS FRESCOS OU RESFRIADOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "OSTRA FRESCA OU REFRIGERADA",
+      "unidade": "KG"
+    }
+  ],
+  "PRODUTOS DA AQUICULTURA": [
+    {
+      "codigo": 1,
+      "descricao": "ALEVINOS (EXCETO OS DE PEIXES ORNAMENTAIS)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "ALGAS MARINHAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "OVAS DE PEIXE, FECUNDADAS PARA REPRODUÇÃO",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "PEIXES ORNAMENTAIS (INCLUSIVE ALEVINOS DE PEIXES ORNAMENTAIS)",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 6,
+      "descricao": "PÉROLAS CULTIVADAS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 7,
+      "descricao": "PÓS LARVAS",
+      "unidade": "KG"
+    }
+  ],
+  "RANICULTURA": [
+    {
+      "codigo": 1,
+      "descricao": "CARNE DE RÃ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 2,
+      "descricao": "COXAS DE RÃ, RESFRIADA OU CONGELADA",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 3,
+      "descricao": "GIRINOS",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 4,
+      "descricao": "PELE DE RÃ",
+      "unidade": "KG"
+    },
+    {
+      "codigo": 5,
+      "descricao": "RÃS MATRIZES",
+      "unidade": "CABEÇA"
+    },
+    {
+      "codigo": 6,
+      "descricao": "RÃ VIVA PARA CORTE OU PARA OUTRAS FINALIDADES",
+      "unidade": "CABEÇA"
+    }
+  ]
+}

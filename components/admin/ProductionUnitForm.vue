@@ -17,6 +17,7 @@
         <validation-provider v-slot="{ errors }" name="nome" rules="required">
           <v-text-field v-model="form.name" outlined name="name" label="Nome da propriedade *" :error-messages="errors" />
         </validation-provider>
+        <ProductionActivitiesForm v-model="form.production_activities" label="Culturas" />
 
         <v-textarea v-model="form.farm_address" outlined name="farm_address" label="Endereço da propriedade" rows="2" auto-grow />
 
@@ -37,7 +38,6 @@
 
         <v-textarea v-model="form.contacts" outlined name="contacts" label="Contatos" rows="2" auto-grow />
         <hr class="mb-6">
-        <tags-form v-model="form.cultures" :current-tags="culturas" label="Culturas" />
         <Upload v-model="form.documents" label="Anexar documentos" type="documents" multiple edit-title />
         <Upload v-model="form.pictures" label="Anexar imagens" type="images" multiple edit-title />
         <Save :invalid="invalid" />
@@ -56,7 +56,6 @@ import {
 import mixinForm from '@/mixins/form'
 import estados from '@/data/estados.json'
 import cidades from '@/data/cidades.json'
-import culturas from '@/data/culturas-ibge.json'
 
 export default {
   components: {
@@ -74,7 +73,6 @@ export default {
     return {
       estados,
       cidades,
-      culturas: culturas.sort(),
       form: {
         uf: '',
         city: '',
@@ -96,12 +94,11 @@ export default {
         permanent_preservation_area: '',
         legal_reservea_area: '',
         organic_since: '',
-        cultures: [],
+        production_activities: [],
         previous_year_total_production: '',
         current_year_estimated_production: '',
         certifying_entity_type: '',
         certifying_entity: '',
-
         pictures: [],
         documents: []
       }

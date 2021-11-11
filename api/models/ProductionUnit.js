@@ -32,7 +32,7 @@ const ProductionUnitSchema = mongoose.Schema({
   permanent_preservation_area: Number,
   legal_reservea_area: Number,
   organic_since: Date,
-  cultures: [String],
+  production_activities: [Object],
   previous_year_total_production: Number,
   current_year_estimated_production: Number,
 
