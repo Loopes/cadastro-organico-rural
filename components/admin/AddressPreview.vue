@@ -1,13 +1,14 @@
 <template>
-  <div v-if="address">
+  <div>
     <div class="mb-6">
-      <p v-if="validCoordinates">
+      <p>
         <span class="overline">{{ label }}:</span>
-        <br>
-        <strong v-if="address.description">{{ address.description }}</strong>
-        <v-btn color="secondary" small class="ml-1" @click="show_map = !show_map">
-          {{ show_map ? 'Esconder mapa' : 'Ver mapa' }}
-        </v-btn>
+        <span v-if="validCoordinates">
+          <strong v-if="address.description">{{ address.description }}</strong>
+          <v-btn color="secondary" small class="ml-1" @click="show_map = !show_map">
+            {{ show_map ? 'Esconder mapa' : 'Ver mapa' }}
+          </v-btn>
+        </span>
       </p>
     </div>
     <l-map
@@ -16,7 +17,7 @@
       :center="address.location.coordinates"
       :options="{ scrollWheelZoom: false }"
       style="height: 30vw"
-      class="mb-4"
+      class="mb-6"
     >
       <l-tile-layer :url="url" :attribution="attribution" />
       <l-marker :lat-lng="address.location.coordinates" />

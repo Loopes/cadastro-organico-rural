@@ -35,10 +35,12 @@
         <v-icon v-else>mdi-camera</v-icon>
       </v-avatar>
     </a>
-    <v-btn v-else color="primary" class="lighten-1" @click="upload">
-      <v-icon left>mdi-upload</v-icon>
-      Enviar {{ type === 'images' ? 'image' + (multiple ? 'ns' : 'm') : 'arquivo' + (multiple ? 's' : '') }}
-    </v-btn>
+    <div v-else>
+      <v-btn color="primary" class="lighten-1" @click="upload">
+        <v-icon left>mdi-upload</v-icon>
+        Enviar {{ type === 'images' ? 'image' + (multiple ? 'ns' : 'm') : 'arquivo' + (multiple ? 's' : '') }}
+      </v-btn>
+    </div>
     <p v-if="description" class="text-secondary"><small>{{ description }}</small></p>
     <input
       v-show="false"

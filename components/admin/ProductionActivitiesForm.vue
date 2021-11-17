@@ -13,74 +13,76 @@
         </v-list-item-content>
       </v-list-item>
     </v-list>
-    <v-dialog
-      v-model="dialog"
-      transition="dialog-bottom-transition"
-      max-width="600"
-      scrollable
-    >
-      <template #activator="{ on, attrs }">
-        <v-btn
-          v-bind="attrs"
-          color="primary"
-          class="mb-6 lighten-1"
-          v-on="on"
-        >
-          <v-icon>mdi-plus</v-icon> Adicionar atividade produtiva
-        </v-btn>
-      </template>
-      <v-card>
-        <v-toolbar
-          color="primary"
-          dark
-        >
-          <v-btn icon dark @click="dialog = false">
-            <v-icon>mdi-close</v-icon>
+    <div>
+      <v-dialog
+        v-model="dialog"
+        transition="dialog-bottom-transition"
+        max-width="600"
+        scrollable
+      >
+        <template #activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            color="primary"
+            class="mb-6 lighten-1"
+            v-on="on"
+          >
+            <v-icon>mdi-plus</v-icon> Adicionar atividade produtiva
           </v-btn>
-          <span>Adicionar atividade produtiva</span>
-        </v-toolbar>
-        <div v-if="dialog" class="pa-6">
-          <ValidationObserver v-slot="{ validate, invalid }">
-            <v-form @submit.prevent="validate().then(save)">
-              <validation-provider v-slot="{ errors }" name="atividade produtiva" rules="required">
-                <v-combobox v-model="form.activity" item-text="descricao" name="uf" :items="activities" label="Tipo de atividade produtiva" :error-messages="errors" outlined>
-                  <template v-slot:item="{ item }">
-                    <div class="py-2">
-                      <h4>{{ item.descricao }}</h4>
-                      <small>{{ item.grupo }}</small>
-                    </div>
-                  </template>
-                </v-combobox>
-              </validation-provider>
-              <div v-if="form.activity">
-                <v-row>
-                  <v-col cols="12" sm="6" class="pb-0">
-                    <validation-provider v-slot="{ errors }" name="produção anual" rules="min_value: 0">
-                      <v-text-field v-model="form.quantity" outlined label="Produção anual" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
-                        <span slot="append">
-                          {{ form.activity.unidade }}
-                        </span>
-                      </v-text-field>
-                    </validation-provider>
-                  </v-col>
-                  <v-col cols="12" sm="6" class="pb-0">
-                    <validation-provider v-slot="{ errors }" name="área de produção" rules="min_value: 0">
-                      <v-text-field v-model="form.area" outlined label="Área de produção" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
-                        <span slot="append">
-                          HECTARES
-                        </span>
-                      </v-text-field>
-                    </validation-provider>
-                  </v-col>
-                </v-row>
-                <Save :invalid="invalid" label="Concluír" />
-              </div>
-            </v-form>
-            <Remove v-if="productionUnit" @confirm="remove(productionUnit)" />
-          </ValidationObserver>
-        </div>
-      </v-card>
-    </v-dialog>
+        </template>
+        <v-card>
+          <v-toolbar
+            color="primary"
+            dark
+          >
+            <v-btn icon dark @click="dialog = false">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+            <span>Adicionar atividade produtiva</span>
+          </v-toolbar>
+          <div v-if="dialog" class="pa-6">
+            <ValidationObserver v-slot="{ validate, invalid }">
+              <v-form @submit.prevent="validate().then(save)">
+                <validation-provider v-slot="{ errors }" name="atividade produtiva" rules="required">
+                  <v-combobox v-model="form.activity" item-text="descricao" name="uf" :items="activities" label="Tipo de atividade produtiva" :error-messages="errors" outlined>
+                    <template v-slot:item="{ item }">
+                      <div class="py-2">
+                        <h4>{{ item.descricao }}</h4>
+                        <small>{{ item.grupo }}</small>
+                      </div>
+                    </template>
+                  </v-combobox>
+                </validation-provider>
+                <div v-if="form.activity">
+                  <v-row>
+                    <v-col cols="12" sm="6" class="pb-0">
+                      <validation-provider v-slot="{ errors }" name="produção anual" rules="min_value: 0">
+                        <v-text-field v-model="form.quantity" outlined label="Produção anual" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
+                          <span slot="append">
+                            {{ form.activity.unidade }}
+                          </span>
+                        </v-text-field>
+                      </validation-provider>
+                    </v-col>
+                    <v-col cols="12" sm="6" class="pb-0">
+                      <validation-provider v-slot="{ errors }" name="área de produção" rules="min_value: 0">
+                        <v-text-field v-model="form.area" outlined label="Área de produção" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
+                          <span slot="append">
+                            HECTARES
+                          </span>
+                        </v-text-field>
+                      </validation-provider>
+                    </v-col>
+                  </v-row>
+                  <Save :invalid="invalid" label="Concluír" />
+                </div>
+              </v-form>
+              <Remove v-if="productionUnit" @confirm="remove(productionUnit)" />
+            </ValidationObserver>
+          </div>
+        </v-card>
+      </v-dialog>
+    </div>
   </div>
 </template>
 <script>

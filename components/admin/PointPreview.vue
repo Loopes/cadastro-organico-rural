@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-dark mb-3">
+    <div class="mb-6">
       <p>
         <span class="overline">{{ label }}:</span>
         <span v-if="validCoordinates">

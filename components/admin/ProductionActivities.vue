@@ -1,7 +1,7 @@
 <template>
-  <div v-if="items && items.length" class="mb-3">
-    <span>Atividades de produção: </span>
-    <v-list outlined class="rounded mb-3">
+  <div class="mb-6">
+    <span class="overline">Atividades de produção: </span>
+    <v-list v-if="items && items.length" outlined class="rounded mb-3">
       <v-list-item v-for="(item, i) in items" :key="i">
         <v-list-item-content>
           <v-list-item-title><strong>{{ item.activity.descricao }}</strong></v-list-item-title>
