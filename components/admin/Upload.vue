@@ -1,6 +1,6 @@
 <template>
   <div class="mb-6">
-    <h5 v-if="label">{{ label }}:</h5>
+    <span v-if="label" class="overline">{{ label }}:</span>
     <v-list v-if="showPreview && !avatar && preview && preview.length" color="tertiary" class="mb-6">
       <v-list-item v-for="(item, index) in preview" :key="index">
         <v-list-item-avatar>
@@ -35,10 +35,12 @@
         <v-icon v-else>mdi-camera</v-icon>
       </v-avatar>
     </a>
-    <v-btn v-else color="success" @click="upload">
-      <v-icon left>mdi-upload</v-icon>
-      Enviar {{ type === 'images' ? 'image' + (multiple ? 'ns' : 'm') : 'arquivo' + (multiple ? 's' : '') }}
-    </v-btn>
+    <div v-else>
+      <v-btn color="primary" class="lighten-1" @click="upload">
+        <v-icon left>mdi-upload</v-icon>
+        Enviar {{ type === 'images' ? 'image' + (multiple ? 'ns' : 'm') : 'arquivo' + (multiple ? 's' : '') }}
+      </v-btn>
+    </div>
     <p v-if="description" class="text-secondary"><small>{{ description }}</small></p>
     <input
       v-show="false"

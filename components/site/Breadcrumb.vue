@@ -1,19 +1,17 @@
 <template>
-  <v-toolbar elevation="0" class="pt-3 mb-8">
+  <v-toolbar v-if="active" elevation="0" class="pt-3 mb-8">
     <v-btn
       v-if="$route.path !== '/'"
+      class="ml-n4 mr-4 lighten-2"
+      fab
       small
-      class="ml-n4"
-      icon
+      color="primary"
       @click="$router.replace(parent)"
     >
       <v-icon> mdi-chevron-left </v-icon>
     </v-btn>
-    <v-toolbar-title v-if="active">
-      <strong>{{ active }}</strong>
-    </v-toolbar-title>
-    <v-toolbar-title v-else class="ml-n4">
-      <strong>Bem vindo <span v-if="$auth.user && $auth.user.name" class="primary--text">{{ $auth.user.name }}</span></strong>
+    <v-toolbar-title>
+      <strong class="overline">{{ active }}</strong>
     </v-toolbar-title>
   </v-toolbar>
 </template>
@@ -50,7 +48,7 @@ export default {
   methods: {
     pageTitle() {
       const title = [(this.settings ? this.settings.title : process.env.APP_NAME), this.active]
-      return title.reverse().join(' | ')
+      return title.reverse().filter(t => t).join(' | ')
     },
     pageDescription() {
       return this.description || process.env.npm_package_description

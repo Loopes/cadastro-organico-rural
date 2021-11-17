@@ -8,10 +8,11 @@
       <v-btn
         v-bind="attrs"
         fab
-        bottom
+        top
         right
         fixed
         color="primary"
+        class="lighten-2"
         v-on="on"
       >
         <v-icon dark>mdi-delete</v-icon>

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="pt-6">
     <Breadcrumb />
     <div v-if="settings" class="home-page">
-      <p class="mb-10">A COR.agr.br vai mudar a forma como você desenvolve seu empreendimento rural orgânico!</p>
+      <h5 class="text-h5 mb-8">A COR.agr.br vai mudar a forma como você desenvolve seu empreendimento rural orgânico!</h5>
       <Banners :items="settings.banners" />
       <div v-if="settings.description" class="text-center px-5">
         <!-- <img src="~/assets/img/logo-laranja.svg" alt="Sobre"> -->
@@ -17,7 +17,7 @@
       </div>
       <v-row v-if="metrics">
         <v-col cols="12" md="3">
-          <v-card color="brown darken-4" dark class="text-center">
+          <v-card color="primary lighten-1" dark class="text-center">
             <v-card-title class="text-h4 justify-center">{{ metrics.conversations }}</v-card-title>
             <v-card-text>
               <div class="text-primary">Conexões entre usuários</div>
@@ -25,7 +25,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
-          <v-card color="brown darken-4" dark class="text-center">
+          <v-card color="primary lighten-1" dark class="text-center">
             <v-card-title class="text-h4 justify-center">{{ metrics.categories }}</v-card-title>
             <v-card-text>
               <div class="text-primary">Trilhas de conhecimento</div>
@@ -33,7 +33,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
-          <v-card color="brown darken-4" dark class="text-center">
+          <v-card color="primary lighten-1" dark class="text-center">
             <v-card-title class="text-h4 justify-center">{{ metrics.medias }}</v-card-title>
             <v-card-text>
               <div class="text-primary">Conteúdos publicados</div>
@@ -41,7 +41,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="3">
-          <v-card color="brown darken-4" dark class="text-center">
+          <v-card color="primary lighten-1" dark class="text-center">
             <v-card-title class="text-h4 justify-center">{{ metrics.users }}</v-card-title>
             <v-card-text>
               <div class="text-primary">Usuários cadastrados</div>
