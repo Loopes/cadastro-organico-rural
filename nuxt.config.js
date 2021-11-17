@@ -110,7 +110,7 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: '#00c65e'
+          primary: '#185C37'
         }
       }
     }

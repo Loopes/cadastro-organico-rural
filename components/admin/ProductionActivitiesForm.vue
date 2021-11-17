@@ -1,13 +1,13 @@
 <template>
   <div class="mb-3">
-    <small>Atividades de produção: </small>
+    <span class="overline">Atividades de produção: </span>
     <v-list v-if="items && items.length" outlined class="rounded mb-3">
       <v-list-item v-for="(item, i) in items" :key="i">
         <v-list-item-content>
-          <v-list-item-title>{{ item.activity.descricao }}</v-list-item-title>
-          <v-list-item-subtitle class="mb-2">{{ item.activity.grupo }}</v-list-item-subtitle>
+          <v-list-item-title><strong>{{ item.activity.descricao }}</strong></v-list-item-title>
+          <v-list-item-subtitle class="mb-2"><small>{{ item.activity.grupo }}</small></v-list-item-subtitle>
           <div>
-            <v-chip v-if="item.quantity" small><strong>{{ item.quantity }} </strong> &nbsp; {{ item.activity.unidade }} anuais</v-chip>
+            <v-chip v-if="item.quantity" color="primary" class="lighten-2" small><strong>{{ item.quantity }} </strong> &nbsp; {{ item.activity.unidade }} anuais</v-chip>
             <v-chip v-if="item.area" small><strong>{{ item.area }} </strong> &nbsp; hectares</v-chip>
           </div>
         </v-list-item-content>
@@ -22,12 +22,11 @@
       <template #activator="{ on, attrs }">
         <v-btn
           v-bind="attrs"
-          color="success"
-          right
-          small
+          color="primary"
+          class="mb-6 lighten-1"
           v-on="on"
         >
-          <v-icon>mdi-plus</v-icon> Adicionar
+          <v-icon>mdi-plus</v-icon> Adicionar atividade produtiva
         </v-btn>
       </template>
       <v-card>

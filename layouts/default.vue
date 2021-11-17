@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div v-show="settings">
-      <v-navigation-drawer v-model="show_drawer" app width="314" color="primary">
+      <v-navigation-drawer v-model="show_drawer" app color="primary" dark>
         <div class="pa-8 pt-10 pb-10">
           <n-link to="/">
             <v-img
@@ -14,32 +14,33 @@
         <Menu />
       </v-navigation-drawer>
 
-      <v-app-bar dark hide-on-scroll color="primary" class="d-lg-none">
-        <n-link to="/">
-          <v-img
-            title="COR.agr.br"
-            :src="require('~/assets/img/logo-3.png')"
-            contain
-            max-width="180"
-          />
-        </n-link>
-        <v-spacer />
-        <n-link v-if="$auth.user" to="/conexoes">
-          <v-badge
-            :content="unreadMessages"
-            :value="unreadMessages"
-            :color="'red'"
-            overlap
-          >
-            <v-icon>mdi-email</v-icon>
-          </v-badge>
-        </n-link>
-        <v-app-bar-nav-icon @click="show_drawer = !show_drawer" />
-      </v-app-bar>
-
       <v-main>
+        <v-app-bar dark hide-on-scroll color="primary" class="d-lg-none">
+          <n-link to="/">
+            <v-img
+              title="COR.agr.br"
+              :src="require('~/assets/img/logo-3.png')"
+              contain
+              max-width="180"
+            />
+          </n-link>
+          <v-spacer />
+          <n-link v-if="$auth.user" to="/conexoes">
+            <v-badge
+              :content="unreadMessages"
+              :value="unreadMessages"
+              :color="'red'"
+              overlap
+            >
+              <v-icon>mdi-email</v-icon>
+            </v-badge>
+          </n-link>
+          <v-app-bar-nav-icon @click="show_drawer = !show_drawer" />
+        </v-app-bar>
         <div class="pt-2 pl-4 pr-4 pl-lg-6 pr-lg-6">
-          <Nuxt />
+          <div class="content">
+            <Nuxt />
+          </div>
           <v-divider class="mt-10 mb-10" />
           <Footer />
         </div>

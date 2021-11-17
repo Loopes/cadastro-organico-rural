@@ -1,10 +1,10 @@
 <template>
   <div>
-    <PointPreview :point="value" />
+    <PointPreview :point="value" :label="label" />
     <v-dialog v-model="show_modal" title="Localização">
       <template #activator="{ on, attrs }">
-        <v-btn v-bind="attrs" color="success" class="mb-6" v-on="on">
-          <v-icon dark>mdi-map-marker</v-icon>
+        <v-btn v-bind="attrs" color="primary" class="mb-6 mt-n3 lighten-1" v-on="on">
+          <v-icon dark left>{{ hasCoordinates ? 'mdi-map-marker-check' : 'mdi-map-marker-plus' }}</v-icon>
           {{ hasCoordinates ? 'Mudar' : 'Adicionar' }} localização
         </v-btn>
       </template>
@@ -13,7 +13,7 @@
           color="primary"
           dark
         >
-          Localização
+          {{ label }}
         </v-toolbar>
         <div class="pa-6">
           <p v-if="loading_gps" class="text-center">
@@ -22,7 +22,7 @@
           <div v-else>
             <p class="text-center mt-3">
               <v-btn color="primary" @click="getLocation()">
-                <v-icon-search />
+                <v-icon>mdi-map-marker</v-icon>
                 Buscar pelo GPS
               </v-btn>
             </p>
@@ -97,6 +97,10 @@ export default {
     value: {
       type: Object,
       default: null
+    },
+    label: {
+      type: String,
+      default: 'Localização'
     }
   },
   data() {
@@ -115,7 +119,7 @@ export default {
   },
   computed: {
     hasCoordinates() {
-      return this.form && this.form.coordinates && this.form.coordinates.length
+      return this.form && this.form.coordinates && this.form.coordinates.length > 0
     }
   },
   watch: {
@@ -126,7 +130,7 @@ export default {
     }
   },
   created() {
-    this.form = emptyForm
+    this.form = { ...emptyForm }
     if (this.value) {
       Object.keys(this.form).forEach((k) => {
         this.form[k] = this.value[k]

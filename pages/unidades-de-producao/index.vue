@@ -7,33 +7,35 @@
       top
       right
       fixed
-      color="success"
+      color="primary"
+      class="lighten-2"
     >
       <v-icon dark>mdi-plus</v-icon>
     </v-btn>
     <div v-if="production_units">
-      <v-list v-if="production_units.length" class="rounded lighten-1" color="primary">
-        <template v-for="(production_unit, index) in production_units">
-          <v-list-item :key="production_unit._id" :to="'/unidades-de-producao/' + production_unit._id ">
-            <v-list-item-avatar>{{ production_unit.uf }}</v-list-item-avatar>
-            <v-list-item-content>
-              <v-list-item-title>{{ production_unit.name }}</v-list-item-title>
-              <v-list-item-subtitle v-if="production_unit.city && production_unit.uf">
-                {{ production_unit.city }} - {{ production_unit.uf }}
-              </v-list-item-subtitle>
-            </v-list-item-content>
-            <v-list-item-action>
-              <v-btn icon>
-                <v-icon>mdi-chevron-right</v-icon>
-              </v-btn>
-            </v-list-item-action>
-          </v-list-item>
-          <v-divider
-            v-if="index < production_units.length - 1"
-            :key="index"
-          />
+      <v-simple-table v-if="production_units.length">
+        <template v-slot:default>
+          <thead>
+            <tr>
+              <th class="text-left">
+                Nome
+              </th>
+              <th class="text-left">
+                Município-UF
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="(production_unit) in production_units"
+              :key="production_unit._id"
+            >
+              <td><n-link :to="'/unidades-de-producao/' + production_unit._id" class="text-decoration-none"><strong>{{ production_unit.name }} </strong></n-link></td>
+              <td>{{ production_unit.city }} - {{ production_unit.uf }}</td>
+            </tr>
+          </tbody>
         </template>
-      </v-list>
+      </v-simple-table>
       <v-alert v-else dark color="tertiary" class="text-center">Nenhum item encontrado</v-alert>
     </div>
     <v-skeleton-loader

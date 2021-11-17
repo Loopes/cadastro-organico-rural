@@ -1,12 +1,12 @@
 <template>
   <div class="address-form">
-    <AddressPreview :address="value" />
+    <AddressPreview :address="value" :label="label" />
     <v-dialog
       v-model="show_modal"
     >
       <template #activator="{ on, attrs }">
-        <v-btn v-bind="attrs" color="success" class="mb-6" v-on="on">
-          <v-icon dark>mdi-map-marker</v-icon>
+        <v-btn v-bind="attrs" color="primary" class="mb-6 mt-n3 lighten-1" v-on="on">
+          <v-icon dark left>{{ addressFilled ? 'mdi-map-marker-check' : 'mdi-map-marker-plus' }}</v-icon>
           {{ addressFilled ? 'Mudar' : 'Adicionar' }} endereço
         </v-btn>
       </template>
@@ -228,6 +228,10 @@ export default {
     value: {
       type: Object,
       default: null
+    },
+    label: {
+      type: String,
+      default: 'Endereço'
     }
   },
   data() {
@@ -239,7 +243,7 @@ export default {
       location: null,
       address_input: '',
       show_auto_complete: true,
-      form: emptyForm,
+      form: { ...emptyForm },
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

@@ -1,13 +1,14 @@
 <template>
   <div v-if="address">
-    <div class="text-dark mb-3">
-      <small v-if="validCoordinates">
-        {{ label }}:
+    <div class="mb-6">
+      <p v-if="validCoordinates">
+        <span class="overline">{{ label }}:</span>
+        <br>
         <strong v-if="address.description">{{ address.description }}</strong>
         <v-btn color="secondary" small class="ml-1" @click="show_map = !show_map">
           {{ show_map ? 'Esconder mapa' : 'Ver mapa' }}
         </v-btn>
-      </small>
+      </p>
     </div>
     <l-map
       v-if="show_map"
