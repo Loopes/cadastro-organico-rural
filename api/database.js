@@ -6,6 +6,7 @@ require('./models/Page')
 require('./models/Contact')
 require('./models/Media')
 require('./models/ProductionUnit')
+require('./models/CertifyingEntity')
 require('./models/Conversation')
 require('./config/passport')
 

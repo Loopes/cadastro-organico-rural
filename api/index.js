@@ -35,6 +35,7 @@ router.use('/menus', require('./routes/menus'))
 router.use('/conversations', require('./routes/conversations'))
 router.use('/medias', require('./routes/medias'))
 router.use('/production_units', require('./routes/production_units'))
+router.use('/certifying_entities', require('./routes/certifying_entities'))
 
 router.get('/profile', auth.authenticated, function(req, res) {
   User.findById(req.user._id).exec(function(err, user) {
