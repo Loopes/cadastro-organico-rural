@@ -201,7 +201,7 @@
 import axios from 'axios'
 import { ValidationObserver, ValidationProvider } from 'vee-validate'
 import estados from '@/data/estados.json'
-import AddressPreview from '@/components/admin/AddressPreview'
+import AddressPreview from '@/components/AddressPreview'
 import cidades from '@/data/cidades.json'
 
 const emptyForm = {

@@ -76,7 +76,7 @@
   </div>
 </template>
 <script>
-import PointPreview from '@/components/admin/PointPreview'
+import PointPreview from '@/components/PointPreview'
 const emptyForm = {
   type: 'Point',
   coordinates: []
