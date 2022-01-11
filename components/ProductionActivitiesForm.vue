@@ -11,6 +11,11 @@
             <v-chip v-if="item.area" small><strong>{{ item.area }} </strong> &nbsp; hectares</v-chip>
           </div>
         </v-list-item-content>
+        <v-list-item-action>
+          <v-btn color="danger" icon @click="remove(i)">
+            <v-icon>mdi-delete</v-icon>
+          </v-btn>
+        </v-list-item-action>
       </v-list-item>
     </v-list>
     <div>
@@ -77,7 +82,6 @@
                   <Save :invalid="invalid" label="Concluír" />
                 </div>
               </v-form>
-              <Remove v-if="productionUnit" @confirm="remove(productionUnit)" />
             </ValidationObserver>
           </div>
         </v-card>
@@ -140,6 +144,10 @@ export default {
       this.form.activity = ''
       this.form.quantity = ''
       this.form.area = ''
+    },
+    remove (index) {
+      this.items = this.items.filter((item, i) => i !== index)
+      this.$emit('input', this.items)
     }
   }
 }

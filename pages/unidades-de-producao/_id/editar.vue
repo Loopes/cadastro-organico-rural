@@ -1,5 +1,5 @@
 <template>
-  <div class="create">
+  <div v-if="production_unit" class="create">
     <Breadcrumb active="Editar unidade de produção" :parent="'/unidades-de-producao/' + production_unit._id" />
     <ProductionUnitForm v-if="production_unit" :production-unit="production_unit" />
     <div v-else class="text-center">

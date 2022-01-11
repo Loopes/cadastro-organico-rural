@@ -18,7 +18,7 @@
         <h1 class="mb-0 text-h4 font-weight-bold"> {{ production_unit.name }} </h1>
         <h2 class="mb-6 text-h5"> {{ production_unit.city }} - {{ production_unit.uf }}</h2>
         <p v-if="production_unit.description" class="mt-3">{{ production_unit.description }}</p>
-        <div class="mb-6">
+        <div v-if="production_unit.production_activities && production_unit.production_activities.length" class="mb-6">
           <ProductionActivities :items="production_unit.production_activities" />
         </div>
         <p v-if="production_unit.farm_address"><span class="overline">Endereço:</span><br><strong>{{ production_unit.farm_address }}</strong></p>
@@ -34,6 +34,9 @@
         <p v-if="production_unit.previous_year_total_production"><span class="overline">Produção total no ano anterior:</span><br><strong>{{ production_unit.previous_year_total_production }} KG</strong></p>
         <p v-if="production_unit.current_year_estimated_production"><span class="overline">Estimativa da produção desse ano:</span><br><strong>{{ production_unit.current_year_estimated_production }} KG</strong></p>
         <p><span class="overline">Certificado orgânico desde:</span><br><strong>{{ $moment(production_unit.organic_since).format("DD/MM/YYYY") }}</strong></p>
+        <div v-if="production_unit.responsibles && production_unit.responsibles.length" class="mb-6">
+          <Responsibles :items="production_unit.responsibles" />
+        </div>
         <Documents :documents="production_unit.documents" />
         <Banners v-if="production_unit.pictures && production_unit.pictures.length" :items="production_unit.pictures" />
         <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(production_unit.createdAt).format("DD/MM/YYYY") }}</strong></p>

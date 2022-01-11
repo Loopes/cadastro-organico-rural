@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="mb-6">
-      <p>
+      <div>
         <span class="overline">{{ label }}:</span>
-        <span v-if="validCoordinates">
-          <strong v-if="address.description">{{ address.description }}</strong>
+        <div v-if="validCoordinates">
+          <div v-if="address.description"><strong>{{ address.description }}</strong></div>
           <v-btn color="secondary" small class="ml-1" @click="show_map = !show_map">
             {{ show_map ? 'Esconder mapa' : 'Ver mapa' }}
           </v-btn>
-        </span>
-      </p>
+        </div>
+      </div>
     </div>
     <l-map
       v-if="show_map"

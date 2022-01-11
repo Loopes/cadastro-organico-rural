@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 const PointSchema = require('./Point')
 const AddressSchema = require('./Address')
+const ProductionActivitySchema = require('./ProductionActivity')
+const ResponsibleSchema = require('./Responsible')
 const ObjectId = mongoose.Schema.Types.ObjectId
 
 const ProductionUnitSchema = mongoose.Schema({
@@ -32,9 +34,11 @@ const ProductionUnitSchema = mongoose.Schema({
   permanent_preservation_area: Number,
   legal_reservea_area: Number,
   organic_since: Date,
-  production_activities: [Object],
+  production_activities: [ProductionActivitySchema],
   previous_year_total_production: Number,
   current_year_estimated_production: Number,
+
+  responsibles: [ResponsibleSchema],
 
   certifying_entity_type: String,
   certifying_entity: String

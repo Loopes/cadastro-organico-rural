@@ -1,6 +1,6 @@
 <template>
   <div class="mb-6">
-    <span v-if="label" class="overline">{{ label }}:</span>
+    <div v-if="label" class="overline">{{ label }}:</div>
     <v-list v-if="showPreview && !avatar && preview && preview.length" color="tertiary" class="mb-6">
       <v-list-item v-for="(item, index) in preview" :key="index">
         <v-list-item-avatar>

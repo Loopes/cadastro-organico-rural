@@ -23,7 +23,8 @@
         <AddressForm v-model="form.correspondence_address" label="Endereço de correspondência" />
         <v-textarea v-model="form.access_route" outlined label="Como chegar na propriedade" rows="3" auto-grow />
         <v-textarea v-model="form.contacts" outlined label="Contatos" rows="3" auto-grow />
-        <ProductionActivitiesForm v-model="form.production_activities" label="Atividades produtivas" />
+        <ResponsibleForm v-model="form.responsibles" />
+        <ProductionActivitiesForm v-model="form.production_activities" />
         <v-text-field v-model="form.total_area" outlined label="Área total" suffix="hectares" type="number" />
         <v-text-field v-model="form.organic_production_area" outlined label="Área destinada a produção orgânica" suffix="hectares" type="number" />
         <v-text-field v-model="form.permanent_preservation_area" outlined label="Área de preservação permanente - APP" suffix="hectares" type="number" />
@@ -87,6 +88,7 @@ export default {
         permanent_preservation_area: '',
         legal_reservea_area: '',
         organic_since: '',
+        responsibles: [],
         production_activities: [],
         previous_year_total_production: '',
         current_year_estimated_production: '',
