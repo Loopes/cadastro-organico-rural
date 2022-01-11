@@ -44,7 +44,7 @@
     "node-wget": "^0.4.3",
     "nuxt": "^2.13.0",
     "nuxt-i18n": "^6.13.1",
-    "nuxt-leaflet": "^0.0.21",
+    "nuxt-leaflet": "^0.0.27",
     "nuxt-leaflet-pouchdb": "^1.0.0",
     "nuxt-validate": "^1.0.1",
     "passport": "^0.4.1",

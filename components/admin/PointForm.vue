@@ -77,9 +77,6 @@
 </template>
 <script>
 import PointPreview from '@/components/admin/PointPreview'
-import { LMap, LTileLayer, LMarker, LTooltip } from 'vue2-leaflet'
-import 'nuxt-leaflet-pouchdb'
-
 const emptyForm = {
   type: 'Point',
   coordinates: []
@@ -87,11 +84,7 @@ const emptyForm = {
 
 export default {
   components: {
-    PointPreview,
-    LMap,
-    LTileLayer,
-    LMarker,
-    LTooltip
+    PointPreview
   },
   props: {
     value: {

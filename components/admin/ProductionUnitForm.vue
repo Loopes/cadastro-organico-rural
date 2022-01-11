@@ -22,6 +22,7 @@
         <PointForm v-model="form.farm_gate_location" label="Entrada da propriedade" />
         <PointForm v-model="form.farm_house_location" label="Sede da propriedade" />
         <AddressForm v-model="form.correspondence_address" label="Endereço de correspondência" />
+        <v-textarea v-model="access_route" label="Como chegar" description="Descreva aqui como chegar na propriedade" />
         <ProductionActivitiesForm v-model="form.production_activities" label="Atividades produtivas" />
         <Upload v-model="form.documents" label="Anexar documentos" type="documents" multiple edit-title />
         <Upload v-model="form.pictures" label="Anexar imagens" type="images" multiple edit-title />
@@ -59,8 +60,8 @@ export default {
       estados,
       cidades,
       form: {
-        uf: '',
-        city: '',
+        uf: 'GO',
+        city: 'Alto Paraíso de Goiás',
         name: '',
         farm_address: '',
         farm_gate_location: {

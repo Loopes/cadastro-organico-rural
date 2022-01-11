@@ -76,7 +76,7 @@ export default {
     this.checkUnreadMessages()
     setInterval(() => {
       this.checkUnreadMessages()
-    }, 10000)
+    }, 120000)
   },
   methods: {
     async checkUnreadMessages() {

@@ -1732,10 +1732,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/leaflet@1.5.4":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@types/leaflet/-/leaflet-1.5.4.tgz#851783ba730ab5430ea3e51a2ab7f35e43968f99"
-  integrity sha512-hAiiY7S25N8Ax+vA7FX29j1Hzn7bTziRnkKSj5jfOpud2JUcp/qZHGKCgxWW2TH581a00fDVBhto4xRox8GHXw==
+"@types/leaflet@1.7.6":
+  version "1.7.6"
+  resolved "https://registry.yarnpkg.com/@types/leaflet/-/leaflet-1.7.6.tgz#6580f4babb648972c5af3abc3d66866753fa9311"
+  integrity sha512-Emkz3V08QnlelSbpT46OEAx+TBZYTOX2r1yM7W+hWg5+djHtQ1GbEXBDRLaqQDOYcDI51Ss0ayoqoKD4CtLUDA==
   dependencies:
     "@types/geojson" "*"
 
@@ -7394,11 +7394,6 @@ launch-editor@^2.2.1:
     chalk "^2.3.0"
     shell-quote "^1.6.1"
 
-leaflet@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.6.0.tgz#aecbb044b949ec29469eeb31c77a88e2f448f308"
-  integrity sha512-CPkhyqWUKZKFJ6K8umN5/D2wrJ2+/8UIpXppY7QDnUZW5bZL5+SEI2J7GBpwh4LIupOKqbNSQXgqmrEJopHVNQ==
-
 leaflet@^1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.7.1.tgz#10d684916edfe1bf41d688a3b97127c0322a2a19"
@@ -8803,15 +8798,15 @@ nuxt-leaflet-pouchdb@^1.0.0:
   resolved "https://registry.yarnpkg.com/nuxt-leaflet-pouchdb/-/nuxt-leaflet-pouchdb-1.0.0.tgz#0328a2c875fa6d9a43f8b39818ea7808d2f39e02"
   integrity sha512-7K4aShdZxdO/ejYqq+by4dMelozDLh4nIZAR7wA7kwPHZJV5yl5pleRZ5r8po2Midom04pfG1DDapMr3lhc8cg==
 
-nuxt-leaflet@^0.0.21:
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/nuxt-leaflet/-/nuxt-leaflet-0.0.21.tgz#174a9ee1873092ce49ee48b0f993a392a369decc"
-  integrity sha512-7JangX6SrTFLvepwgHc7eE9TI0Idb974SU2fgvITSDDSuqPSHC2JwtYWx3KLb+gifsP6rPkzXb9NsmMdeOs9OA==
+nuxt-leaflet@^0.0.27:
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/nuxt-leaflet/-/nuxt-leaflet-0.0.27.tgz#8f95908e69e0ab18c277285a9757a3eb033a2242"
+  integrity sha512-ssDupj8RzJudcWbNfP6u76r2kDse8u0BXxDTxwf9SJETWD95/qu9oBRrBxHzs9ayT26YnlWhPblcw24KH7k0HQ==
   dependencies:
-    "@types/leaflet" "1.5.4"
-    leaflet "^1.6.0"
+    "@types/leaflet" "1.7.6"
+    leaflet "^1.7.1"
     npm-publish-git-tag "^3.0.3"
-    vue2-leaflet "^2.5.2"
+    vue2-leaflet "^2.7.1"
 
 nuxt-validate@^1.0.1:
   version "1.0.1"
@@ -13034,11 +13029,6 @@ vue2-filters@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/vue2-filters/-/vue2-filters-0.11.0.tgz#32fff5a95e55159a93d6fecbaf69b58f0e056e99"
   integrity sha512-/sL1slXSxbFkrk9acgRSbykwcs7EmdTVxDcmdb5WHmpQG9cFb//LTaJy4EiH/e58nnD6ZHw2B5k+Gz0mTaQszA==
-
-vue2-leaflet@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/vue2-leaflet/-/vue2-leaflet-2.5.2.tgz#b89c056fe741c7ce7cb9df5aca90809092e5eb8d"
-  integrity sha512-9eN0TxqCkyXbaI7waO3u+n0OAezkxjb811tstG6gRLAZy/ocXlNLC3JqTWE0FwBUlqBbMpyzsIk6LrEhs8oVBQ==
 
 vue2-leaflet@^2.7.1:
   version "2.7.1"
