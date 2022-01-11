@@ -10,9 +10,10 @@
   >
     <template #activator="{ on, attrs }">
       <v-text-field
-        v-model="date"
+        outlined
+        :value="computedDateFormattedMomentjs"
         :label="label"
-        prepend-icon="mdi-calendar"
+        append-icon="mdi-calendar"
         readonly
         v-bind="attrs"
         v-on="on"
@@ -22,8 +23,10 @@
       v-model="date"
       no-title
       scrollable
+      locale="pt-br"
+      @change="$refs.menu.save(date)"
     >
-      <v-spacer />
+      <!-- <v-spacer />
       <v-btn
         text
         color="primary"
@@ -37,7 +40,7 @@
         @click="$refs.menu.save(date)"
       >
         OK
-      </v-btn>
+      </v-btn> -->
     </v-date-picker>
   </v-menu>
 </template>
@@ -58,6 +61,11 @@ export default {
     date: null,
     menu: false
   }),
+  computed: {
+    computedDateFormattedMomentjs () {
+      return this.date ? this.$moment(this.date).format('DD/MM/YYYY') : ''
+    }
+  },
   watch: {
     date() {
       this.$emit('input', this.date)

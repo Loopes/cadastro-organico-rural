@@ -3,27 +3,34 @@
     <v-form @submit.prevent="validate().then(save)">
       <v-row>
         <v-col cols="12" md="6">
-          <validation-provider v-slot="{ errors }" name="categoria" rules="required">
-            <v-select v-model="form.uf" name="uf" :items="estados" label="Estado *" :error-messages="errors" outlined />
+          <validation-provider v-slot="{ errors }" name="estado" rules="required">
+            <v-select v-model="form.uf" :items="estados" label="Estado *" :error-messages="errors" outlined />
           </validation-provider>
         </v-col>
         <v-col v-if="form.uf" cols="12" md="6">
-          <validation-provider v-slot="{ errors }" name="categoria" rules="required">
-            <v-select v-model="form.city" name="city" :items="cidades[form.uf]" label="Município *" :error-messages="errors" outlined />
+          <validation-provider v-slot="{ errors }" name="município" rules="required">
+            <v-select v-model="form.city" :items="cidades[form.uf]" label="Município *" :error-messages="errors" outlined />
           </validation-provider>
         </v-col>
       </v-row>
       <div v-if="form.uf && form.city">
         <validation-provider v-slot="{ errors }" name="nome" rules="required">
-          <v-text-field v-model="form.name" outlined name="name" label="Nome da propriedade *" :error-messages="errors" />
+          <v-text-field v-model="form.name" outlined label="Nome da propriedade *" :error-messages="errors" />
         </validation-provider>
-        <v-textarea v-model="form.contacts" outlined name="contacts" label="Contatos" rows="2" auto-grow />
-        <v-textarea v-model="form.farm_address" outlined name="farm_address" label="Endereço da propriedade" rows="2" auto-grow />
+        <v-textarea v-model="form.farm_address" outlined label="Endereço da propriedade" rows="3" auto-grow />
         <PointForm v-model="form.farm_gate_location" label="Entrada da propriedade" />
         <PointForm v-model="form.farm_house_location" label="Sede da propriedade" />
         <AddressForm v-model="form.correspondence_address" label="Endereço de correspondência" />
-        <v-textarea v-model="access_route" label="Como chegar" description="Descreva aqui como chegar na propriedade" />
+        <v-textarea v-model="form.access_route" outlined label="Como chegar na propriedade" rows="3" auto-grow />
+        <v-textarea v-model="form.contacts" outlined label="Contatos" rows="3" auto-grow />
         <ProductionActivitiesForm v-model="form.production_activities" label="Atividades produtivas" />
+        <v-text-field v-model="form.total_area" outlined label="Área total" suffix="hectares" type="number" />
+        <v-text-field v-model="form.organic_production_area" outlined label="Área destinada a produção orgânica" suffix="hectares" type="number" />
+        <v-text-field v-model="form.permanent_preservation_area" outlined label="Área de preservação permanente - APP" suffix="hectares" type="number" />
+        <v-text-field v-model="form.legal_reservea_area" outlined label="Área da reserva legal" suffix="hectares" type="number" />
+        <v-text-field v-model="form.previous_year_total_production" outlined label="Qual a produção obtida no ano anterior?" suffix="KG" type="number" />
+        <v-text-field v-model="form.current_year_estimated_production" outlined label="Qual a estimativa da produção desse ano?" suffix="KG" type="number" />
+        <DatePicker v-model="form.organic_since" label="Desde de quando finalizou a conversão orgânica?" />
         <Upload v-model="form.documents" label="Anexar documentos" type="documents" multiple edit-title />
         <Upload v-model="form.pictures" label="Anexar imagens" type="images" multiple edit-title />
         <Save :invalid="invalid" />

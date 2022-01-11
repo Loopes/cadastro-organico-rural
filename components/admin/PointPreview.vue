@@ -1,15 +1,16 @@
 <template>
   <div>
     <div class="mb-6">
-      <p>
+      <div>
         <span class="overline">{{ label }}:</span>
         <span v-if="validCoordinates">
-          <br><strong>{{ point.coordinates.join(',') }}</strong>
+          <br>
+          <strong>{{ point.coordinates.join(',') }}</strong>
           <v-btn color="secondary" small class="ml-1" @click="show_map = !show_map">
             {{ show_map ? 'Esconder mapa' : 'Ver mapa' }}
           </v-btn>
         </span>
-      </p>
+      </div>
     </div>
     <l-map
       v-if="show_map"

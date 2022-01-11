@@ -22,13 +22,21 @@
           <ProductionActivities :items="production_unit.production_activities" />
         </div>
         <p v-if="production_unit.farm_address"><span class="overline">Endereço:</span><br><strong>{{ production_unit.farm_address }}</strong></p>
-        <p v-if="production_unit.contacts"><span class="overline">Contatos:</span><br><strong>{{ production_unit.contacts }}</strong></p>
-        <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(production_unit.createdAt).format("DD/MM/YYYY") }}</strong></p>
         <PointPreview v-if="production_unit.farm_gate_location && production_unit.farm_gate_location.coordinates.length" :point="production_unit.farm_gate_location" label="Entrada da propriedade" />
         <PointPreview v-if="production_unit.farm_house_location && production_unit.farm_house_location.coordinates.length" :point="production_unit.farm_house_location" label="Sede da propriedade" />
         <AddressPreview :address="production_unit.correspondence_address" label="Endereço de correspondência" />
+        <p v-if="production_unit.access_route"><span class="overline">Como chegar na propriedade:</span><br><strong>{{ production_unit.access_route }}</strong></p>
+        <p v-if="production_unit.contacts"><span class="overline">Contatos:</span><br><strong>{{ production_unit.contacts }}</strong></p>
+        <p v-if="production_unit.total_area"><span class="overline">Área total:</span><br><strong>{{ production_unit.total_area }} hectares</strong></p>
+        <p v-if="production_unit.organic_production_area"><span class="overline">Área destinada a produção orgânica:</span><br><strong>{{ production_unit.organic_production_area }} hectares</strong></p>
+        <p v-if="production_unit.permanent_preservation_area"><span class="overline">Área de preservação permanente - APP:</span><br><strong>{{ production_unit.permanent_preservation_area }} hectares</strong></p>
+        <p v-if="production_unit.legal_reservea_area"><span class="overline">Área da reserva legal:</span><br><strong>{{ production_unit.legal_reservea_area }} hectares</strong></p>
+        <p v-if="production_unit.previous_year_total_production"><span class="overline">Produção total no ano anterior:</span><br><strong>{{ production_unit.previous_year_total_production }} KG</strong></p>
+        <p v-if="production_unit.current_year_estimated_production"><span class="overline">Estimativa da produção desse ano:</span><br><strong>{{ production_unit.current_year_estimated_production }} KG</strong></p>
+        <p><span class="overline">Certificado orgânico desde:</span><br><strong>{{ $moment(production_unit.organic_since).format("DD/MM/YYYY") }}</strong></p>
         <Documents :documents="production_unit.documents" />
         <Banners v-if="production_unit.pictures && production_unit.pictures.length" :items="production_unit.pictures" />
+        <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(production_unit.createdAt).format("DD/MM/YYYY") }}</strong></p>
       </div>
     </div>
     <div v-else class="text-center">
