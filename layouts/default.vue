@@ -13,7 +13,6 @@
         </div>
         <Menu />
       </v-navigation-drawer>
-
       <v-main>
         <v-app-bar dark hide-on-scroll color="primary" class="d-lg-none">
           <n-link to="/">

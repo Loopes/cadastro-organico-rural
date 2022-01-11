@@ -1,18 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar dark hide-on-scroll class="d-lg-none">
-      <n-link to="/">
-        <v-img
-          title="COR.agr.br"
-          :src="require('~/assets/img/logo-3.png')"
-          contain
-          max-width="180"
-        />
-      </n-link>
-      <v-spacer />
-      <v-app-bar-nav-icon @click="show_drawer = !show_drawer" />
-    </v-app-bar>
-    <v-navigation-drawer v-model="show_drawer" temporary color="primary">
+    <v-navigation-drawer v-model="show_drawer" app color="primary">
       <div class="pa-8 pt-10 pb-10">
         <n-link to="/">
           <v-img
@@ -24,6 +12,19 @@
       </div>
       <AdminMenu />
     </v-navigation-drawer>
+    <v-app-bar dark hide-on-scroll color="primary" class="d-lg-none">
+      <n-link to="/">
+        <v-img
+          title="COR.agr.br"
+          :src="require('~/assets/img/logo-3.png')"
+          contain
+          max-width="180"
+        />
+      </n-link>
+      <v-spacer />
+      <v-app-bar-nav-icon @click="show_drawer = !show_drawer" />
+    </v-app-bar>
+
     <v-main>
       <div class="pt-2 pl-4 pr-4 pl-lg-6 pr-lg-6">
         <Nuxt />

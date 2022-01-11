@@ -14,7 +14,7 @@
         </v-list-item-content>
       </v-list-item>
     </v-list>
-    <v-list nav class="pb-0 mt-3" dense rounded>
+    <v-list nav dark class="pb-0 mt-3" dense rounded>
       <v-list-item class="ml-n10 pl-12" to="/admin" exact>
         <v-list-item-icon>
           <v-icon>mdi-view-dashboard</v-icon>
