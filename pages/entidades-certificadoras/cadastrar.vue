@@ -1,6 +1,6 @@
 <template>
   <div class="create">
-    <Breadcrumb active="Cadsatrar entidade certificadora" parent="/entidades-certificadoras" />
+    <Breadcrumb active="Cadastrar entidade certificadora" parent="/entidades-certificadoras" />
     <CertifyingEntityForm />
   </div>
 </template>
