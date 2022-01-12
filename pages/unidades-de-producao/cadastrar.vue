@@ -12,7 +12,7 @@ export default {
       breadcrumb: [
         { text: 'Dashboard', to: '/admin' },
         { text: 'Unidades de produção', to: '/unidades-de-producao' },
-        { text: 'Cadastrar item', active: true }
+        { text: 'Cadastrar', active: true }
       ]
     }
   }

@@ -33,7 +33,13 @@
         <p v-if="production_unit.legal_reservea_area"><span class="overline">Área da reserva legal:</span><br><strong>{{ production_unit.legal_reservea_area }} hectares</strong></p>
         <p v-if="production_unit.previous_year_total_production"><span class="overline">Produção total no ano anterior:</span><br><strong>{{ production_unit.previous_year_total_production }} KG</strong></p>
         <p v-if="production_unit.current_year_estimated_production"><span class="overline">Estimativa da produção desse ano:</span><br><strong>{{ production_unit.current_year_estimated_production }} KG</strong></p>
-        <p><span class="overline">Certificado orgânico desde:</span><br><strong>{{ $moment(production_unit.organic_since).format("DD/MM/YYYY") }}</strong></p>
+        <p v-if="production_unit.organic_since"><span class="overline">Certificado orgânico desde:</span><br><strong>{{ $moment(production_unit.organic_since).format("DD/MM/YYYY") }}</strong></p>
+        <p v-if="production_unit.certification_type"><span class="overline">Tipo de certificação:</span><br><strong>{{ production_unit.certification_type }}</strong></p>
+        <p v-if="certifying_entity">
+          <span class="overline">Entidade certificadora:</span>
+          <br>
+          <n-link class="text-decoration-none" :to="'/entidades-certificadoras/' + certifying_entity._id"><strong>{{ certifying_entity.name }}</strong> ({{ certifying_entity.city }} - {{ certifying_entity.uf }})</n-link>
+        </p>
         <div v-if="production_unit.responsibles && production_unit.responsibles.length" class="mb-6">
           <Responsibles :items="production_unit.responsibles" />
         </div>
@@ -51,11 +57,15 @@
 export default {
   data () {
     return {
-      production_unit: null
+      production_unit: null,
+      certifying_entity: null
     }
   },
   async created () {
     this.production_unit = await this.$axios.$get('/api/production_units/' + this.$route.params.id)
+    if (this.production_unit.certifying_entity) {
+      this.certifying_entity = await this.$axios.$get('/api/certifying_entities/' + this.production_unit.certifying_entity)
+    }
   }
 }
 </script>

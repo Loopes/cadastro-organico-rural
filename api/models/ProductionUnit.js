@@ -40,8 +40,12 @@ const ProductionUnitSchema = mongoose.Schema({
 
   responsibles: [ResponsibleSchema],
 
-  certifying_entity_type: String,
-  certifying_entity: String
+  certification_type: String,
+  certifying_entity: {
+    type: ObjectId,
+    ref: 'CertifyingEntity',
+    required: true
+  }
 
 }, {
   timestamps: true,
