@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" md="6">
           <validation-provider v-slot="{ errors }" name="estado" rules="required">
-            <v-select v-model="form.uf" :items="estados" label="Estado *" :error-messages="errors" outlined />
+            <v-select v-model="form.uf" :items="estados" label="Estado *" :error-messages="errors" outlined hide-details="auto" />
           </validation-provider>
         </v-col>
         <v-col v-if="form.uf" cols="12" md="6">
@@ -32,6 +32,17 @@
         <v-text-field v-model="form.previous_year_total_production" outlined label="Qual a produção obtida no ano anterior?" suffix="KG" type="number" />
         <v-text-field v-model="form.current_year_estimated_production" outlined label="Qual a estimativa da produção desse ano?" suffix="KG" type="number" />
         <DatePicker v-model="form.organic_since" label="Desde de quando finalizou a conversão orgânica?" />
+        <v-select v-model="form.certification_type" label="Qual foi o tipo de certificação?" :items="['Certificadora', 'OPAC', 'OCS']" outlined />
+        <v-autocomplete
+          v-model="form.certifying_entity" :items="certifying_entities" item-text="name" item-value="_id" label="Entidade certificadora *" outlined
+        >
+          <template v-slot:item="data">
+            <div class="py-2">
+              <h4>{{ data.item.name }}</h4>
+              <small>{{ data.item.city }} - {{ data.item.uf }}</small>
+            </div>
+          </template>
+        </v-autocomplete>
         <Upload v-model="form.documents" label="Anexar documentos" type="documents" multiple edit-title />
         <Upload v-model="form.pictures" label="Anexar imagens" type="images" multiple edit-title />
         <Save :invalid="invalid" />
@@ -67,6 +78,7 @@ export default {
     return {
       estados,
       cidades,
+      certifying_entities: null,
       form: {
         uf: 'GO',
         city: 'Alto Paraíso de Goiás',
@@ -92,15 +104,16 @@ export default {
         production_activities: [],
         previous_year_total_production: '',
         current_year_estimated_production: '',
-        certifying_entity_type: '',
-        certifying_entity: '',
+        certification_type: null,
+        certifying_entity: null,
         pictures: [],
         documents: []
       }
     }
   },
-  created() {
+  async created() {
     this.toForm(this.form, this.productionUnit)
+    this.certifying_entities = await this.$axios.$get('/api/certifying_entities')
   },
   methods: {
     async save() {

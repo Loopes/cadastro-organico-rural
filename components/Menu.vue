@@ -38,7 +38,7 @@
       </v-list-item>
       <v-list-item class="ml-n10 pl-12" to="/entidades-certificadoras">
         <v-list-item-icon>
-          <v-icon>mdi-barn</v-icon>
+          <v-icon>mdi-certificate</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title>Entidades Certificadoras</v-list-item-title>
