@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const AddressSchema = require('./Address')
+const ResponsibleSchema = require('./Responsible')
 const ObjectId = mongoose.Schema.Types.ObjectId
 
 const CertifyingEntitySchema = mongoose.Schema({
@@ -16,15 +17,21 @@ const CertifyingEntitySchema = mongoose.Schema({
     type: String,
     required: true
   },
-  cnpj: Number,
-  phone: Number,
-  name: String,
+  name: {
+    type: String,
+    required: true
+  },
+  cnpj: {
+    type: String,
+    required: true
+  },
+  phone: String,
   email: String,
   contacts: String,
   address: AddressSchema,
-  pictures: [Object],
-  responsable: String,
-  documents: [Object]
+  responsibles: [ResponsibleSchema],
+  documents: [Object],
+  pictures: [Object]
 }, {
   timestamps: true,
   toJSON: { virtuals: true }

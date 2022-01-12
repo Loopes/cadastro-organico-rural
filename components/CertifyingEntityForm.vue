@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" md="6">
           <validation-provider v-slot="{ errors }" name="categoria" rules="required">
-            <v-select v-model="form.uf" name="uf" :items="estados" label="Estado *" :error-messages="errors" outlined />
+            <v-select v-model="form.uf" name="uf" :items="estados" label="Estado *" :error-messages="errors" outlined hide-details="auto" />
           </validation-provider>
         </v-col>
         <v-col v-if="form.uf" cols="12" md="6">
@@ -15,17 +15,23 @@
       </v-row>
       <div v-if="form.uf && form.city">
         <validation-provider v-slot="{ errors }" name="nome" rules="required">
-          <v-text-field v-model="form.name" outlined name="name" label="Nome do Organismo Certificador *" :error-messages="errors" />
+          <v-text-field v-model="form.name" outlined label="Nome da entidade *" :error-messages="errors" />
         </validation-provider>
-        <v-textarea v-model="form.contacts" outlined name="contacts" label="Contatos" rows="2" auto-grow />
-        <v-textarea v-model="form.farm_address" outlined name="farm_address" label="Endereço do Organismo Certificador" rows="2" auto-grow />
+        <validation-provider v-slot="{ errors }" name="cnpj" rules="required">
+          <v-text-field v-model="form.cnpj" v-mask="['##.###.###/####-##']" outlined label="CNPJ" :error-messages="errors" />
+        </validation-provider>
+        <v-text-field v-model="form.phone" v-mask="['(##) ####-####', '(##) #####-####']" outlined name="phone" placeholder="(99) 99999-9999" label="Telefone *" />
+        <v-text-field v-model="form.email" name="email" label="Email" outlined />
+        <v-textarea v-model="form.contacts" outlined label="Outros contatos" rows="3" auto-grow />
         <AddressForm v-model="form.address" label="Endereço de correspondência" />
+        <ResponsibleForm v-model="form.responsibles" />
         <Upload v-model="form.documents" label="Anexar documentos" type="documents" multiple edit-title />
         <Upload v-model="form.pictures" label="Anexar imagens" type="images" multiple edit-title />
+
         <Save :invalid="invalid" />
       </div>
     </v-form>
-    <Remove v-if="productionUnit" @confirm="remove(productionUnit)" />
+    <Remove v-if="certifyingEntity" @confirm="remove(certifyingEntity)" />
   </ValidationObserver>
 </template>
 
@@ -46,7 +52,7 @@ export default {
   },
   mixins: [mixinForm],
   props: {
-    productionUnit: {
+    certifyingEntity: {
       type: Object,
       default: null
     }
@@ -56,11 +62,15 @@ export default {
       estados,
       cidades,
       form: {
-        uf: '',
-        city: '',
+        uf: 'GO',
+        city: 'Alto Paraíso de Goiás',
         name: '',
-        address: null,
+        cnpj: null,
+        phone: '',
+        email: '',
         contacts: '',
+        address: null,
+        responsibles: [],
         pictures: [],
         documents: []
       }
@@ -74,7 +84,7 @@ export default {
       if (this.certifyingEntity) {
         const certifyingEntity = await this.$axios.$put('/api/certifying_entities/' + this.certifyingEntity._id, this.form)
         if (certifyingEntity) {
-          this.$notifier.success('Entidade Certificadora Atualizada!')
+          this.$notifier.success('Entidade certificadora Atualizada!')
           this.$router.push('/entidades-certificadoras/' + certifyingEntity._id)
         }
       } else {

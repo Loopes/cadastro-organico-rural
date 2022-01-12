@@ -1,6 +1,6 @@
 <template>
   <div class="create">
-    <Breadcrumb active="Cadsatrar unidade de produção" parent="/entidades-certificadoras" />
+    <Breadcrumb active="Cadsatrar entidade certificadora" parent="/entidades-certificadoras" />
     <CertifyingEntityForm />
   </div>
 </template>
@@ -11,8 +11,8 @@ export default {
     return {
       breadcrumb: [
         { text: 'Dashboard', to: '/admin' },
-        { text: 'Entidade Certificadora', to: '/entidades-certificadoras' },
-        { text: 'Cadastrar item', active: true }
+        { text: 'Entidades certificadoras', to: '/entidades-certificadoras' },
+        { text: 'Cadastrar', active: true }
       ]
     }
   }

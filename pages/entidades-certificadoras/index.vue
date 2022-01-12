@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Breadcrumb active="Entidade Certificadora" />
+    <Breadcrumb active="Entidades certificadoras" />
     <v-btn
       to="/entidades-certificadoras/cadastrar"
       fab
