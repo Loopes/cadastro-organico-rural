@@ -62,7 +62,7 @@
                   <v-row>
                     <v-col cols="12" sm="6" class="pb-0">
                       <validation-provider v-slot="{ errors }" name="produção anual" rules="min_value: 0">
-                        <v-text-field v-model="form.quantity" outlined label="Produção anual" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
+                        <v-text-field v-model="form.quantity" outlined label="Produção anual estimada desse ano" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
                           <span slot="append">
                             {{ form.activity.unidade }}
                           </span>
@@ -71,7 +71,25 @@
                     </v-col>
                     <v-col cols="12" sm="6" class="pb-0">
                       <validation-provider v-slot="{ errors }" name="área de produção" rules="min_value: 0">
-                        <v-text-field v-model="form.area" outlined label="Área de produção" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
+                        <v-text-field v-model="form.area" outlined label="Área de produção atual" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
+                          <span slot="append">
+                            HECTARES
+                          </span>
+                        </v-text-field>
+                      </validation-provider>
+                    </v-col>
+                    <v-col cols="12" sm="6" class="pb-0">
+                      <validation-provider v-slot="{ errors }" name="área de produção" rules="min_value: 0">
+                        <v-text-field v-model="form.previous_year_total_production" outlined label="Total de produção do ano passado" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
+                          <span slot="append">
+                            KG
+                          </span>
+                        </v-text-field>
+                      </validation-provider>
+                    </v-col>
+                    <v-col cols="12" sm="6" class="pb-0">
+                      <validation-provider v-slot="{ errors }" name="área de produção" rules="min_value: 0">
+                        <v-text-field v-model="form.current_year_estimated_production" outlined label="Total de área do ano passado" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
                           <span slot="append">
                             HECTARES
                           </span>
@@ -116,7 +134,9 @@ export default {
       form: {
         activity: null,
         quantity: null,
-        area: null
+        area: null,
+        previous_year_total_production: null,
+        current_year_estimated_production: null
       }
     }
   },
@@ -144,6 +164,8 @@ export default {
       this.form.activity = ''
       this.form.quantity = ''
       this.form.area = ''
+      this.previous_year_total_production = ''
+      this.current_year_estimated_production = ''
     },
     remove (index) {
       this.items = this.items.filter((item, i) => i !== index)

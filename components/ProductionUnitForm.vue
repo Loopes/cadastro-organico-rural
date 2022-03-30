@@ -29,8 +29,6 @@
         <v-text-field v-model="form.organic_production_area" outlined label="Área destinada a produção orgânica" suffix="hectares" type="number" />
         <v-text-field v-model="form.permanent_preservation_area" outlined label="Área de preservação permanente - APP" suffix="hectares" type="number" />
         <v-text-field v-model="form.legal_reservea_area" outlined label="Área da reserva legal" suffix="hectares" type="number" />
-        <v-text-field v-model="form.previous_year_total_production" outlined label="Qual a produção obtida no ano anterior?" suffix="KG" type="number" />
-        <v-text-field v-model="form.current_year_estimated_production" outlined label="Qual a estimativa da produção desse ano?" suffix="KG" type="number" />
         <DatePicker v-model="form.organic_since" label="Desde de quando finalizou a conversão orgânica?" />
         <v-select v-model="form.certification_type" label="Qual foi o tipo de certificação?" :items="['Certificadora', 'OPAC', 'OCS']" outlined />
         <v-autocomplete
@@ -102,8 +100,6 @@ export default {
         organic_since: '',
         responsibles: [],
         production_activities: [],
-        previous_year_total_production: '',
-        current_year_estimated_production: '',
         certification_type: null,
         certifying_entity: null,
         pictures: [],

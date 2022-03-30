@@ -35,8 +35,6 @@ const ProductionUnitSchema = mongoose.Schema({
   legal_reservea_area: Number,
   organic_since: Date,
   production_activities: [ProductionActivitySchema],
-  previous_year_total_production: Number,
-  current_year_estimated_production: Number,
 
   responsibles: [ResponsibleSchema],
 
