@@ -1,6 +1,6 @@
 <template>
   <div class="mb-3">
-    <span class="overline">Atividades de produção: </span>
+    <span class="overline">Atividades de produção atual: </span>
     <v-list v-if="items && items.length" outlined class="rounded mb-3">
       <v-list-item v-for="(item, i) in items" :key="i">
         <v-list-item-content>
@@ -9,6 +9,24 @@
           <div>
             <v-chip v-if="item.quantity" color="primary" class="lighten-2" small><strong>{{ item.quantity }} </strong> &nbsp; {{ item.activity.unidade }} anuais</v-chip>
             <v-chip v-if="item.area" small><strong>{{ item.area }} </strong> &nbsp; hectares</v-chip>
+          </div>
+        </v-list-item-content>
+        <v-list-item-action>
+          <v-btn color="danger" icon @click="remove(i)">
+            <v-icon>mdi-delete</v-icon>
+          </v-btn>
+        </v-list-item-action>
+      </v-list-item>
+    </v-list>
+    <span class="overline">Atividades de produção do ano passado: </span>
+    <v-list v-if="items && items.length" outlined class="rounded mb-3">
+      <v-list-item v-for="(item, i) in items" :key="i">
+        <v-list-item-content>
+          <v-list-item-title><strong>{{ item.activity.descricao }}</strong></v-list-item-title>
+          <v-list-item-subtitle class="mb-2"><small>{{ item.activity.grupo }}</small></v-list-item-subtitle>
+          <div>
+            <v-chip v-if="item.previous_year_total_quantity_production" color="primary" class="lighten-2" small><strong>{{ item. previous_year_total_quantity_production }} </strong> &nbsp; {{ item.activity.unidade }} anuais</v-chip>
+            <v-chip v-if="item.previous_year_area_production" small><strong>{{ item.previous_year_area_production }} </strong> &nbsp; hectares</v-chip>
           </div>
         </v-list-item-content>
         <v-list-item-action>
@@ -80,7 +98,7 @@
                     </v-col>
                     <v-col cols="12" sm="6" class="pb-0">
                       <validation-provider v-slot="{ errors }" name="área de produção" rules="min_value: 0">
-                        <v-text-field v-model="form.previous_year_total_production" outlined label="Total de produção do ano passado" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
+                        <v-text-field v-model="form.previous_year_area_production" outlined label="Total de produção do ano passado" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
                           <span slot="append">
                             KG
                           </span>
@@ -89,7 +107,7 @@
                     </v-col>
                     <v-col cols="12" sm="6" class="pb-0">
                       <validation-provider v-slot="{ errors }" name="área de produção" rules="min_value: 0">
-                        <v-text-field v-model="form.current_year_estimated_production" outlined label="Total de área do ano passado" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
+                        <v-text-field v-model="form.previous_year_total_quantity_production" outlined label="Total de área do ano passado" type="number" step="0.01" lang="nb" min="0" :error-messages="errors">
                           <span slot="append">
                             HECTARES
                           </span>
@@ -135,8 +153,8 @@ export default {
         activity: null,
         quantity: null,
         area: null,
-        previous_year_total_production: null,
-        current_year_estimated_production: null
+        previous_year_total_quantity_production: null,
+        previous_year_area_production: null
       }
     }
   },
@@ -164,8 +182,8 @@ export default {
       this.form.activity = ''
       this.form.quantity = ''
       this.form.area = ''
-      this.previous_year_total_production = ''
-      this.current_year_estimated_production = ''
+      this.previous_year_total_quantity_production = ''
+      this.previous_year_area_production = ''
     },
     remove (index) {
       this.items = this.items.filter((item, i) => i !== index)

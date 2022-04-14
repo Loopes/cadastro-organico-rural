@@ -11,10 +11,10 @@ const ProductionActivitySchema = new mongoose.Schema({
   area: {
     type: Number
   },
-  previous_year_total_production: {
+  previous_year_total_quantity_production: {
     type: Number
   },
-  current_year_estimated_production: {
+  previous_year_area_production: {
     type: Number
   }
 })
