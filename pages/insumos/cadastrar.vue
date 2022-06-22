@@ -1,0 +1,20 @@
+<template>
+  <div class="create">
+    <Breadcrumb active="Cadastrar entidade certificadora" parent="/entidades-certificadoras" />
+    <RawMaterialForm />
+  </div>
+</template>
+<script>
+export default {
+  middleware: 'auth',
+  data () {
+    return {
+      breadcrumb: [
+        { text: 'Dashboard', to: '/admin' },
+        { text: 'Entidades certificadoras', to: '/entidades-certificadoras' },
+        { text: 'Cadastrar', active: true }
+      ]
+    }
+  }
+}
+</script>

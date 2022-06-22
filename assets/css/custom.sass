@@ -1,0 +1,27 @@
+// $primary: '#1976D2',
+// $secondary: '#424242',
+// $accent: '#82B1FF',
+// $error: '#FF5252',
+// $info: '#2196F3',
+// $success: '#4CAF50',
+// $warning: '#FFC107',
+
+/* stylelint-disable */
+@import "leaflet/dist/leaflet.css"
+
+.content
+  min-height: calc(100vh - 64px)
+
+.quill-editor
+  border-radius: 8px
+  margin-bottom: 24px
+
+.v-btn--absolute.v-btn--top, .v-btn--fixed.v-btn--top
+  top: 30px
+  @media (max-width: 1264px)
+    top: 90px
+  @media (max-width: 960px)
+    top: 77px
+
+.v-main
+  min-height: calc(100vh - 56px)
