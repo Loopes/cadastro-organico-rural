@@ -46,7 +46,7 @@
         <Save :invalid="invalid" />
       </div>
     </v-form>
-    <Remove v-if="certifyingEntity" @confirm="remove(certifyingEntity)" />
+    <Remove v-if="rawMaterialEntity" @confirm="remove(rawMaterialEntity)" />
   </ValidationObserver>
 </template>
 
@@ -68,7 +68,7 @@ export default {
   },
   mixins: [mixinForm],
   props: {
-    certifyingEntity: {
+    rawMaterialEntity: {
       type: Object,
       default: null
     }
@@ -97,24 +97,24 @@ export default {
   },
   methods: {
     async save() {
-      if (this.certifyingEntity) {
-        const certifyingEntity = await this.$axios.$put('/api/certifying_entities/' + this.certifyingEntity._id, this.form)
-        if (certifyingEntity) {
-          this.$notifier.success('Entidade certificadora Atualizada!')
-          this.$router.push('/entidades-certificadoras/' + certifyingEntity._id)
+      if (this.rawMaterialEntity) {
+        const rawMaterialEntity = await this.$axios.$put('/api/raw_materials/' + this.rawMaterialEntity._id, this.form)
+        if (rawMaterialEntity) {
+          this.$notifier.success('Insumo Atualizado!')
+          this.$router.push('/insumos/' + rawMaterialEntity._id)
         }
       } else {
-        const certifyingEntity = await this.$axios.$post('/api/certifying_entities', this.form)
-        if (certifyingEntity) {
-          this.$notifier.success('Unidade cadastrada!')
-          this.$router.push('/entidades-certificadoras/' + certifyingEntity._id)
+        const rawMaterialEntity = await this.$axios.$post('/api/raw_materials', this.form)
+        if (rawMaterialEntity) {
+          this.$notifier.success('Insumo cadastrado!')
+          this.$router.push('/insumos/' + rawMaterialEntity._id)
         }
       }
     },
-    remove (certifyingEntity) {
-      this.$axios.delete('/api/certifying_entities/' + certifyingEntity._id).then(() => {
+    remove (rawMaterialEntity) {
+      this.$axios.delete('/api/raw_materials/' + rawMaterialEntity._id).then(() => {
         this.$notifier.success('Removido com sucesso!')
-        this.$router.push('/entidades-certificadoras')
+        this.$router.push('/insumos')
       })
     }
   }

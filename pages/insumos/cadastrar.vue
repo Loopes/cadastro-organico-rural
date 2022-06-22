@@ -1,6 +1,6 @@
 <template>
   <div class="create">
-    <Breadcrumb active="Cadastrar entidade certificadora" parent="/entidades-certificadoras" />
+    <Breadcrumb active="Cadastrar insumo" parent="/insumos" />
     <RawMaterialForm />
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
     return {
       breadcrumb: [
         { text: 'Dashboard', to: '/admin' },
-        { text: 'Entidades certificadoras', to: '/entidades-certificadoras' },
+        { text: 'Insumos', to: '/insumos' },
         { text: 'Cadastrar', active: true }
       ]
     }

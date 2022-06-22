@@ -57,12 +57,12 @@ export default {
   },
   methods: {
     async list () {
-      this.raw_materials = await this.$axios.$get('/api/certifying_entities')
+      this.raw_materials = await this.$axios.$get('/api/raw_materials')
     },
     remove (rawMaterial) {
       this.$bvModal.msgBoxConfirm('Tem certeza que deseja excluír este item?').then(async confirmed => {
         if (confirmed) {
-          await this.$axios.delete('/api/certifying_entities/' + rawMaterial._id).then(() => {
+          await this.$axios.delete('/api/raw_materials/' + rawMaterial._id).then(() => {
             this.list()
             this.$notifier.success('Item removido com sucesso!')
           })

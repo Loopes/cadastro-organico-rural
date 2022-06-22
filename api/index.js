@@ -36,6 +36,7 @@ router.use('/conversations', require('./routes/conversations'))
 router.use('/medias', require('./routes/medias'))
 router.use('/production_units', require('./routes/production_units'))
 router.use('/certifying_entities', require('./routes/certifying_entities'))
+router.use('/raw_materials', require('./routes/raw_materials'))
 
 router.get('/profile', auth.authenticated, function(req, res) {
   User.findById(req.user._id).exec(function(err, user) {

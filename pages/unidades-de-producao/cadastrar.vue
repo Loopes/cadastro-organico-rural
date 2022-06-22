@@ -1,6 +1,6 @@
 <template>
   <div class="create">
-    <Breadcrumb active="Cadsatrar unidade de produção" parent="/unidades-de-producao" />
+    <Breadcrumb active="Cadastrar unidade de produção" parent="/unidades-de-producao" />
     <ProductionUnitForm />
   </div>
 </template>
