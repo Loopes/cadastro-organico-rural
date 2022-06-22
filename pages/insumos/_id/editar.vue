@@ -1,7 +1,7 @@
 <template>
   <div class="create">
-    <Breadcrumb active="Editar entidade de certificação" parent="/entidades-certificadoras" />
-    <CertifyingEntityForm v-if="certifying_entity" :certifying-entity="certifying_entity" />
+    <Breadcrumb active="Editar insumo" parent="/insumos" />
+    <RawMaterialForm v-if="raw_materials" :rawMaterialEntity="raw_materials" />
     <div v-else class="text-center">
       <v-progress-circular indeterminate small label="Carregando..." />
     </div>
@@ -12,11 +12,11 @@ export default {
   middleware: 'auth',
   data () {
     return {
-      certifying_entity: null
+      raw_materials: null
     }
   },
   async created () {
-    this.certifying_entity = await this.$axios.$get('/api/certifying_entities/' + this.$route.params.id)
+    this.raw_materials = await this.$axios.$get('/api/raw_materials/' + this.$route.params.id)
   }
 }
 </script>

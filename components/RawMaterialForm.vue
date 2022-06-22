@@ -9,7 +9,7 @@
         </v-col>
         <v-col cols="12" md="2">
           <validation-provider v-slot="{ errors }" name="um" rules="required">
-            <v-select v-model="form.uM" name="uf" :items="unidadeMedida" label="Unidade de Medida *" :error-messages="errors" outlined hide-details="auto" />
+            <v-select v-model="form.uM" name="uM" :items="unidadeMedida" label="Unidade de Medida *" :error-messages="errors" outlined hide-details="auto" />
           </validation-provider>
         </v-col>
       </v-row>
@@ -93,7 +93,7 @@ export default {
     }
   },
   created() {
-    this.toForm(this.form, this.certifyingEntity)
+    this.toForm(this.form, this.rawMaterialEntity)
   },
   methods: {
     async save() {

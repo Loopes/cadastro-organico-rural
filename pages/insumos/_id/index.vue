@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div v-if="certifying_entity" class="create">
+    <div v-if="raw_materials" class="create">
       <v-btn
-        v-if="$auth.user && $auth.user._id === certifying_entity.user"
-        :to="'/entidades-certificadoras/'+ certifying_entity._id + '/editar'"
+        v-if="$auth.user && $auth.user._id === raw_materials.user"
+        :to="'/insumos/'+ raw_materials._id + '/editar'"
         fab
         top
         right
@@ -13,21 +13,18 @@
       >
         <v-icon dark>mdi-pencil</v-icon>
       </v-btn>
-      <Breadcrumb active="Entidade certificadora" parent="/entidades-certificadoras" />
+      <Breadcrumb active="Insumos" parent="/insumos" />
       <div>
-        <h1 class="mb-0 text-h4 font-weight-bold"> {{ certifying_entity.name }} </h1>
-        <h2 class="mb-6 text-h5"> {{ certifying_entity.city }} - {{ certifying_entity.uf }}</h2>
-        <p class="mt-3">{{ certifying_entity.cnpj }}</p>
-        <p v-if="certifying_entity.phone"><span class="overline">Telefone:</span><br><strong>{{ certifying_entity.phone }}</strong></p>
-        <p v-if="certifying_entity.email"><span class="overline">E-mail:</span><br><strong>{{ certifying_entity.email }}</strong></p>
-        <p v-if="certifying_entity.contacts"><span class="overline">Outros contatos:</span><br><strong>{{ certifying_entity.contacts }}</strong></p>
-        <AddressPreview v-if="certifying_entity.address" :address="certifying_entity.address" label="Endereço" />
-        <div v-if="certifying_entity.responsibles && certifying_entity.responsibles.length" class="mb-6">
-          <Responsibles :items="certifying_entity.responsibles" />
-        </div>
-        <Documents :documents="certifying_entity.documents" />
-        <Banners v-if="certifying_entity.pictures && certifying_entity.pictures.length" :items="certifying_entity.pictures" />
-        <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(certifying_entity.createdAt).format("DD/MM/YYYY") }}</strong></p>
+        <h1 class="mb-0 text-h4 font-weight-bold"> {{ raw_materials.name }} </h1>
+        <h2 class="mb-6 text-h5">{{ raw_materials.category }}</h2>
+        <p v-if="raw_materials.uM"><span class="overline">Unidade de Medida:</span><br><strong>{{ raw_materials.uM }}</strong></p>
+        <p v-if="raw_materials.guidelines"><span class="overline">Orientações:</span><br><strong>{{ raw_materials.guidelines }}</strong></p>
+        <p v-if="raw_materials.restrictions"><span class="overline">Restrições:</span><br><strong>{{ raw_materials.restrictions }}</strong></p>
+        <p v-if="raw_materials.reference"><span class="overline">Referências Legais:</span><br><strong>{{ raw_materials.reference }}</strong></p>
+        <p v-if="raw_materials.allowed"><span class="overline">Permitido:</span><br><strong> Sim </strong></p>
+        <p v-if="!raw_materials.allowed"><span class="overline">Permitido:</span><br><strong> Não </strong></p>
+        <p><span class="overline">Data de Vigencia:</span><br>Inicial:<br/><strong>{{ raw_materials.validityDateInit.toString().slice(0,10) }}</strong><br>Final:<br/><strong>{{ raw_materials.validityDateInit.toString().slice(0,10) }}</strong></p>
+        <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(raw_materials.createdAt).format("DD/MM/YYYY") }}</strong></p>
       </div>
     </div>
     <div v-else class="text-center">
@@ -39,11 +36,11 @@
 export default {
   data () {
     return {
-      certifying_entity: null
+      raw_materials: null
     }
   },
   async created () {
-    this.certifying_entity = await this.$axios.$get('/api/certifying_entities/' + this.$route.params.id)
+    this.raw_materials = await this.$axios.$get('/api/raw_materials/' + this.$route.params.id)
   }
 }
 </script>
