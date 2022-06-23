@@ -52,7 +52,6 @@
           <v-list-item-title>Insumos</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-
       <v-list-item v-if="$auth.user" to="/conexoes" class="ml-n10 pl-12">
         <v-list-item-icon>
           <v-badge
