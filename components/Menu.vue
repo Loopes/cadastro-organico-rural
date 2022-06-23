@@ -44,7 +44,14 @@
           <v-list-item-title>Entidades Certificadoras</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-
+      <v-list-item class="ml-n10 pl-12" to="/insumos">
+        <v-list-item-icon>
+          <v-icon>mdi-tree</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>Insumos</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
       <v-list-item v-if="$auth.user" to="/conexoes" class="ml-n10 pl-12">
         <v-list-item-icon>
           <v-badge

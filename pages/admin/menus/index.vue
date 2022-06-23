@@ -59,7 +59,9 @@
         </template>
       </v-list>
       <v-alert v-else dark color="tertiary" class="text-center">Nenhum item encontrado</v-alert>
+
     </div>
+
     <v-skeleton-loader
       v-else
       type="list-item-two-line@3"
