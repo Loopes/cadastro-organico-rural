@@ -2,10 +2,11 @@ const express = require('express')
 const mongoose = require('mongoose')
 const router = express.Router()
 const auth = require('../config/auth')
-const ProductionUnit = mongoose.model('ProductionUnit')
+const FieldNotebookEntity = mongoose.model('FieldNotebookEntity')
 
 router.get('/', auth.authenticated, (req, res) => {
   const query = {}
+
   if (req.query.search) {
     query.title = { $regex: req.query.search, $options: 'i' }
   }
@@ -19,66 +20,66 @@ router.get('/', auth.authenticated, (req, res) => {
     query.user = req.user._id
   }
 
-  ProductionUnit.find(query).sort({ name: 1 }).exec((err, productionUnits) => {
+  FieldNotebookEntity.find(query).sort({ name: 1 }).exec((err, fieldNotebook) => {
     if (err) {
       res.status(422).send(err.message)
     } else {
-      res.json(productionUnits)
+      res.json(fieldNotebook)
     }
   })
 })
 
 router.get('/:id', (req, res) => {
-  ProductionUnit.findOne({
+  FieldNotebookEntity.findOne({
     _id: req.params.id
-  }).exec((err, productionUnit) => {
+  }).exec((err, fieldNotebook) => {
     if (err) {
       res.status(422).send(err.message)
     } else {
-      res.json(productionUnit)
+      res.json(fieldNotebook)
     }
   })
 })
 
 router.post('/', auth.authenticated, (req, res) => {
-  const newProductionUnit = new ProductionUnit(req.body)
+  const newFieldNotebook = new FieldNotebookEntity(req.body)
   console.log(req.user)
-  newProductionUnit.user = req.user._id
-  newProductionUnit.save((err, productionUnit) => {
+  newFieldNotebook.user = req.user._id
+  newFieldNotebook.save((err, fieldNotebook) => {
     if (err) {
       res.status(422).send(err.message)
     } else {
-      res.send(productionUnit)
+      res.send(fieldNotebook)
     }
   })
 })
 
 router.put('/:id', auth.authenticated, (req, res) => {
   const params = req.body
-  ProductionUnit.findOneAndUpdate({
+  FieldNotebookEntity.findOneAndUpdate({
     _id: req.params.id
   }, {
     $set: params
   }, {
     upsert: true
-  }, (err, productionUnit) => {
+  }, (err, fieldNotebook) => {
     if (err) {
       res.status(422).send(err.message)
     } else {
-      res.send(productionUnit)
+      res.send(fieldNotebook)
     }
   })
 })
 
 router.delete('/:id', auth.authenticated, (req, res) => {
-  ProductionUnit.findOne({
+  FieldNotebookEntity.findOne({
     _id: req.params.id
-  }).exec((err, productionUnit) => {
+  }).exec((err, fieldNotebook) => {
     if (err) {
       res.status(422).send(err.message)
     } else {
-      productionUnit.remove()
-      res.send(productionUnit)
+      fieldNotebook.remove()
+      res.send(fieldNotebook)
     }
   })
 })

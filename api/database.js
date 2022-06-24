@@ -9,6 +9,7 @@ require('./models/ProductionUnit')
 require('./models/CertifyingEntity')
 require('./models/Conversation')
 require('./models/RawMaterialsEntity')
+require('./models/FieldNotebookEntity')
 require('./config/passport')
 
 

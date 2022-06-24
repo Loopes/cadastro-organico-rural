@@ -28,6 +28,14 @@
           <v-list-item-title>Início</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+      <v-list-item class="ml-n10 pl-12" to="/caderno-de-campo">
+        <v-list-item-icon>
+          <v-icon>mdi-notebook</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>Caderno de campo</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
       <v-list-item class="ml-n10 pl-12" to="/unidades-de-producao">
         <v-list-item-icon>
           <v-icon>mdi-barn</v-icon>
