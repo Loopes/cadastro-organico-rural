@@ -13,9 +13,11 @@
       >
         <v-icon dark>mdi-pencil</v-icon>
       </v-btn>
+      <Breadcrumb active="Caderno de campo" parent="/caderno-de-campo" />
       <div>
         <h1 class="mb-0 text-h4 font-weight-bold"> {{ field_notebook.name }} </h1>
         <br>
+        <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Código de Rastreabilidade:</span><br><strong>{{ field_notebook.codTraceability }}</strong></p>
         <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Tipos:</span><br>
           <strong v-for="(item, index) in field_notebook.type" :key="index">
             {{ item }} <br>

@@ -44,6 +44,7 @@ router.get('/:id', (req, res) => {
 router.post('/', auth.authenticated, (req, res) => {
   const newFieldNotebook = new FieldNotebookEntity(req.body)
   console.log(req.user)
+  newFieldNotebook.codTraceability += newFieldNotebook._id
   newFieldNotebook.user = req.user._id
   newFieldNotebook.save((err, fieldNotebook) => {
     if (err) {

@@ -104,7 +104,6 @@
         <validation-provider v-slot="{ errors }" name="Título" rules="required">
           <v-text-field v-model="form.name" outlined label="Título (Ex: Cultivo de Tomate - Junho/2022)*" :error-messages="errors" />
         </validation-provider>
-        <span class="overline">Código de Rastreabilidade: {{form.codTraceability && form.codTraceability}}</span>
         <v-row>
           <v-col cols="12" md="12">
           </v-col>
