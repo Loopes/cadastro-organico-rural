@@ -37,7 +37,8 @@ const FieldNotebookEntitySchema = mongoose.Schema({
     type: Array,
     required: true
   },
-  codTraceability: String
+  codTraceability: String,
+  observation: String,
 }, {
   timestamps: true,
   toJSON: { virtuals: true }

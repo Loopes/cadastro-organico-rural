@@ -104,6 +104,7 @@
         <validation-provider v-slot="{ errors }" name="Título" rules="required">
           <v-text-field v-model="form.name" outlined label="Título (Ex: Cultivo de Tomate - Junho/2022)*" :error-messages="errors" />
         </validation-provider>
+        <v-textarea v-model="form.observation" outlined label="Observações" rows="3" auto-grow />
         <v-row>
           <v-col cols="12" md="12">
           </v-col>
@@ -202,7 +203,8 @@ export default {
         productionActivitie: null,
         productionId: '',
         name: '',
-        codTraceability: ''
+        codTraceability: '',
+        observation: ''
       }
     }
   },

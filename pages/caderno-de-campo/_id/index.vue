@@ -17,8 +17,8 @@
       <div>
         <h1 class="mb-0 text-h4 font-weight-bold"> {{ field_notebook.name }} </h1>
         <br>
-        <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Código de Rastreabilidade:</span><br><strong>{{ field_notebook.codTraceability }}</strong></p>
-        <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Tipos:</span><br>
+        <p class="mt-3"><span class="overline">Código de Rastreabilidade:</span><br><strong>{{ field_notebook.codTraceability }}</strong></p>
+        <p class="mt-3"><span class="overline">Tipos:</span><br>
           <strong v-for="(item, index) in field_notebook.type" :key="index">
             {{ item }} <br>
           </strong>
@@ -29,6 +29,7 @@
           <strong>{{ field_notebook.productionActivitie.descricao }}</strong> <br>
           <strong>{{ field_notebook.productionActivitie.codigo }}</strong>
         </p>
+        <p v-if="field_notebook.observation" class="mt-3" style="white-space: pre-line;"><span class="overline">Observações:</span><br><strong>{{ field_notebook.observation }}</strong></p>
         <br>
         <p v-if="field_notebook.rawMaterial[0]" class="mt-3"><strong>Insumos:</strong></p>
         <v-row  v-for="(a, index) in field_notebook.rawMaterial" :key="index" class="table">
