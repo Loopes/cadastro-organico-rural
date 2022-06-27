@@ -45,6 +45,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/auth',
     '@nuxtjs/toast',
+    '@nuxtjs/dotenv',
     ['nuxt-validate', {
       lang: 'pt_BR'
     }],
