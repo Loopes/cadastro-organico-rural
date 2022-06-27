@@ -4,7 +4,7 @@ const router = express.Router()
 const auth = require('../config/auth')
 const RawMaterialsEntity = mongoose.model('RawMaterialsEntity')
 
-router.get('/', (req, res) => {
+router.get('/', auth.authenticated, (req, res) => {
   const query = {}
 
   if (req.query.search) {
@@ -15,6 +15,9 @@ router.get('/', (req, res) => {
   }
   if (req.query.tag) {
     query.tags = req.query.tag
+  }
+  if (req.query.user) {
+    query.user = req.user._id
   }
 
   RawMaterialsEntity.find(query).sort({ name: 1 }).exec((err, rawMaterials) => {
