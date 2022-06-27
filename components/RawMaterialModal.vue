@@ -32,10 +32,15 @@
               <v-form >
                 <v-row>
                     <v-col cols="12" md="12">
-                      <v-select v-model="unitId" :items="items" label="Insumos" outlined hide-details="auto" />
+                      <v-text-field @input="filter(findRawMaterial)" v-model="findRawMaterial" outlined label="Buscar Insumo" />
                     </v-col>
-                    <v-col cols="12" md="12">
-                    </v-col>
+                    <b-container v-if="!unitId" style="width: 100%; height: 30vh; overflow:auto">
+                      <v-col class="text-center" v-for="(material, index) in items" :key="index" cols="12" md="12">
+                        <div @click="unitId=material.value; findRawMaterial=material.text" style="cursor: pointer;">
+                          <span class="overline">{{material.text}}<br></span>
+                        </div>
+                      </v-col>
+                    </b-container>
                 </v-row>
                 <div v-if="unitId">
                   <validation-provider v-slot="{ errors }" name="Area Aplicada" rules="required">
@@ -60,7 +65,7 @@
                   <v-col cols="12" md="4">
                   </v-col>
                   <v-col cols="12" md="4">
-                    <v-btn class="mr-4" @click="save()">
+                    <v-btn v-if="unitId" class="mr-4" @click="save()">
                       Confirmar
                     </v-btn>
                   </v-col>
@@ -95,6 +100,8 @@ export default {
   data () {
     return {
       dialog: false,
+      teste: [],
+      findRawMaterial: '',
       items: [],
       base: [],
       rawMaterials: [],
@@ -123,6 +130,27 @@ export default {
           value: req._id
         })
       })
+    },
+    filter (name) {
+      this.unitId = ''
+      this.items = []
+      if (name) {
+        this.rawMaterials.forEach(material => {
+          if (material.name.toUpperCase().search(name.toUpperCase()) >= 0) {
+            this.items.push({
+              text: material.name,
+              value: material._id
+            })
+          }
+        })
+      } else {
+        this.rawMaterials.forEach(material => {
+          this.items.push({
+            text: material.name,
+            value: material._id
+          })
+        })
+      }
     },
     save () {
       const findMaterial = this.rawMaterials.find(material => material._id === this.unitId)
