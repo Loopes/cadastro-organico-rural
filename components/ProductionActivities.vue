@@ -13,8 +13,8 @@
         </v-list-item-content>
       </v-list-item>
     </v-list>
-    <span class="overline">Atividades de produção do ano passado: </span>
-    <v-list v-if="items && items.length" outlined class="rounded mb-3">
+    <span v-if="!onlyThisYear" class="overline">Atividades de produção do ano passado: </span>
+    <v-list v-if="items && items.length && !onlyThisYear" outlined class="rounded mb-3">
       <v-list-item v-for="(item, i) in items" :key="i">
         <v-list-item-content>
           <v-list-item-title><strong>{{ item.activity.descricao }}</strong></v-list-item-title>
@@ -34,6 +34,10 @@ export default {
     items: {
       type: Array,
       default: () => []
+    },
+    onlyThisYear: {
+      type: Boolean,
+      default: () => false
     }
   }
 }

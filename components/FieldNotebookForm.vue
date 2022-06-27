@@ -220,6 +220,7 @@ export default {
               id: material._id,
               name: material.name,
               category: material.category,
+              uM: material.uM,
               ...material.extra
             }
           }
@@ -238,16 +239,12 @@ export default {
           id: this.form.productionUnit.id,
           name: this.form.productionUnit.name
         }
-        this.form.productionActivitie = {
-          id: this.form.productionActivitie._id,
-          codigo: this.form.productionActivitie.activity.codigo,
-          descricao: this.form.productionActivitie.activity.descricao
-        }
         this.form.rawMaterial = this.form.rawMaterial.map(material => {
           return {
             id: material._id,
             name: material.name,
             category: material.category,
+            uM: material.uM,
             ...material.extra
           }
         })
