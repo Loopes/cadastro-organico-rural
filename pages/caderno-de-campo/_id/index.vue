@@ -25,6 +25,14 @@
         </p>
         <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Status:</span><br><strong>{{ field_notebook.status }}</strong></p>
         <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Unidade de Produção:</span><br><strong>{{ field_notebook.productionUnit.name }}</strong></p>
+        <br>
+        <p v-if="certifying_entity" class="mt-3"><span class="overline">Entidade certificadora</span><br>
+          <p v-if="certifying_entity.name" class="mt-3"><span class="overline">Nome: </span><strong>{{ certifying_entity.name }}</strong></p>
+          <p v-if="certifying_entity.phone" class="mt-3"><span class="overline">Telefone: </span><strong>{{ certifying_entity.phone }}</strong></p>
+          <p v-if="certifying_entity.email" class="mt-3"><span class="overline">Email: </span><strong>{{ certifying_entity.email }}</strong></p>
+          <p v-if="certifying_entity.contacts" class="mt-3"><span class="overline">Outros Contatos: </span><strong>{{ certifying_entity.contacts }}</strong></p>
+        </p>
+        <br>
         <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Atividade de Produção:</span><br>
           <strong>{{ field_notebook.productionActivitie.descricao }}</strong> <br>
           <strong>{{ field_notebook.productionActivitie.codigo }}</strong>
@@ -78,11 +86,15 @@
 export default {
   data () {
     return {
-      field_notebook: null
+      field_notebook: null,
+      certifying_entity: {},
+      production_unity: null
     }
   },
   async created () {
     this.field_notebook = await this.$axios.$get('/api/field_notebook/' + this.$route.params.id)
+    this.production_unity = await this.$axios.$get('/api/production_units/' + this.field_notebook.productionUnit.id)
+    this.certifying_entity = await this.$axios.$get('/api/certifying_entities/' + this.production_unity.certifying_entity)
   }
 }
 </script>
