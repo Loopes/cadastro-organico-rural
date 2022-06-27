@@ -24,19 +24,22 @@
           </strong>
         </p>
         <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Status:</span><br><strong>{{ field_notebook.status }}</strong></p>
+        <br>
         <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Unidade de Produção:</span><br><strong>{{ field_notebook.productionUnit.name }}</strong></p>
+        <AddressPreview v-if="production_unity" :address="production_unity.correspondence_address" label="Endereço de correspondência" />
+        <div v-if="production_unity.responsibles && production_unity.responsibles.length" class="mb-6">
+          <Responsibles :items="production_unity.responsibles" />
+        </div>
         <br>
-        <p v-if="certifying_entity" class="mt-3"><span class="overline">Entidade certificadora</span><br>
-          <p v-if="certifying_entity.name" class="mt-3"><span class="overline">Nome: </span><strong>{{ certifying_entity.name }}</strong></p>
-          <p v-if="certifying_entity.phone" class="mt-3"><span class="overline">Telefone: </span><strong>{{ certifying_entity.phone }}</strong></p>
-          <p v-if="certifying_entity.email" class="mt-3"><span class="overline">Email: </span><strong>{{ certifying_entity.email }}</strong></p>
-          <p v-if="certifying_entity.contacts" class="mt-3"><span class="overline">Outros Contatos: </span><strong>{{ certifying_entity.contacts }}</strong></p>
+        <p v-if="certifying_entity">
+          <span class="overline">Entidade certificadora:</span>
+          <br>
+          <n-link class="text-decoration-none" :to="'/entidades-certificadoras/' + certifying_entity._id"><strong>{{ certifying_entity.name }}</strong> ({{ certifying_entity.city }} - {{ certifying_entity.uf }})</n-link>
         </p>
         <br>
-        <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Atividade de Produção:</span><br>
-          <strong>{{ field_notebook.productionActivitie.descricao }}</strong> <br>
-          <strong>{{ field_notebook.productionActivitie.codigo }}</strong>
-        </p>
+        <div v-if="field_notebook.productionActivitie" class="mb-6">
+          <ProductionActivities :items="field_notebook.productionActivitie" :onlyThisYear="true" />
+        </div>
         <p v-if="field_notebook.observation" class="mt-3" style="white-space: pre-line;"><span class="overline">Observações:</span><br><strong>{{ field_notebook.observation }}</strong></p>
         <br>
         <p v-if="field_notebook.rawMaterial[0]" class="mt-3"><strong>Insumos:</strong></p>
@@ -88,11 +91,12 @@ export default {
     return {
       field_notebook: null,
       certifying_entity: {},
-      production_unity: null
+      production_unity: {}
     }
   },
   async created () {
     this.field_notebook = await this.$axios.$get('/api/field_notebook/' + this.$route.params.id)
+    this.field_notebook.productionActivitie = [this.field_notebook.productionActivitie]
     this.production_unity = await this.$axios.$get('/api/production_units/' + this.field_notebook.productionUnit.id)
     this.certifying_entity = await this.$axios.$get('/api/certifying_entities/' + this.production_unity.certifying_entity)
   }
