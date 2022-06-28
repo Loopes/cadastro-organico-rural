@@ -34,7 +34,7 @@
                     <v-col cols="12" md="12">
                       <v-text-field @input="filter(findRawMaterial)" v-model="findRawMaterial" outlined label="Buscar Insumo" />
                     </v-col>
-                    <b-container v-if="!unitId" style="width: 100%; height: 30vh; overflow:auto">
+                    <b-container v-if="!unitId" style="width: 100%; height: 30vh; overflow: auto;">
                       <v-col class="text-center" v-for="(material, index) in items" :key="index" cols="12" md="12">
                         <div @click="unitId=material.value; findRawMaterial=material.text" style="cursor: pointer;">
                           <span class="overline">{{material.text}}<br></span>
@@ -122,7 +122,7 @@ export default {
   },
   methods: {
     async list () {
-      const request = await this.$axios.$get('/api/raw_materials?user=true')
+      const request = await this.$axios.$get('/api/raw_materials/mine')
       this.rawMaterials = request
       request.forEach(req => {
         this.items.push({
