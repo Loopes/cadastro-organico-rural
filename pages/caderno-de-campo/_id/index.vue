@@ -112,10 +112,10 @@ export default {
     this.certifying_entity = await this.$axios.$get('/api/certifying_entities/' + this.production_unity.certifying_entity)
     this.route = process.env.BASE_URL + this.$router.currentRoute.fullPath
     this.qr.push({
-      url: 'api/uploads/qr_code/qr_code_' + this.field_notebook.name + '_' + this.field_notebook._id + '.png',
+      url: 'api/uploads/qr_code/qr_code_field_notebook_' + this.field_notebook.name + '_' + this.field_notebook._id + '.png',
       title: 'QR CODE'
     })
-    await this.$axios.$post('/api/qr_code?url=' + this.route + '&title=' + this.field_notebook.name + '&id=' + this.field_notebook._id)
+    await this.$axios.$post('/api/qr_code?url=' + this.route + '&title=field_notebook_' + this.field_notebook.name + '&id=' + this.field_notebook._id)
   }
 }
 </script>
