@@ -59,7 +59,7 @@
                     </v-col>
                   </v-row>
                   <v-textarea v-model="observation" outlined label="Observações" rows="2" auto-grow />
-                  <Upload v-model="documents" label="Anexar Notas Fiscais (PDF)" type="documents" multiple edit-title />
+                  <Upload v-model="documents" label="Anexar Notas Fiscais" type="documents" multiple edit-title />
                 </div>
                 <v-row>
                   <v-col cols="12" md="4">
