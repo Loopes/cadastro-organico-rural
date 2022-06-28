@@ -26,6 +26,7 @@
         <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Status:</span><br><strong>{{ field_notebook.status }}</strong></p>
         <br>
         <p v-if="field_notebook.productionUnit" class="mt-3"><span class="overline">Unidade de Produção:</span><br><strong>{{ field_notebook.productionUnit.name }}</strong></p>
+        <PointPreview v-if="production_unity.farm_house_location && production_unity.farm_house_location.coordinates.length" :point="production_unity.farm_house_location" label="Sede da propriedade" />
         <AddressPreview v-if="production_unity" :address="production_unity.correspondence_address" label="Endereço de correspondência" />
         <div v-if="production_unity.responsibles && production_unity.responsibles.length" class="mb-6">
           <Responsibles :items="production_unity.responsibles" />
