@@ -4,7 +4,7 @@ const router = express.Router()
 const auth = require('../config/auth')
 const ProductionUnit = mongoose.model('ProductionUnit')
 
-router.get('/', auth.authenticated, (req, res) => {
+router.get('/', (req, res) => {
   const query = {}
   if (req.query.search) {
     query.title = { $regex: req.query.search, $options: 'i' }
@@ -15,7 +15,28 @@ router.get('/', auth.authenticated, (req, res) => {
   if (req.query.tag) {
     query.tags = req.query.tag
   }
-  if (req.query.user) {
+
+  ProductionUnit.find(query).sort({ name: 1 }).exec((err, productionUnits) => {
+    if (err) {
+      res.status(422).send(err.message)
+    } else {
+      res.json(productionUnits)
+    }
+  })
+})
+
+router.get('/mine', auth.authenticated, (req, res) => {
+  const query = {}
+  if (req.query.search) {
+    query.title = { $regex: req.query.search, $options: 'i' }
+  }
+  if (req.query.category) {
+    query.category = req.query.category
+  }
+  if (req.query.tag) {
+    query.tags = req.query.tag
+  }
+  if (req.user._id) {
     query.user = req.user._id
   }
 

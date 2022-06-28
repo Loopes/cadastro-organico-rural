@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     async list () {
-      const request = await this.$axios.$get('/api/production_units?user=true')
+      const request = await this.$axios.$get('/api/production_units/mine')
       this.products = request
       request.forEach(req => {
         this.items.push({
