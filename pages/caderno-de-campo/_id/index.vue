@@ -83,6 +83,7 @@
         <div style="width: 12vw;">
           <Documents :documents="qr" />
         </div>
+
       </div>
     </div>
     <div v-else class="text-center">
