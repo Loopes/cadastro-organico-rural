@@ -79,6 +79,9 @@
         <br>
         <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(field_notebook.createdAt).format("DD/MM/YYYY") }}</strong></p>
         <qrcode-vue :value="route" :level="H" :size="250" :render-as="'canva'"/>
+        <div style="width: 12vw;">
+          <Documents :documents="qr" />
+        </div>
       </div>
     </div>
     <div v-else class="text-center">
@@ -98,7 +101,8 @@ export default {
       field_notebook: null,
       certifying_entity: {},
       production_unity: {},
-      route: ''
+      route: '',
+      qr: []
     }
   },
   async created () {
@@ -107,6 +111,11 @@ export default {
     this.production_unity = await this.$axios.$get('/api/production_units/' + this.field_notebook.productionUnit.id)
     this.certifying_entity = await this.$axios.$get('/api/certifying_entities/' + this.production_unity.certifying_entity)
     this.route = process.env.BASE_URL + this.$router.currentRoute.fullPath
+    this.qr.push({
+      url: 'api/uploads/qr_code/qr_code_' + this.field_notebook.name + '_' + this.field_notebook._id + '.png',
+      title: 'QR CODE'
+    })
+    await this.$axios.$post('/api/qr_code?url=' + this.route + '&title=' + this.field_notebook.name + '&id=' + this.field_notebook._id)
   }
 }
 </script>

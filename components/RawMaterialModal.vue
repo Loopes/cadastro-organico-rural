@@ -34,7 +34,7 @@
                     <v-col cols="12" md="12">
                       <v-text-field @input="filter(findRawMaterial)" v-model="findRawMaterial" outlined label="Buscar Insumo" />
                     </v-col>
-                    <b-container v-if="!unitId" style="width: 100%; height: 30vh; overflow:auto">
+                    <b-container v-if="!unitId" style="width: 100%; height: 30vh; overflow: auto;">
                       <v-col class="text-center" v-for="(material, index) in items" :key="index" cols="12" md="12">
                         <div @click="unitId=material.value; findRawMaterial=material.text" style="cursor: pointer;">
                           <span class="overline">{{material.text}}<br></span>
@@ -59,7 +59,7 @@
                     </v-col>
                   </v-row>
                   <v-textarea v-model="observation" outlined label="Observações" rows="2" auto-grow />
-                  <Upload v-model="documents" label="Anexar Notas Fiscais (PDF)" type="documents" multiple edit-title />
+                  <Upload v-model="documents" label="Anexar Notas Fiscais" type="documents" multiple edit-title />
                 </div>
                 <v-row>
                   <v-col cols="12" md="4">

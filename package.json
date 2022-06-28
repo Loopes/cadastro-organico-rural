@@ -24,6 +24,7 @@
   "dependencies": {
     "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.11.0",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/toast": "^3.3.1",
@@ -52,6 +53,7 @@
     "passport-local": "^1.0.0",
     "pdf-image": "^2.0.0",
     "pouchdb": "^7.2.2",
+    "qr-image": "3.2.0",
     "qrcode.vue": "1.7.0",
     "sharp": "^0.29.2",
     "slugify": "^1.4.4",
@@ -80,7 +82,7 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.1",
     "sass-loader": "^9.0.2",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0"
