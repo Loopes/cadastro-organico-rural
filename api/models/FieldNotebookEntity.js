@@ -34,11 +34,13 @@ const FieldNotebookEntitySchema = mongoose.Schema({
     required: true
   },
   rawMaterial: {
-    type: Array,
-    required: true
+    type: Array
+  },
+  activities: {
+    type: Array
   },
   codTraceability: String,
-  observation: String,
+  observation: String
 }, {
   timestamps: true,
   toJSON: { virtuals: true }

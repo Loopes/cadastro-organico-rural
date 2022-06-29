@@ -78,7 +78,57 @@
           <Documents v-if="a.documents" :documents="a.documents" />
         </v-row>
         <br>
+        <p v-if="field_notebook.activities[0]" class="mt-3"><strong>Atividades:</strong></p>
+        <v-row  v-for="(a, index) in field_notebook.activities" :key="index" class="table">
+          <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
+              <span class="overline">Título: <br></span>
+              {{ a.title }}
+            </v-col>
+            <v-col cols="12" md="6">
+              <div >
+                <span class="overline">Observações: <br></span>
+                {{ a.observation ? a.observation : '' }}
+              </div>
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
+              <span class="overline">Status | Categoria: <br></span>
+              {{ a.status }} | {{ a.category }}
+            </v-col>
+            <v-col cols="12" md="6">
+              <span class="overline">Periodo | Inspecionado: <br></span>
+              {{ a.period }} | {{ a.inspect }}
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="2">
+            <v-col cols="12" md="6">
+              <span class="overline">Data Inicial <br></span>
+              {{ a.dateInit ? a.dateInit : a.extra.dateInit }}
+            </v-col>
+            <v-col cols="12" md="6">
+              <span class="overline">Data Final: <br></span>
+              {{ a.dateFinal ? a.dateFinal : a.extra.dateFinal }}
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="2">
+            <v-col cols="12" md="6">
+              <span class="overline">Insumos: <br></span>
+              <div v-for="(raw, index) in a.rawMaterials" :key="index" >{{ raw.name }}</div>
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="1">
+            <v-col cols="12" md="8">
+            </v-col>
+            <v-col cols="12" md="4">
+               <Documents v-if="a.documents" :documents="a.documents" />
+            </v-col>
+          </v-col>
+        </v-row>
+        <br>
         <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(field_notebook.createdAt).format("DD/MM/YYYY") }}</strong></p>
+        <br>
         <qrcode-vue :value="route" :level="H" :size="250" :render-as="'canva'"/>
         <div style="width: 12vw;">
           <Documents :documents="qr" />
