@@ -159,6 +159,60 @@
             </v-col>
           </v-col>
         </v-row>
+        <v-row>
+          <v-col cols="12" md="12">
+            <ActivitiesForm v-model="form.activities" :rawMaterialsSeleceted="form.rawMaterial" :activities="form.activities"/>
+          </v-col>
+        </v-row>
+        <v-row  v-for="(a, index) in form.activities" :key="index" class="table">
+          <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
+              <span class="overline">Título: <br></span>
+              {{ a.title }}
+            </v-col>
+            <v-col cols="12" md="6">
+              <div >
+                <span class="overline">Observações: <br></span>
+                {{ a.observation ? a.observation : '' }}
+              </div>
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
+              <span class="overline">Status | Categoria: <br></span>
+              {{ a.status }} | {{ a.category }}
+            </v-col>
+            <v-col cols="12" md="6">
+              <span class="overline">Periodo | Inspecionado: <br></span>
+              {{ a.period }} | {{ a.inspect }}
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="2">
+            <v-col cols="12" md="6">
+              <span class="overline">Data Inicial <br></span>
+              {{ a.dateInit ? a.dateInit : a.extra.dateInit }}
+            </v-col>
+            <v-col cols="12" md="6">
+              <span class="overline">Data Final: <br></span>
+              {{ a.dateFinal ? a.dateFinal : a.extra.dateFinal }}
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="2">
+            <v-col cols="12" md="6">
+              <span class="overline">Insumos: <br></span>
+              <div v-for="(raw, index) in a.rawMaterials" :key="index" >{{ raw.name }}</div>
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="1">
+            <v-col cols="12" md="8">
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-btn @click="removeActivity(index)">
+                Retirar da lista
+              </v-btn>
+            </v-col>
+          </v-col>
+        </v-row>
         <Save :invalid="invalid" />
       </div>
     </v-form>
@@ -200,6 +254,7 @@ export default {
         status: '',
         productionUnit: {},
         rawMaterial: [],
+        activities: [],
         productionActivitie: null,
         productionId: '',
         name: '',
@@ -263,6 +318,9 @@ export default {
     },
     removeRaw (index) {
       this.form.rawMaterial.splice(index, 1)
+    },
+    removeActivity (index) {
+      this.form.activities.splice(index, 1)
     },
     selectActivity () {
       this.dialog = false

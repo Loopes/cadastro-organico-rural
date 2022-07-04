@@ -101,7 +101,8 @@ export default {
         const ret = {
           id: findProduct._id,
           name: findProduct.name,
-          production_activities: findProduct.production_activities
+          production_activities: findProduct.production_activities,
+          responsibles: findProduct.responsibles
         }
         this.name = ret.name
         this.dialog = false

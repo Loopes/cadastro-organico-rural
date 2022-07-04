@@ -10,8 +10,8 @@ require('./models/CertifyingEntity')
 require('./models/Conversation')
 require('./models/RawMaterialsEntity')
 require('./models/FieldNotebookEntity')
+require('./models/CheckListEntity')
 require('./config/passport')
-
 
 const mongoose = require('mongoose')
 const isProduction = process.env.NODE_ENV === 'production'
