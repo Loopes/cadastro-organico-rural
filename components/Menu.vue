@@ -9,12 +9,8 @@
           <v-icon>mdi-account</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
-          <v-list-item-title v-if="$auth.user">
-            {{ $auth.user.name }}
-          </v-list-item-title>
-          <v-list-item-title v-else>
-            Cadastre-se!
-          </v-list-item-title>
+          <v-list-item-title v-if="$auth.user">{{ $auth.user.name }}</v-list-item-title>
+          <v-list-item-title v-else>Cadastre-se!</v-list-item-title>
           <v-list-item-subtitle v-if="$auth.user">{{ $auth.user.email }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
