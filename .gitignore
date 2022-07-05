@@ -90,3 +90,5 @@ sw.*
 *.swp
 
 api/uploads/*
+
+nuxt.config.js

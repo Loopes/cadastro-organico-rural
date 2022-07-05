@@ -98,8 +98,8 @@
               {{ a.status }} | {{ a.category }}
             </v-col>
             <v-col cols="12" md="6">
-              <span class="overline">Periodo | Inspecionado: <br></span>
-              {{ a.period }} | {{ a.inspect }}
+              <span class="overline">Periodo: <br></span>
+              {{ a.period }}
             </v-col>
           </v-col>
           <v-col cols="12" md="2">
@@ -116,6 +116,10 @@
             <v-col cols="12" md="6">
               <span class="overline">Insumos: <br></span>
               <div v-for="(raw, index) in a.rawMaterials" :key="index" >{{ raw.name }}</div>
+            </v-col>
+            <v-col cols="12" md="6">
+              <span class="overline">Inspecionado: <br></span>
+              {{ a.inspect }}
             </v-col>
           </v-col>
           <v-col cols="12" md="1">
