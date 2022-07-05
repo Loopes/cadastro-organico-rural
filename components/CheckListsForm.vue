@@ -198,9 +198,9 @@ export default {
           productionUnit: this.productionUnit,
           responsible: this.responsible
         }
-        const updated = await this.$axios.$put('/api/check_lists' + this.checkList._id, baseCreate)
+        const updated = await this.$axios.$put('/api/check_lists/' + this.checkList._id, baseCreate)
         if (updated) {
-          this.$notifier.success('Caderno de Campo Atualizado!')
+          this.$notifier.success('Check List Atualizado!')
           this.$router.push('/check-lists/' + updated._id)
         }
       }
