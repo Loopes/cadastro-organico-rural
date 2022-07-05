@@ -64,7 +64,7 @@ export default {
     'nuxt-leaflet'
   ],
   axios: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000' // Used as fallback if no runtime config is provided
+    baseURL: process.env.BASE_URL || 'https://cor.agr.br/' // Used as fallback if no runtime config is provided
   },
   auth: {
     strategies: {
