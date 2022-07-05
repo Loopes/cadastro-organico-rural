@@ -75,6 +75,9 @@ export default {
     value: {
       type: Object,
       default: () => {}
+    },
+    productionUnitId: {
+      type: String
     }
   },
   data () {
@@ -82,7 +85,8 @@ export default {
       dialog: false,
       unitId: '',
       items: [],
-      name: ''
+      name: '',
+      productionUnit: {}
     }
   },
   created() {
@@ -93,10 +97,25 @@ export default {
   },
   methods: {
     async list () {
-      this.items = await this.$axios.$get('/api/field_notebook')
+      if (this.productionUnitId) {
+        this.productionUnit = await this.$axios.$get('/api/production_units/' + this.productionUnitId)
+        const base = await this.$axios.$get('/api/field_notebook?productionId=' + this.productionUnitId + '&productionName=' + this.productionUnit.name)
+        if (base.length > 0) {
+          this.items = base
+        } else {
+          this.items.push('Nenhum Caderno de Campo Achado')
+        }
+      } else {
+        const base = await this.$axios.$get('/api/field_notebook')
+        if (base.length > 0) {
+          this.items = base
+        } else {
+          this.items.push('Nenhum Caderno de Campo Achado')
+        }
+      }
     },
     save () {
-      if (this.unitId) {
+      if (this.unitId && this.unitId !== 'Nenhum Caderno de Campo Achado') {
         const findFieldNotebook = this.items.find(notebook => notebook.id === this.unitId)
         const objectBase = {
           id: findFieldNotebook.id,

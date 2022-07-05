@@ -18,8 +18,8 @@
         <h1 class="mb-0 text-h4 font-weight-bold"> {{ check_lists.title }} </h1>
         <br>
         <p v-if="check_lists.productionUnit.name"><span class="overline">Unidade Produtora:</span><br><strong>{{ check_lists.productionUnit.name }}</strong></p>
-        <p v-if="check_lists.responsible.name"><span class="overline">Responsável:</span><br><strong>{{ check_lists.responsible.name }}</strong></p>
-        <p v-if="check_lists.fieldNotebook.name"><span class="overline">Caderno de Campo:</span><br><strong>{{ check_lists.fieldNotebook.name }}</strong></p>
+        <p v-if="check_lists.responsible"><span class="overline">Responsável:</span><br><strong>{{ check_lists.responsible.name }}</strong></p>
+        <p v-if="check_lists.fieldNotebook"><span class="overline">Caderno de Campo:</span><br><strong>{{ check_lists.fieldNotebook.name }}</strong></p>
         <br>
         <div v-for="(category, indexCategory) in check_lists.checkLists" :key="indexCategory">
           <p v-if="category"><strong>{{indexCategory + 1}}. {{category.category}}</strong></p>
