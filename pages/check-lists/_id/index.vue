@@ -18,8 +18,8 @@
         <h1 class="mb-0 text-h4 font-weight-bold"> {{ check_lists.title }} </h1>
         <br>
         <p v-if="check_lists.productionUnit.name"><span class="overline">Unidade Produtora:</span><br><strong>{{ check_lists.productionUnit.name }}</strong></p>
-        <p v-if="check_lists.responsible.name"><span class="overline">Responsável:</span><br><strong>{{ check_lists.responsible.name }}</strong></p>
-        <p v-if="check_lists.fieldNotebook.name"><span class="overline">Caderno de Campo:</span><br><strong>{{ check_lists.fieldNotebook.name }}</strong></p>
+        <p v-if="check_lists.responsible"><span class="overline">Responsável:</span><br><strong>{{ check_lists.responsible.name }}</strong></p>
+        <p v-if="check_lists.fieldNotebook"><span class="overline">Caderno de Campo:</span><br><strong>{{ check_lists.fieldNotebook.name }}</strong></p>
         <br>
         <div v-for="(category, indexCategory) in check_lists.checkLists" :key="indexCategory">
           <p v-if="category"><strong>{{indexCategory + 1}}. {{category.category}}</strong></p>
@@ -48,21 +48,30 @@
                 >
                   <td>{{ indexCategory + 1 }}.{{ indexQuestion + 1 }}</td>
                   <td><strong>{{ question.topic }} </strong></td>
-                  <td><strong>{{ question.obs }} </strong></td>
-                  <td><p/><p v-for="(answers, indexAnswers) in question.answers" :key="indexAnswers">{{ answers }} [ &nbsp; ]</p></td>
+                  <td>
+                    <strong>{{ question.obs }} </strong>
+                    <v-textarea v-if="question.obs" v-model="question.obsAnswer" outlined rows="2" auto-grow />
+                  </td>
+                  <td><v-select v-model="question.selected" name="teste" :items="question.answers" outlined hide-details="auto" /></td>
                 </tr>
               </tbody>
             </template>
           </v-simple-table>
         </div>
         <br>
-        <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(check_lists.createdAt).format("DD/MM/YYYY") }}</strong></p>
+        <v-row>
+          <v-col cols="12" md="6">
+            <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(check_lists.createdAt).format("DD/MM/YYYY") }}</strong></p>
+          </v-col>
+          <v-col cols="12" md="6">
+            <p><span class="overline">Respondido em:</span><br><strong>{{ $moment(check_lists.updatedAt).format("DD/MM/YYYY") }}</strong></p>
+          </v-col>
+        </v-row>
         <br>
-        <qrcode-vue :value="route" :level="H" :size="250" :render-as="'canva'"/>
-        <div style="width: 12vw;">
-          <Documents :documents="qr" />
-        </div>
-
+      </div>
+      <Documents v-if="check_lists.reference" :documents="check_lists.reference.documents" label="Baixar Referência" />
+      <div @click="save()" style="margin-top: 2%;">
+        <Send :label="'SALVAR RESPOSTAS'" />
       </div>
     </div>
     <div v-else class="text-center">
@@ -75,11 +84,21 @@
 export default {
   data () {
     return {
-      check_lists: null
+      check_lists: null,
+      teste: ''
     }
   },
   async created () {
     this.check_lists = await this.$axios.$get('/api/check_lists/' + this.$route.params.id)
+  },
+  methods: {
+    async save () {
+      const updated = await this.$axios.$put('/api/check_lists/' + this.check_lists._id, this.check_lists)
+      if (updated) {
+        this.$notifier.success('Respostas Salvas!')
+        this.$router.push('/check-lists/' + updated._id)
+      }
+    }
   }
 }
 </script>

@@ -9,7 +9,7 @@
         </v-col>
         <v-col cols="12" md="6">
           <v-select
-            v-if="productionUnit.responsibles"
+            v-if="productionUnit.responsibles && productionUnit.responsibles.length"
             v-model="responsibleId"
             :items="productionUnit.responsibles"
             item-text="name"
@@ -17,12 +17,12 @@
             label="Responsável"
             outlined
             hide-details="auto" />
-          <span v-else class="overline">Unidade de Produção: {{responsible.name}}</span>
+          <span v-else-if="responsible" class="overline">Unidade de Produção: {{responsible.name}}</span>
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="12" md="6">
-          <FieldNotebookModal v-model="fieldNotebook" />
+          <FieldNotebookModal v-if="productionUnit.id" :value="fieldNotebook" :productionUnitId="productionUnit.id" />
         </v-col>
         <v-col cols="12" md="6">
           <DatePicker v-model="date" label="Data" />
@@ -107,6 +107,25 @@
           </v-row>
         </div>
       </div>
+      <v-row style="margin-top: 2%;">
+        <v-col cols="12" md="3"></v-col>
+        <v-col cols="12" md="5">
+          <v-select
+            v-model="reference"
+            :items="references"
+            item-text="title"
+            return-object
+            label="Referências"
+            outlined
+            hide-details="auto"
+            />
+        </v-col>
+        <v-col cols="12" md="4"></v-col>
+        <v-col cols="12" md="3"></v-col>
+        <v-col v-if="reference" cols="12" md="5">
+          <Documents v-if="reference.documents" :documents="reference.documents" label="Baixar Referência" />
+        </v-col>
+      </v-row>
       <div @click="save()" style="margin-top: 2%;">
         <Save />
       </div>
@@ -133,13 +152,15 @@ export default {
   mixins: [mixinForm],
   data() {
     return {
-      teste: {},
       title: '',
       productionUnit: {},
       responsibleId: '',
       responsible: {},
       fieldNotebook: {},
+      references: [],
+      reference: {},
       date: '',
+      error: '',
       checkLists: [{
         category: '',
         questions: [{
@@ -151,7 +172,7 @@ export default {
       }]
     }
   },
-  created() {
+  async created() {
     if (this.checkList) {
       this.title = this.checkList.title && this.checkList.title
       this.date = this.checkList.date && this.checkList.date
@@ -159,7 +180,9 @@ export default {
       this.checkLists = this.checkList.checkLists && this.checkList.checkLists
       this.productionUnit = this.checkList.productionUnit && this.checkList.productionUnit
       this.responsible = this.checkList.responsible && this.checkList.responsible
+      this.reference = this.checkList.reference && this.checkList.reference
     }
+    this.references = await this.$axios.$get('/api/check_lists/references/')
   },
   methods: {
     async save() {
@@ -167,26 +190,28 @@ export default {
         const baseCreate = {
           title: this.title && this.title,
           date: this.date && this.date,
-          fieldNotebook: this.fieldNotebook && this.fieldNotebook,
-          checkLists: this.checkLists && this.checkLists
+          fieldNotebook: this.fieldNotebook !== {} && this.fieldNotebook,
+          checkLists: this.checkLists && this.checkLists,
+          reference: this.reference && this.reference
         }
         if (this.productionUnit.id) {
           baseCreate.productionUnit = {
             id: this.productionUnit.id,
             name: this.productionUnit.name
           }
-          this.responsible = this.productionUnit.responsibles.find(responsible => responsible._id === this.responsibleId)
-          if (this.responsible._id) {
-            baseCreate.responsible = {
-              id: this.responsible._id,
-              name: this.responsible.name
+          if (this.productionUnit.responsibles.length > 0) {
+            this.responsible = this.productionUnit.responsibles.find(responsible => responsible._id === this.responsibleId)
+            if (this.responsible._id) {
+              baseCreate.responsible = {
+                id: this.responsible._id,
+                name: this.responsible.name
+              }
             }
           }
         }
-        this.teste = baseCreate
         const created = await this.$axios.$post('/api/check_lists', baseCreate)
         if (created) {
-          this.$notifier.success('Caderno de Campo Cadastrado!')
+          this.$notifier.success('Check List Cadastrado!')
           this.$router.push('/check-lists/' + created._id)
         }
       } else {
@@ -196,11 +221,12 @@ export default {
           fieldNotebook: this.fieldNotebook,
           checkLists: this.checkLists,
           productionUnit: this.productionUnit,
-          responsible: this.responsible
+          responsible: this.responsible,
+          reference: this.reference
         }
-        const updated = await this.$axios.$put('/api/check_lists' + this.checkList._id, baseCreate)
+        const updated = await this.$axios.$put('/api/check_lists/' + this.checkList._id, baseCreate)
         if (updated) {
-          this.$notifier.success('Caderno de Campo Atualizado!')
+          this.$notifier.success('Check List Atualizado!')
           this.$router.push('/check-lists/' + updated._id)
         }
       }

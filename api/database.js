@@ -11,6 +11,7 @@ require('./models/Conversation')
 require('./models/RawMaterialsEntity')
 require('./models/FieldNotebookEntity')
 require('./models/CheckListEntity')
+require('./models/CheckListReferenceEntity')
 require('./config/passport')
 
 const mongoose = require('mongoose')

@@ -20,6 +20,9 @@ const CheckListEntitySchema = mongoose.Schema({
   fieldNotebook: {
     type: Object
   },
+  reference: {
+    type: Object
+  },
   date: {
     type: String
   },

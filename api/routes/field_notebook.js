@@ -16,6 +16,9 @@ router.get('/', (req, res) => {
   if (req.query.tag) {
     query.tags = req.query.tag
   }
+  if (req.query.productionId && req.query.productionName) {
+    query.productionUnit = { id: req.query.productionId, name: req.query.productionName }
+  }
 
   FieldNotebookEntity.find(query).sort({ name: 1 }).exec((err, fieldNotebook) => {
     if (err) {

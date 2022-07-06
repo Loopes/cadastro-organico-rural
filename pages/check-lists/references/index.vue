@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Breadcrumb active="Check Lists" />
+    <Breadcrumb active="Check Lists | Referências" />
     <v-btn
-      to="/check-lists/cadastrar"
+      to="/check-lists/references/cadastrar"
       fab
       top
       right
@@ -12,9 +12,6 @@
     >
       <v-icon dark>mdi-plus</v-icon>
     </v-btn>
-    <div @click="referencePage()">
-      <Send :label="'REFERÊNCIAS'" />
-    </div>
     <div v-if="checkLists">
       <v-simple-table v-if="checkLists.length">
         <template v-slot:default>
@@ -23,6 +20,9 @@
               <th class="text-left">
                 Título
               </th>
+              <th class="text-left">
+                Observações
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -30,7 +30,8 @@
               v-for="(check) in checkLists"
               :key="check._id"
             >
-              <td><n-link :to="'/check-lists/' + check._id" class="text-decoration-none"><strong>{{ check.title }} </strong></n-link></td>
+              <td><n-link :to="'/check-lists/references/' + check._id" class="text-decoration-none"><strong>{{ check.title }} </strong></n-link></td>
+              <td><n-link :to="'/check-lists/references/' + check._id" class="text-decoration-none"><strong>{{ check.obs }} </strong></n-link></td>
             </tr>
           </tbody>
         </template>
@@ -55,20 +56,17 @@ export default {
   },
   methods: {
     async list () {
-      this.checkLists = await this.$axios.$get('/api/check_lists')
+      this.checkLists = await this.$axios.$get('/api/check_lists/references')
     },
     remove (checkLists) {
       this.$bvModal.msgBoxConfirm('Tem certeza que deseja excluír este item?').then(async confirmed => {
         if (confirmed) {
-          await this.$axios.delete('/api/check_lists/' + checkLists._id).then(() => {
+          await this.$axios.delete('/api/check_lists/references' + checkLists._id).then(() => {
             this.list()
             this.$notifier.success('Item removido com sucesso!')
           })
         }
       })
-    },
-    referencePage () {
-      this.$router.push('/check-lists/references')
     }
   }
 }
