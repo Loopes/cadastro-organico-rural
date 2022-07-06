@@ -107,6 +107,25 @@
           </v-row>
         </div>
       </div>
+      <v-row style="margin-top: 2%;">
+        <v-col cols="12" md="3"></v-col>
+        <v-col cols="12" md="5">
+          <v-select
+            v-model="reference"
+            :items="references"
+            item-text="title"
+            return-object
+            label="Referências"
+            outlined
+            hide-details="auto"
+            />
+        </v-col>
+        <v-col cols="12" md="4"></v-col>
+        <v-col cols="12" md="3"></v-col>
+        <v-col v-if="reference" cols="12" md="5">
+          <Documents v-if="reference.documents" :documents="reference.documents" label="Baixar Referência" />
+        </v-col>
+      </v-row>
       <div @click="save()" style="margin-top: 2%;">
         <Save />
       </div>
@@ -138,6 +157,8 @@ export default {
       responsibleId: '',
       responsible: {},
       fieldNotebook: {},
+      references: [],
+      reference: {},
       date: '',
       error: '',
       checkLists: [{
@@ -151,7 +172,7 @@ export default {
       }]
     }
   },
-  created() {
+  async created() {
     if (this.checkList) {
       this.title = this.checkList.title && this.checkList.title
       this.date = this.checkList.date && this.checkList.date
@@ -159,7 +180,9 @@ export default {
       this.checkLists = this.checkList.checkLists && this.checkList.checkLists
       this.productionUnit = this.checkList.productionUnit && this.checkList.productionUnit
       this.responsible = this.checkList.responsible && this.checkList.responsible
+      this.reference = this.checkList.reference && this.checkList.reference
     }
+    this.references = await this.$axios.$get('/api/check_lists/references/')
   },
   methods: {
     async save() {
@@ -168,7 +191,8 @@ export default {
           title: this.title && this.title,
           date: this.date && this.date,
           fieldNotebook: this.fieldNotebook !== {} && this.fieldNotebook,
-          checkLists: this.checkLists && this.checkLists
+          checkLists: this.checkLists && this.checkLists,
+          reference: this.reference && this.reference
         }
         if (this.productionUnit.id) {
           baseCreate.productionUnit = {
@@ -197,7 +221,8 @@ export default {
           fieldNotebook: this.fieldNotebook,
           checkLists: this.checkLists,
           productionUnit: this.productionUnit,
-          responsible: this.responsible
+          responsible: this.responsible,
+          reference: this.reference
         }
         const updated = await this.$axios.$put('/api/check_lists/' + this.checkList._id, baseCreate)
         if (updated) {

@@ -69,6 +69,7 @@
         </v-row>
         <br>
       </div>
+      <Documents v-if="check_lists.reference" :documents="check_lists.reference.documents" label="Baixar Referência" />
       <div @click="save()" style="margin-top: 2%;">
         <Send :label="'SALVAR RESPOSTAS'" />
       </div>
