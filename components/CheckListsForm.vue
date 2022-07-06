@@ -107,7 +107,6 @@
           </v-row>
         </div>
       </div>
-      {{error}}
       <div @click="save()" style="margin-top: 2%;">
         <Save />
       </div>
@@ -188,7 +187,7 @@ export default {
         }
         const created = await this.$axios.$post('/api/check_lists', baseCreate)
         if (created) {
-          this.$notifier.success('Caderno de Campo Cadastrado!')
+          this.$notifier.success('Check List Cadastrado!')
           this.$router.push('/check-lists/' + created._id)
         }
       } else {

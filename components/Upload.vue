@@ -103,7 +103,8 @@ export default {
   },
   data() {
     return {
-      is_loading: false
+      is_loading: false,
+      error: 'teste'
     }
   },
   computed: {
@@ -142,6 +143,7 @@ export default {
             }
           })
           .then((uploaded) => {
+            this.error = 'entrou'
             if (this.multiple) {
               let ret = [uploaded]
               if (this.value) {
@@ -153,6 +155,9 @@ export default {
             }
             this.$emit('uploaded', uploaded)
             this.is_loading = false
+          })
+          .catch((error) => {
+            this.error = error
           })
       }
     },

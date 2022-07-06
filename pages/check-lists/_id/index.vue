@@ -72,7 +72,6 @@
       <div @click="save()" style="margin-top: 2%;">
         <Send :label="'SALVAR RESPOSTAS'" />
       </div>
-      {{teste}}
     </div>
     <div v-else class="text-center">
       <v-progress-circular indeterminate small />

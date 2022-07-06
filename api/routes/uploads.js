@@ -159,7 +159,10 @@ router.post('/documents', [auth.authenticated, documentUploader.single('file')],
               })
           }
         })
-    }).catch(() => {})
+    }).catch((error) => {
+      console.log(error)
+      res.status(201).send({ title: filename, url: path + filename })
+    })
   } else {
     res.status(201).send({ title: filename, url: path + filename })
   }
