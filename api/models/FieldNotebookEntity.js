@@ -39,6 +39,9 @@ const FieldNotebookEntitySchema = mongoose.Schema({
   activities: {
     type: Array
   },
+  harvest: {
+    type: Array
+  },
   codTraceability: String,
   observation: String
 }, {

@@ -29,7 +29,7 @@
           <ProductionUnit v-model="form.productionUnit"/>
         </v-col>
         <v-col cols="12" md="6">
-      <span v-if="fieldNotebookEntity" class="overline">Atividade Produtiva: {{ fieldNotebookEntity.productionActivitie.descricao }}</span>
+      <span v-if="fieldNotebookEntity" class="overline">Atividade Produtiva: {{ form.productionActivitie.activity.descricao }}</span>
       <div v-if="form.productionUnit.production_activities" class="mb-3">
         <span class="overline">Atividade Produtiva: {{form.productionActivitie ? form.productionActivitie.activity.descricao : ''}}</span>
         <div>
@@ -213,6 +213,54 @@
             </v-col>
           </v-col>
         </v-row>
+        <v-row>
+          <v-col v-if="form.productionActivitie" cols="12" md="12">
+            <HarvestForm v-model="form.harvest" :productionActivitie="form.productionActivitie" :harvests="form.harvest"/>
+          </v-col>
+        </v-row>
+        <v-row  v-for="(a, index) in form.harvest" :key="index" class="table">
+          <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
+              <span class="overline">Tipo: <br></span>
+              {{ a.type }}
+            </v-col>
+            <v-col cols="12" md="6">
+              <div >
+                <span class="overline">Observações: <br></span>
+                {{ a.observation ? a.observation : '' }}
+              </div>
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="2">
+            <v-col cols="12" md="12">
+              <span class="overline">Categoria: <br></span>
+              {{ a.category }}
+            </v-col>
+            <v-col cols="12" md="12">
+              <span class="overline">Quantidade ({{a.unidMed}}): <br></span>
+              {{ a.qntd }}
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
+              <span class="overline">Data de Colheita <br></span>
+              {{ a.dateHarvest }}
+            </v-col>
+            <v-col v-if="a.dateValidity" cols="12" md="6">
+              <span class="overline">Data de Validade: <br></span>
+              {{ a.dateValidity }}
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="1">
+            <v-col cols="12" md="8">
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-btn @click="removeHarvest(index)">
+                Retirar da lista
+              </v-btn>
+            </v-col>
+          </v-col>
+        </v-row>
         <Save :invalid="invalid" />
       </div>
     </v-form>
@@ -255,6 +303,7 @@ export default {
         productionUnit: {},
         rawMaterial: [],
         activities: [],
+        harvest: [],
         productionActivitie: null,
         productionId: '',
         name: '',
@@ -326,6 +375,9 @@ export default {
       this.dialog = false
       this.form.productionActivitie = this.form.productionUnit.production_activities.find(activities => activities._id === this.productionId)
       this.form.codTraceability = this.form.productionUnit.id + this.form.productionActivitie._id
+    },
+    removeHarvest (index) {
+      this.form.harvest.splice(index, 1)
     }
   }
 }
