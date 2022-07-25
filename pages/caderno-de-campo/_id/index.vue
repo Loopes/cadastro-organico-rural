@@ -130,6 +130,48 @@
             </v-col>
           </v-col>
         </v-row>
+        <p v-if="field_notebook.harvest[0]" class="mt-3"><strong>Colheitas:</strong></p>
+        <v-row  v-for="(a, index) in field_notebook.harvest" :key="index" class="table">
+          <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
+              <span class="overline">Tipo: <br></span>
+              {{ a.type }}
+            </v-col>
+            <v-col cols="12" md="6">
+              <div >
+                <span class="overline">Observações: <br></span>
+                {{ a.observation ? a.observation : '' }}
+              </div>
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
+              <span class="overline">Categoria: <br></span>
+              {{ a.category }}
+            </v-col>
+            <v-col cols="12" md="6">
+              <span class="overline">Quantidade ({{a.unidMed}}): <br></span>
+              {{ a.qntd }}
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
+              <span class="overline">Data de Colheita <br></span>
+              {{ a.dateHarvest }}
+            </v-col>
+            <v-col cols="12" md="6">
+              <span class="overline">Data de Validade: <br></span>
+              {{ a.dateValidity }}
+            </v-col>
+          </v-col>
+          <v-col cols="12" md="1">
+            <v-col cols="12" md="8">
+            </v-col>
+            <v-col cols="12" md="4">
+               <Documents v-if="a.documents" :documents="a.documents" />
+            </v-col>
+          </v-col>
+        </v-row>
         <br>
         <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(field_notebook.createdAt).format("DD/MM/YYYY") }}</strong></p>
         <br>
