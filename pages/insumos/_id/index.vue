@@ -23,7 +23,7 @@
         <p v-if="raw_materials.reference"><span class="overline">Referências Legais:</span><br><strong>{{ raw_materials.reference }}</strong></p>
         <p v-if="raw_materials.allowed"><span class="overline">Permitido:</span><br><strong> Sim </strong></p>
         <p v-if="!raw_materials.allowed"><span class="overline">Permitido:</span><br><strong> Não </strong></p>
-        <p><span class="overline">Data de Vigencia:</span><br>Inicial:<br/><strong>{{ raw_materials.validityDateInit.toString().slice(0,10) }}</strong><br>Final:<br/><strong>{{ raw_materials.validityDateInit.toString().slice(0,10) }}</strong></p>
+        <p v-if="raw_materials.validityDateInit"><span class="overline">Data de Vigencia:</span><br>Inicial:<br><strong>{{ raw_materials.validityDateInit.toString().slice(0,10) }}</strong><br>Final:<br><strong>{{ raw_materials.validityDateInit.toString().slice(0,10) }}</strong></p>
         <p><span class="overline">Cadastrado em:</span><br><strong>{{ $moment(raw_materials.createdAt).format("DD/MM/YYYY") }}</strong></p>
       </div>
     </div>
