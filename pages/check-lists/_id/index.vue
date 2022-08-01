@@ -22,7 +22,7 @@
         <p v-if="check_lists.fieldNotebook"><span class="overline">Caderno de Campo:</span><br><strong>{{ check_lists.fieldNotebook.name }}</strong></p>
         <br>
         <div v-for="(category, indexCategory) in check_lists.checkLists" :key="indexCategory">
-          <p v-if="category"><strong>{{indexCategory + 1}}. {{category.category}}</strong></p>
+          <p v-if="category"><strong>{{ indexCategory + 1 }}. {{ category.category }}</strong></p>
           <v-simple-table v-if="category.questions.length">
             <template v-slot:default>
               <thead>
@@ -33,11 +33,14 @@
                   <th width="40%" class="text-left">
                     Título
                   </th>
-                  <th width="40%" class="text-left">
+                  <th width="30%" class="text-left">
                     Observações
                   </th>
                   <th class="text-left">
                     Respostas
+                  </th>
+                  <th width="12%" class="text-left">
+                    Ações Corretivas
                   </th>
                 </tr>
               </thead>
@@ -52,7 +55,11 @@
                     <strong>{{ question.obs }} </strong>
                     <v-textarea v-if="question.obs" v-model="question.obsAnswer" outlined rows="2" auto-grow />
                   </td>
-                  <td><v-select v-model="question.selected" name="teste" :items="question.answers" outlined hide-details="auto" /></td>
+                  <td><v-select v-model="question.selected" :items="question.answers" outlined hide-details="auto" /></td>
+                  <td>
+                    <v-switch v-model="question.switch" flat:label="`Switch 2: ${switch2.toString()}`" />
+                    <CorrectActionModal v-if="question.switch" v-model="question.correctActions" />
+                  </td>
                 </tr>
               </tbody>
             </template>
@@ -70,7 +77,7 @@
         <br>
       </div>
       <Documents v-if="check_lists.reference" :documents="check_lists.reference.documents" label="Baixar Referência" />
-      <div @click="save()" style="margin-top: 2%;">
+      <div style="margin-top: 2%;" @click="save()">
         <Send :label="'SALVAR RESPOSTAS'" />
       </div>
     </div>
@@ -84,8 +91,7 @@
 export default {
   data () {
     return {
-      check_lists: null,
-      teste: ''
+      check_lists: null
     }
   },
   async created () {
