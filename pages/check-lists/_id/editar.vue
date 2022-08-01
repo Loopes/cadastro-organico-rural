@@ -1,7 +1,7 @@
 <template>
   <div v-if="check_lists" class="create">
-    <Breadcrumb active="Editar caderno de campo" :parent="'/caderno-de-campo/' + check_lists._id" />
-    <CheckListsForm v-if="check_lists" :checkList="check_lists" />
+    <Breadcrumb active="Check List" :parent="'/check-lists/' + check_lists._id" />
+    <CheckListsForm v-if="check_lists" :check-list="check_lists" />
     <div v-else class="text-center">
       <v-progress-circular indeterminate small label="Carregando..." />
     </div>
